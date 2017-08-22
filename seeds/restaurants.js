@@ -389,11 +389,22 @@ exports.seed = function(knex, Promise) {
           is_dinein: true,
           is_takeaway: true
         },
-      
-
-
-
-
+        {
+          net_rating: 12,
+          pricing: "$$",
+          restaurant_name: "Boquita",
+          restaurant_url: "http://boquita.nz/",
+          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/3b/4b/c7/img-20170811-132653-largejpg.jpg",
+          address: "23 Kent Terrace, Mount Victoria, Wellington 6011",
+          phone: "0064272492589",
+          description: "Real, delicious, plant-based Mexican food. Food for life: plant-based tacos, salads and soups.La Boca Loca’s clean-eating, veggie-loving little sister. Mexican the way your mama’s mama’s mama made it. No nasties, no short-cuts and no compromise on flavour.",
+          is_meat: false,
+          is_vegan: true,
+          is_breakfast: true,
+          is_dinner: true,
+          is_dinein: true,
+          is_takeaway: true
+        }
 
       ]);
     });
