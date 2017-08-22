@@ -1,4 +1,4 @@
-# API Documentation
+D# API Documentation
 
 #### Authors
 
@@ -74,7 +74,7 @@ The server will return an object structured as following
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
-| GET   | `/api/comments/:restaurant_id` | get all comments on a restaurant| comments |
+| GET   | `/api/restaurants/:restaurant_id/comments` | get all comments on a restaurant| comments |
 
 This route get will return an array of the comment objects associated to the specified restaurant. The comments will be arranged in a descending order, meaning the first index will be the latest comment.
 The :comment_id parameter in the request url is the id of the restaurant you wish to retrieve the comments of.
@@ -111,7 +111,7 @@ The server will return an object structured as following
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
-| GET   | `/api/comments/:user_id` | get all comments created by a specific user| user comments |
+| GET   | `/api/users/:user_id/comments` | get all comments created by a specific user| user comments |
 
 This route get will return an array of the comment objects associated to the specified user. The comments will be arranged in a ascending order, meaning the latest index will be the latest comment.
 The :user_id parameter in the request url is the id of the user you wish to retrieve the comments of.
@@ -139,12 +139,11 @@ The server will return an object structured as following
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
-| GET   | `/api/comments` | post a comment for a specific restaurant| add comment |
+| POST   | `/api/comments` | post a comment for a specific restaurant| add comment |
 
 This post creates a new comment in the comments table, associating the user who posted it to the restaurant it was posted on. The submission is an object containing the entry id & user id and the comment string to be posted e.g.:
 
   {
-    comment_id: 2,
     user_id: 1,
     restaurant_id: 1,
     content: "good price and great food",
@@ -165,12 +164,12 @@ This post creates a new comment in the comments table, associating the user who 
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
-| POST    | `/v1/users/signup` | Create a user | boolean |
+| POST    | `/api/users/signup` | Create a user | boolean |
 
 The post object must take the form:
 
     {
-      "username": "Bob",
+      "user_name": "Bob",
       "password": "Bob1234",
       "email": "bob@gmail.com"
     }
@@ -184,7 +183,7 @@ The post object must take the form:
 
 The post request will add a new user row to the user table based on the form inputs. It will reject the request if the username is already taken, and return "false". The password will be hashed, and the database stores only this hashed version. If the user creation is successful, that user's ID will be returned, e.g.:
 
-    { "user_id": 15 }
+    { user_id: 15 }
 
 ([back to summary](#summary))  
 
@@ -192,12 +191,12 @@ The post request will add a new user row to the user table based on the form inp
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
-| POST    | `/v1/users/login` | Authenticate a user | user |
+| POST    | `/api/users/login` | Authenticate a user | user |
 
 The post object must take the form:
 
     {
-      "username": "Bob",
+      "user_name": "Bob",
       "password": "Bob1234"
     }
 
@@ -213,7 +212,7 @@ The post request will compare the username to the users table for a match. A use
 
     {
       "user": {
-        "username": "Bob",
+        "user_name": "Bob",
         "user_id": 7,
       }
     }

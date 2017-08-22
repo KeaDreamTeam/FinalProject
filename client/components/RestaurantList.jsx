@@ -3,14 +3,12 @@ import {connect} from 'react-redux'
 
 import {getRestaurants} from '../actions/restaurants'
 
-import RestaurantSingle from './RestaurantSingle'
-
 const RestaurantList = ({restaurants, toggleSingleView, singleView, select}) => {
   return (
-    <div>
+    <div className="columns is-multiline">
       {restaurants.map((restaurant, i) => {
         return (
-          <div key={i}>
+          <div className="column is-half" key={i}>
             {restaurant.restaurant_name}
             <a onClick={() => select(restaurant) }>Details</a>
           </div>

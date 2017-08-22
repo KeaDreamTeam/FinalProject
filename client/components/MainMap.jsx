@@ -10,12 +10,16 @@ class MainMap extends React.Component {
         }
   }
 
+  componentWillMount () {
+    this.geocoder = new google.maps.Geocoder
+  }
+
   render() {
     return (
       <div className="columns">
     <div className="column is-8 is-offset-2 box">
       <Map google={this.props.google}
-        style={{width: '50%', height: '50%', position: 'relative', margin: '10px'}}
+        style={{width: '50%', height: '80%', position: 'relative', margin: '10px'}}
         className={'map'}
         zoom={6}
         initialCenter={{
@@ -24,15 +28,21 @@ class MainMap extends React.Component {
           }}
           >
           {this.props.restaurants.map((restaurant, key) => {
+            console.log(this.props.restaurants)
 
-              console.log(this.props.restaurants);
-          this.geocoder = new google.maps.Geocoder
             this.geocoder.geocode(
-            { address: restaurant.address },(results) => {
+            {address: restaurant.address},(results, status) => {
+              if (status === 'OK') {
+                console.log('Geocode was successful');
                this.setState({lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()})
+             }
+             else {
+               console.log('Geocode was not successful for the following reason: ' + status);
+
+             }
           })
           return(
-            <Marker key = {key} position={{lat: this.state.lat, lng: this.state.lng}} />
+            <Marker key = {key} position={this.state} />
           )
   })}
     </Map>
