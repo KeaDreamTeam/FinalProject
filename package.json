@@ -6,6 +6,7 @@
   "main": "server/index.js",
   "scripts": {
     "postinstall": "webpack",
+    "geocode": "node geocode.js",
     "dev": "nodemon --watch server server/index & webpack --watch",
     "start": "node server/index",
     "test": "ava  -v  --serial 'test/**/*.test.js'",

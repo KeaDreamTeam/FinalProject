@@ -27,13 +27,12 @@ class Restaurant extends React.Component {
     return (
       <div className="columns">
         <div className="column is-8 is-offset-2 box">
-<<<<<<< HEAD
+
           Restaurants!!!
           <MainMap restaurants={this.props.restaurants} google={window.google}/>
-          <RestaurantList restaurants={this.props.restaurants} toggleSingleView={this.state.toggleSingleView} singleView={this.state.singleView} select={this.selectRestaurant.bind(this)} />
-=======
+
           <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
->>>>>>> 7afd586689a92c17f7e3047ad2895c07952c453d
+
             {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
         </div>
       </div>

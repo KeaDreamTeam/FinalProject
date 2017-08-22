@@ -6,15 +6,41 @@ class MainMap extends React.Component {
     super(props)
     this.state = {
           lat: null,
-          lng: null
+          lng: null,
+          mappedRestaurants: []
         }
   }
 
   componentWillMount () {
     this.geocoder = new google.maps.Geocoder
-  }
 
+
+  }
+  componentWillReceiveProps(props) {
+    let mappedRestaurants = props.restaurants.map((restaurant, key) => {
+      // console.log(this.props.restaurants)
+
+      this.geocoder.geocode({address: restaurant.address},(results, status) => {
+        if (status === 'OK') {
+          console.log(results);
+          restaurant.lat = results[0].geometry.location.lat()
+          restaurant.lng = results[0].geometry.location.lng()
+          console.log('Geocode was successful');
+        //  this.setState({lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()})
+         }
+         else {
+           console.log('Geocode was not successful for the following reason: ' + status);
+
+         }
+       })
+       return restaurant
+
+     })
+     console.log("after first map", mappedRestaurants);
+     this.setState({mappedRestaurants})
+  }
   render() {
+    console.log("render");
     return (
       <div className="columns">
     <div className="column is-8 is-offset-2 box">
@@ -27,24 +53,13 @@ class MainMap extends React.Component {
             lng: 174.7787425
           }}
           >
-          {this.props.restaurants.map((restaurant, key) => {
-            console.log(this.props.restaurants)
-
-            this.geocoder.geocode(
-            {address: restaurant.address},(results, status) => {
-              if (status === 'OK') {
-                console.log('Geocode was successful');
-               this.setState({lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()})
-             }
-             else {
-               console.log('Geocode was not successful for the following reason: ' + status);
-
-             }
-          })
-          return(
-            <Marker key = {key} position={this.state} />
-          )
-  })}
+          {console.log("inside map component", this.state.mappedRestaurants)}
+          {this.state.mappedRestaurants.map((rest, key) => {
+            // console.log({lat, lng});
+            console.log(rest);
+            let {lat, lng} = rest
+            return <Marker key={key} position={{lat, lng}} />
+          })}
     </Map>
   </div>
 </div>
