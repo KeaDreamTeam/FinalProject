@@ -13,6 +13,3 @@ exports.up = function(knex, Promise) {
 exports.down = function(knex, Promise) {
   return knex.schema.dropTableIfExists('comments')
 };
-
-
-//rating_pos & rating_pos have values 0/1 in comments
