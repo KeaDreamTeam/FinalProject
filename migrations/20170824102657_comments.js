@@ -1,10 +1,11 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTableIfNotExists('comments', (table) => {
-    table.increments('id')
+    table.increments('commenmt_id')
+    table.integer('user_id')
     table.integer('restaurant_id')
-    table.text('text')
-    table.integer('rating_pos')
-    table.integer('rating_neg')
+    table.text('content')
+    table.boolean('is_pos').defaultTo(true)
+    table.boolean('is_fair').defaultTo(true)
     table.timestamp('created_at').defaultTo(knex.fn.now())
   })
 };
@@ -12,6 +13,3 @@ exports.up = function(knex, Promise) {
 exports.down = function(knex, Promise) {
   return knex.schema.dropTableIfExists('comments')
 };
-
-
-//rating_pos & rating_pos have values 0/1 in comments
