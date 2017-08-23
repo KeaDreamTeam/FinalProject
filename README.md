@@ -1,6 +1,6 @@
 # Final project
 
-it is based on webpack project for React, Redux, Express and Knex
+Wgat's For Lunch?!
 
 ## Contributors
 
