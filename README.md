@@ -18,13 +18,13 @@ Project name: What's For Lunch?!
 
 An app that displays and searches through vegetarian restaurants.
 
-###Features:
+### Features:
 - filtering
 - search
 - google maps
 - single-page app
 
-###Learning Objectives:
+### Learning Objectives:
 
 - full stack development (React, Redux, Express, Knex)
 - creating a mobile-ready one-page app
