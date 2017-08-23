@@ -6,24 +6,20 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('restaurants').insert([
         {
-          id: 1,
-          rating: 5,
+          net_rating: 5,
           pricing: "$$",
-          name: 'Dream Team Restaurant',
-          url: "www.dream-team-restaurant.com",
+          restaurant_name: 'Dream Team Restaurant',
+          restaurant_url: "www.dream-team-restaurant.com",
+          image_url: "www.dream-team-restaurant.com",
           address: "275 Cuba St, Te Aro, Wellington 6023",
           description: "Dine with the best",
-          meat: true,
-          vegan: true,
-          breakfast: true,
-          dinner: true,
-          dinein: true,
-          takeaway: true,
-          preorder: true,
-          pricing_cheap: true,
-          pricing_mid: true,
-          pricing_fine: false
-        },
+          is_meat: true,
+          is_vegan: true,
+          is_breakfast: true,
+          is_dinner: true,
+          is_dinein: true,
+          is_takeaway: true
+        }
       ]);
     });
 };
