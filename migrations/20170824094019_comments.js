@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTableIfNotExists('comments', (table) => {
-    table.increments('commenmt_id')
+    table.increments('comment_id')
     table.integer('user_id')
     table.integer('restaurant_id')
     table.text('content')
@@ -9,7 +9,6 @@ exports.up = function(knex, Promise) {
     table.timestamp('created_at').defaultTo(knex.fn.now())
   })
 };
-
 exports.down = function(knex, Promise) {
   return knex.schema.dropTableIfExists('comments')
 };
