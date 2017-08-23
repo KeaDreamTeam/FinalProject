@@ -14,9 +14,10 @@ exports.up = function(knex, Promise) {
     table.boolean('dinner')
     table.boolean('dinein')
     table.boolean('takeaway')
-    table.boolean('pricing-cheap')
-    table.boolean('pricing-mid')
-    table.boolean('pricing-fine')
+    table.boolean('preorder')
+    table.boolean('pricing_cheap')
+    table.boolean('pricing_mid')
+    table.boolean('pricing_fine')
   })
 };
 
