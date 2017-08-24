@@ -41,14 +41,14 @@ exports.seed = function(knex, Promise) {
           is_fair: false
         },
         {
-          user_id: 4,
+          user_id: 1,
           restaurant_id: 4,
           content: "good price and great food",
           is_pos: true,
           is_fair: true
         },
         {
-          user_id: 5,
+          user_id: 1,
           restaurant_id:5,
           content: "good price and great food",
           is_pos: false,
@@ -89,7 +89,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           user_id: 4,
-          restaurant_id: 11,
+          restaurant_id: 1,
           content: "good price and great food",
           is_pos: false,
           is_fair: false
@@ -109,7 +109,7 @@ exports.seed = function(knex, Promise) {
         {
           user_id: 7,
           restaurant_id: 14,
-          content: "good price and great food"
+          content: "not good"
         },
         {
           user_id: 1,
@@ -118,7 +118,151 @@ exports.seed = function(knex, Promise) {
         },
         {
           user_id: 2,
+          restaurant_id: 1,
+          content: "not good",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
           restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "not good",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "not good",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 13,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 3,
+          restaurant_id: 2,
+          content: "not good",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 1,
+          restaurant_id: 14,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 3,
+          content: "good price and great food",
+        },
+        {
+          user_id: 2,
+          restaurant_id: 4,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+        },
+        {
+          user_id: 3,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 16,
+          content: "good price and great food",
+        },
+        {
+          user_id: 1,
+          restaurant_id: 13,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 17,
+          content: "good price and great food",
+        },
+        {
+          user_id: 3,
+          restaurant_id: 11,
+          content: "good price and great food",
+          is_pos: false,
+          is_fair: false
+        },
+        {
+          user_id: 2,
+          restaurant_id: 4,
           content: "good price and great food",
           is_pos: false,
           is_fair: false
