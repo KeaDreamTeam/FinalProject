@@ -5,7 +5,6 @@ import {getRestaurants} from '../actions/restaurants'
 
 import RestaurantList from './RestaurantList'
 import RestaurantSingle from './RestaurantSingle'
-import RestTest from './RestTest'
 
 class Restaurant extends React.Component {
   constructor (props) {
