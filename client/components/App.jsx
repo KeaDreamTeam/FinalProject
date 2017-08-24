@@ -1,8 +1,12 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
+<<<<<<< HEAD
+// import Greetings from './Greetings'
+=======
 import {connect} from 'react-redux'
 
 
+>>>>>>> master
 import Header from './Header'
 import Filter from './Filter'
 import MainMap from './MainMap'
