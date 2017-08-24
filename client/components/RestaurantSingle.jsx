@@ -1,15 +1,14 @@
 import React from 'react'
 
-const RestaurantSingle = props => {
+const RestaurantSingle = ({selected, select}) => {
   return (
     <div>
-      Food Cafe
-      Address: salkjasjflskf
-      Ph: 34092340234
-      <br />
-        <a href='#' onClick={props.toggleSingleView}>
-          Close
-        </a>
+      <h1>{selected.restaurant_name}</h1>
+      <p>{selected.address}</p>
+      <p>{selected.phone}</p>
+      <p>{selected.description}</p>
+      <img src={selected.image_url} />
+      <a href="#" onClick={() => select(null)}>Close</a>
     </div>
   )
 }

@@ -5,14 +5,14 @@ import {getRestaurants} from '../actions/restaurants'
 
 import RestaurantSingle from './RestaurantSingle'
 
-const RestaurantList = ({restaurants, toggleSingleView, singleView, selected}) => {
+const RestaurantList = ({restaurants, toggleSingleView, singleView, select}) => {
   return (
     <div>
       {restaurants.map((restaurant, i) => {
         return (
           <div key={i}>
             {restaurant.restaurant_name}
-            <a onClick={() => selected(restaurant) }>Details</a>
+            <a onClick={() => select(restaurant) }>Details</a>
           </div>
         )
       })}

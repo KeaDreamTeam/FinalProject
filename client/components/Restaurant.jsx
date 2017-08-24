@@ -35,10 +35,8 @@ class Restaurant extends React.Component {
         <div className="column is-8 is-offset-2 box">
           Restaurants!!!
 
-          <RestaurantList restaurants={this.props.restaurants} toggleSingleView={this.state.toggleSingleView} singleView={this.state.singleView} selected={this.state.selected} />
-            {
-              this.state.singleView ? <RestaurantSingle toggleSingleView={this.toggleSingleView.bind(this)} /> : <a href="#" onClick={this.toggleSingleView}>Details</a>
-            }
+          <RestaurantList restaurants={this.props.restaurants} toggleSingleView={this.state.toggleSingleView} singleView={this.state.singleView} select={this.selectRestaurant.bind(this)} />
+            {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
         </div>
       </div>
     )
