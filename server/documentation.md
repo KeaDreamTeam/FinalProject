@@ -82,7 +82,11 @@ The :comment_id parameter in the request url is the id of the restaurant you wis
 #### Response
 ##### Status Codes:
 * If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Ok').
+<<<<<<< HEAD
 * If the restaurant_id given does not match any entries in the database, the HTTP status code in the response header is 400 ('Bad Request').
+=======
+* If the restaurant_id given does not match any entries in the database, the server will return an empty array [].
+>>>>>>> master
 * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
 
 The server will return an object structured as following
@@ -120,7 +124,11 @@ The :user_id parameter in the request url is the id of the user you wish to retr
 ### Response
 ##### Status Codes:
 * If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Ok').
+<<<<<<< HEAD
 * If the user_id given does not match any comments in the database, the HTTP status code in the response header is 400 ('Bad Request').
+=======
+* If the user_id given does not match any comments in the database, the server will return an empty array [].
+>>>>>>> master
 * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
 
 The server will return an object structured as following
