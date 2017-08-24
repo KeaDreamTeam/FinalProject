@@ -1,14 +1,43 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
+import {getRestaurants} from '../actions/restaurants'
 
 import RestaurantList from './RestaurantList'
+import RestaurantSingle from './RestaurantSingle'
 
-const Restaurant = () => (
-  <div className="columns">
-    <div className="column is-8 is-offset-2 box">
-      Restaurants!!!
-      <RestaurantList />
-    </div>
-  </div>
-)
+class Restaurant extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      singleView: false,
+      selected: null
+    }
+  }
 
-export default Restaurant
+  componentWillMount () {
+    this.props.dispatch(getRestaurants())
+  }
+
+  selectRestaurant(selected) {
+    this.setState({selected})
+  }
+
+  render() {
+    return (
+      <div className="columns">
+        <div className="column is-8 is-offset-2 box">
+          <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
+            {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
+        </div>
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {restaurants: state.restaurants}
+
+}
+
+export default connect(mapStateToProps)(Restaurant)

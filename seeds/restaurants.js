@@ -326,6 +326,7 @@ exports.seed = function(knex, Promise) {
           is_takeaway: true
         },
         {
+
           net_rating: 8,
           pricing: "$",
           restaurant_name: "Tommy Millions",
