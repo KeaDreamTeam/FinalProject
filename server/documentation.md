@@ -10,18 +10,16 @@
 
 API for use with the What's For Lunch app project.
 
-
 ##### The API can:
 | Task | Method | Requires authentication? |
 | ------ | -------- | -------- |
-| [Return a list of all restaurants](#return-list-of-all-users) | GET | no |
+| [Return a list of all restaurants](#Return-a-list-of-all-restaurants) | GET | no |
+| [Return all comments on a specified restaurant](#Get-all-comments-on-a-specified-restaurant) | GET | no |
 | [Return all comment entries by a specific user](#) | GET | no |
-| [Return all comments on a specified restaurant](#) | GET | no |
 | [Like or dislike a specific restaurant](#) | POST | yes |
 | [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | yes |
 | [Create a new user](#) | POST | no |
 | [Log in as a user](#) | POST | yes |
-
 
 ### Return a list of all restaurants
 | Method | Endpoint | Usage | Returns |
@@ -80,7 +78,7 @@ The server will return an object structured as following
 | GET   | `/api/comments/:restaurant_id` | get all comments on a restaurant| comments |
 
 This route get will return an array of the comment objects associated to the specified restaurant. The comments will be arranged in a descending order, meaning the first index will be the latest comment.
-The :comment_id parameter in the request url is the id of the entry you wish to retrieve the comments of.
+The :comment_id parameter in the request url is the id of the restaurant you wish to retrieve the comments of.
 
 #### Response
 ##### Status Codes:
@@ -110,5 +108,35 @@ The server will return an object structured as following
         created_at: "2017-08-23 22:52:12"
         }
       ]
+
+### Return all comment entries by a specific user
+
+| Method | Endpoint | Usage | Returns |
+| ------ | -------- | ----- | ------- |
+| GET   | `/api/comments/:user_id` | get all comments created by a specific user| user comments |
+
+This route get will return an array of the comment objects associated to the specified user. The comments will be arranged in a ascending order, meaning the latest index will be the latest comment.
+The :user_id parameter in the request url is the id of the user you wish to retrieve the comments of.
+
+### Response
+##### Status Codes:
+* If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Ok').
+* If the user_id given does not match any comments in the database, the HTTP status code in the response header is 400 ('Bad Request').
+* In case of server error, the header status code is a 5xx error code and the response body contains an error object.
+
+The server will return an object structured as following
+
+    [
+      {
+      user_id: 1,
+      comment_id: 2,
+      restaurant_id: 1,
+      content: "good price and great food",
+      is_pos: 1,
+      is_fair: 1,
+      created_at: "2017-08-23 22:52:12"
+      }
+      ]
+
 
 ([back to summary](#summary))
