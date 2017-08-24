@@ -19,9 +19,16 @@ const saveComment = (comment, db) => {
     .insert(comment)
 }
 
+const getRestaurantRating = (id, db) => {
+  return db('comments')
+    .join('restaurants', 'comments.restaurant_id', "restaurants.restaurant_id")
+    .where('comments.restaurant_id', id)
+}
+
 module.exports = {
   getRestaurants,
   getComments,
   getComments_byRest,
-  saveComment
+  saveComment,
+  getRestaurantRating
 }
