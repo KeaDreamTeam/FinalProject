@@ -1,6 +1,6 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
-import Greetings from './Greetings'
+// import Greetings from './Greetings'
 import Header from './Header'
 import Filter from './Filter'
 import MainMap from './MainMap'

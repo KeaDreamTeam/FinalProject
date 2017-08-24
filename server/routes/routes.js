@@ -3,6 +3,15 @@ var router = express.Router()
 
 var DbAccess = require('../db/DbAccess')
 
+router.get('/comments/:restaurant_id', (req, res) => {
+  let db = req.app.get('db')
+  let id = req.params.restaurant_id
+  DbAccess.getComments_byRest(id, db)
+    .then(restaurantComments => {
+      res.json(restaurantComments)
+  })
+})
+
 router.get('/restaurants', (req, res) => {
   let db = req.app.get('db')
   DbAccess.getRestaurants(db)
@@ -10,6 +19,7 @@ router.get('/restaurants', (req, res) => {
       res.json(restaurants)
     })
 })
+
 router.get('/comments', (req, res) => {
   let db = req.app.get('db')
   DbAccess.getComments(db)
