@@ -30,6 +30,48 @@ API for use with the What's For Lunch app project.
 
 This route get will return an array of objects associated with restaurants. The restaurants will be arranged in an ascending order, meaning the last index will be the latest restaurant.
 
+#### Response
+##### Status Codes:
+* If the restaurant exists and the comments are retrieved, the HTTP status code is 200 ('Created').
+* If the restaurant_id given does not match any entries in the database, the HTTP status code in the response header is 400 ('Bad Request').
+* In case of server error, the header status code is a 5xx error code and the response body contains an error object.
+
+The server will return an object structured as following
+
+    [
+      {
+        restaurant_id: 1,
+        net_rating: 5,
+        pricing: "$$",
+        restaurant_name: "Dream Team Restaurant",
+        restaurant_url: "www.dream-team-restaurant.com",
+        image_url: "www.dream-team-restaurant.com/photo",
+        address: "275 Cuba St, Te Aro, Wellington 6023",
+        description: "Dine with the best",
+        is_meat: true,
+        is_vegan: true,
+        is_breakfast: true,
+        is_dinner: true,
+        is_dinein: true,
+        is_takeaway: true
+      },
+      {
+        restaurant_id: 2 ,
+        net_rating: 5,
+        pricing: "$$",
+        restaurant_name: "Vegeterian Feast",
+        restaurant_url: "www.vegeterian-feast.com",
+        image_url: "www.vegeterian-feast.com/photo",
+        address: "20 Mills St, Te Aro, Wellington 6023",
+        description: "We serve vegeterian meals",
+        is_meat: false,
+        is_vegan: true,
+        is_breakfast: true,
+        is_dinner: true,
+        is_dinein: true,
+        is_takeaway: true
+      },      
+      ]
 
 ### Get all comments on a specified restaurant
 
@@ -42,7 +84,7 @@ The :comment_id parameter in the request url is the id of the entry you wish to 
 
 #### Response
 ##### Status Codes:
-* If the restaurant exists and the comments are retrieved, the HTTP status code is 200 ('Created').
+* If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Created').
 * If the restaurant_id given does not match any entries in the database, the HTTP status code in the response header is 400 ('Bad Request').
 * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
 
