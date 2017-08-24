@@ -42,7 +42,6 @@ router.get('/comments', (req, res) => {
       res.json(comments)
     })
 })
-
 router.post('/comments', (req, res) => {
   let db = req.app.get('db')
   let comment = req.body

@@ -23,6 +23,7 @@ const getRestaurantRating = (id, db) => {
   return db('comments')
     .join('restaurants', 'comments.restaurant_id', "restaurants.restaurant_id")
     .where('comments.restaurant_id', id)
+    .select()
 }
 
 module.exports = {
