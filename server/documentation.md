@@ -17,7 +17,6 @@ API for use with the What's For Lunch app project.
 | [Return all comments on a specified restaurant](#Get-all-comments-on-a-specified-restaurant) | GET | no |
 | [Return all comment entries by a specific user](#Return-all-comment-entries-by-a-specific-user) | GET | no |
 | [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | yes |
-| [Like or dislike a specific restaurant](#Like-or-dislike-a-specific-restaurant) | POST | yes |
 | [Create a new user](#) | POST | no |
 | [Log in as a user](#) | POST | yes |
 
@@ -164,6 +163,66 @@ This post creates a new comment in the comments table, associating the user who 
   * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
 
 
+### Create new user
+
+| Method | Endpoint | Usage | Returns |
+| ------ | -------- | ----- | ------- |
+| POST    | `/v1/users/signup` | Create a user | boolean |
+
+The post object must take the form:
+
+    {
+      "username": "Bob",
+      "password": "Bob1234",
+      "email": "bob@gmail.com"
+    }
+
+#### Response
+##### Status Codes:
+
+  * On success, the HTTP status code in the response header is 201 ('Created').
+  * If the data passed in is incorrect, a 400 'Bad Response' HTTP status code will be returned.
+  * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
+
+The post request will add a new user row to the user table based on the form inputs. It will reject the request if the username is already taken, and return "false". The password will be hashed, and the database stores only this hashed version. If the user creation is successful, that user's ID will be returned, e.g.:
+
+    { "user_id": 15 }
+
+([back to summary](#summary))  
+
+### Login as user
+
+| Method | Endpoint | Usage | Returns |
+| ------ | -------- | ----- | ------- |
+| POST    | `/v1/users/login` | Authenticate a user | user |
+
+The post object must take the form:
+
+    {
+      "username": "Bob",
+      "password": "Bob1234"
+    }
+
+#### Response
+
+##### Status Codes:
+  * On success, the HTTP status code in the response header is 200 ('OK').
+  * If the login information is invalid (username doesn't exist / password is incorrect), a 401 'Unauthorized' HTTP status code will be returned.
+  * If the data passed in is incorrect, a 400 'Bad Response' HTTP status code will be returned.
+  * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
+
+The post request will compare the username to the users table for a match, and will bcrypt compare the password attempt to the hashed password in the user table. Returns user information (minus password) on success. A user session is created upon success.
+
+    {
+      "user": {
+        "username": "Mel",
+        "user_id": 7,
+        "shotsRemaining": 2,
+        "user_created_at": "2016-12-08 06:18:15"
+      }
+    }
+
+([back to summary](#summary))  
 
 
 
