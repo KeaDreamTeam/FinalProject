@@ -326,11 +326,12 @@ exports.seed = function(knex, Promise) {
           is_takeaway: true
         },
         {
-          net_rating: 12,
-          pricing: "$$$",
+
+          net_rating: 8,
+          pricing: "$",
           restaurant_name: "Tommy Millions",
           restaurant_url: "https://www.tommymillions.co.nz/",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/1f/4b/38/photo0jpg.jpg",
+          image_url: "https://media-cdn.tripadvisor.com/media/photo-w/03/bb/16/3f/tommy-millions.jpg",
           address: "105 Courtenay Pl, Te Aro, Wellington 6011",
           phone: "006443828866",
           description: "Laverly special pizza of the day and great veggie options",
@@ -341,9 +342,70 @@ exports.seed = function(knex, Promise) {
           is_dinein: true,
           is_takeaway: true
         },
-
-
-
+        {
+          net_rating: 4,
+          pricing: "$$$",
+          restaurant_name: "Hippopotamus Restaurant and Cocktail Bar",
+          restaurant_url: "https://www.qthotelsandresorts.com/wellington/eat-drink/hippopotamus/",
+          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/3f/66/f9/hippopotamus-restaurant.jpg",
+          address: "Museum Art Hotel, Level 3, 90 Cable St, Te Aro, Wellington 6011",
+          phone: "006448028935",
+          description: "When you are looking for a delicious dining experience in a stunning setting try our flagship, French inspired restaurant – Hippopotamus. Our broad menu is peppered with a delicious mix of comfort food and fine-dining dishes that are designed to satisfy your hunger.Our skilled service team will weave their way in and out of your experience ready to recommend their favourite dish and aperitif. In our adjoining Cocktail Bar mixologists armed with all the hip, new cocktails and a host of firm favourites that can either be enjoyed while you dine, or as a pre and post dining spot.Perfect for people watching in Wellywood!",
+          is_meat: true,
+          is_vegan: true,
+          is_breakfast: true,
+          is_dinner: true,
+          is_dinein: true,
+          is_takeaway: false
+        },
+        {
+          net_rating: 14,
+          pricing: "$",
+          restaurant_name: "Aunty Mena's Vegetarian Cafe Restaurant",
+          restaurant_url: "",
+          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/e7/c4/dd/photo3jpg.jpg",
+          address: "167 Cuba St, Te Aro, Wellington 6011",
+          phone: "006443828288",
+          description: "Great meal, great value.",
+          is_meat: false,
+          is_vegan: true,
+          is_breakfast: false,
+          is_dinner: true,
+          is_dinein: true,
+          is_takeaway: false
+        },
+        {
+          net_rating: 6,
+          pricing: "$",
+          restaurant_name: "Satay Kingdom",
+          restaurant_url: "",
+          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/03/a4/36/6d/satay-kingdom.jpg",
+          address: "212 Cuba St, Te Aro, Wellington 6011",
+          phone: "006443813730",
+          description: "Hidden Treasure in Wellington",
+          is_meat: true,
+          is_vegan: false,
+          is_breakfast: true,
+          is_dinner: true,
+          is_dinein: true,
+          is_takeaway: true
+        },
+        {
+          net_rating: 12,
+          pricing: "$$",
+          restaurant_name: "Boquita",
+          restaurant_url: "http://boquita.nz/",
+          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/10/3b/4b/c7/img-20170811-132653-largejpg.jpg",
+          address: "23 Kent Terrace, Mount Victoria, Wellington 6011",
+          phone: "0064272492589",
+          description: "Real, delicious, plant-based Mexican food. Food for life: plant-based tacos, salads and soups.La Boca Loca’s clean-eating, veggie-loving little sister. Mexican the way your mama’s mama’s mama made it. No nasties, no short-cuts and no compromise on flavour.",
+          is_meat: false,
+          is_vegan: true,
+          is_breakfast: true,
+          is_dinner: true,
+          is_dinein: true,
+          is_takeaway: true
+        }
 
       ]);
     });
