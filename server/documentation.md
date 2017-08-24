@@ -13,16 +13,10 @@ API for use with the What's For Lunch app project.
 ##### The API can:
 | Task | Method | Requires authentication? |
 | ------ | -------- | -------- |
-<<<<<<< HEAD
 | [Return a list of all restaurants](#Return-a-list-of-all-restaurants) | GET | no |
 | [Return all comments on a specified restaurant](#Get-all-comments-on-a-specified-restaurant) | GET | no |
-| [Return all comment entries by a specific user](#) | GET | no |
-=======
-| [Return a list of all restaurants](#) | GET | no |
-| [Return all comment entries by a specific user](#) | GET | no |
-| [Return all comments on a specified restaurant](#) | GET | no |
->>>>>>> cae65b2e4f784c95fb6fe2623819512d37d100ed
-| [Like or dislike a specific restaurant](#) | POST | yes |
+| [Return all comment entries by a specific user](#Return-all-comment-entries-by-a-specific-user) | GET | no |
+| [Like or dislike a specific restaurant](#Like-or-dislike-a-specific-restaurant) | POST | yes |
 | [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | yes |
 | [Create a new user](#) | POST | no |
 | [Log in as a user](#) | POST | yes |
@@ -34,7 +28,6 @@ API for use with the What's For Lunch app project.
 
 This route get will return an array of objects associated with restaurants. The restaurants will be arranged in an ascending order, meaning the last index will be the latest restaurant.
 
-<<<<<<< HEAD
 #### Response
 ##### Status Codes:
 * If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Ok').
@@ -77,8 +70,6 @@ The server will return an object structured as following
         is_takeaway: true
       },      
       ]
-=======
->>>>>>> cae65b2e4f784c95fb6fe2623819512d37d100ed
 
 ### Get all comments on a specified restaurant
 
@@ -145,7 +136,22 @@ The server will return an object structured as following
       is_fair: 1,
       created_at: "2017-08-23 22:52:12"
       }
-      ]
+    ]
+
+### Like or dislike a specific restaurant
+
+| Method | Endpoint | Usage | Returns |
+| ------ | -------- | ----- | ------- |
+| GET   | `/api/comments` | post a comment for a specific restaurant| add comment |
+
+This post creates a new comment in the comments table, associating the user who posted it to the restaurant it was posted on. It will also increment the commentCount column of the entries table for the given entry.
+The submission is an object containing the entry id & user id and the comment string to be posted e.g.:
+
+    {
+      "entry_id": 1,
+      "user_id": 1,
+      "comment": "Mel-lo I am Hel"
+    }
 
 
 ([back to summary](#summary))
