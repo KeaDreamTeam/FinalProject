@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.string('restaurant_url')
     table.string('image_url')
     table.string('address')
+    table.integer('phone')
     table.text('description')
     table.boolean('is_meat').defaultTo(false)
     table.boolean('is_vegan').defaultTo(false)
