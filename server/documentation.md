@@ -148,9 +148,7 @@ This post creates a new comment in the comments table, associating the user who 
 The submission is an object containing the entry id & user id and the comment string to be posted e.g.:
 
     {
-      "entry_id": 1,
-      "user_id": 1,
-      "comment": "Mel-lo I am Hel"
+  
     }
 
 
