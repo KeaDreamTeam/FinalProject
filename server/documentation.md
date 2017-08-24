@@ -13,9 +13,15 @@ API for use with the What's For Lunch app project.
 ##### The API can:
 | Task | Method | Requires authentication? |
 | ------ | -------- | -------- |
+<<<<<<< HEAD
 | [Return a list of all restaurants](#Return-a-list-of-all-restaurants) | GET | no |
 | [Return all comments on a specified restaurant](#Get-all-comments-on-a-specified-restaurant) | GET | no |
 | [Return all comment entries by a specific user](#) | GET | no |
+=======
+| [Return a list of all restaurants](#) | GET | no |
+| [Return all comment entries by a specific user](#) | GET | no |
+| [Return all comments on a specified restaurant](#) | GET | no |
+>>>>>>> cae65b2e4f784c95fb6fe2623819512d37d100ed
 | [Like or dislike a specific restaurant](#) | POST | yes |
 | [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | yes |
 | [Create a new user](#) | POST | no |
@@ -28,6 +34,7 @@ API for use with the What's For Lunch app project.
 
 This route get will return an array of objects associated with restaurants. The restaurants will be arranged in an ascending order, meaning the last index will be the latest restaurant.
 
+<<<<<<< HEAD
 #### Response
 ##### Status Codes:
 * If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Ok').
@@ -70,6 +77,8 @@ The server will return an object structured as following
         is_takeaway: true
       },      
       ]
+=======
+>>>>>>> cae65b2e4f784c95fb6fe2623819512d37d100ed
 
 ### Get all comments on a specified restaurant
 
