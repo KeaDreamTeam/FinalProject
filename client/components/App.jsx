@@ -2,7 +2,6 @@ import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-
 import Header from './Header'
 import Filter from './Filter'
 import MainMap from './MainMap'
