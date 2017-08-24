@@ -28,7 +28,7 @@ API for use with the What's For Lunch app project.
 | ------ | -------- | ----- | ------- |
 | GET   | `/api/restaurants` | get a list of all restaurants| restaurants |
 
-This route get will return an array of objects. Each object represents restaurant details 
+This route get will return an array of objects associated with restaurants. The restaurants will be arranged in an ascending order, meaning the last index will be the latest restaurant.
 
 
 ### Get all comments on a specified restaurant
