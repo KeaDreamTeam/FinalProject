@@ -7,6 +7,7 @@ import Header from './Header'
 import Filter from './Filter'
 import MainMap from './MainMap'
 import Restaurant from './Restaurant'
+import Rating from './Rating'
 import Footer from './Footer'
 
 class App extends React.Component {
@@ -15,7 +16,9 @@ class App extends React.Component {
   return (
     <Router>
       <div className='app-container'>
+        <Route path="/" component={Rating} />
         <Route path="/" component={Header} />
+
 
         <Route path="/" component={Filter} />
         <Route path="/" component={(props) => <Restaurant />} />
