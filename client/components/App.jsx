@@ -1,24 +1,34 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
+<<<<<<< HEAD
 // import Greetings from './Greetings'
+=======
+import {connect} from 'react-redux'
+
+
+>>>>>>> master
 import Header from './Header'
 import Filter from './Filter'
 import MainMap from './MainMap'
 import Restaurant from './Restaurant'
 import Footer from './Footer'
 
-const App = () => (
-  <Router>
-    <div className='app-container'>
-      <Route path="/" component={Header} />
+class App extends React.Component {
 
-      <Route path="/" component={Filter} />
-      <Route path="/" component={MainMap} />
-      <Route path="/" component={Restaurant} />
+  render() {
+  return (
+    <Router>
+      <div className='app-container'>
+        <Route path="/" component={Header} />
 
-      <Route path="/" component={Footer} />
-    </div>
-  </Router>
-)
+        <Route path="/" component={Filter} />
+        <Route path="/" component={(props) => <Restaurant />} />
+        <Route path="/" component={Footer} />
+      </div>
+    </Router>
+  )
+}
+}
 
-export default App
+
+export default connect()(App)
