@@ -1,31 +1,23 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
+import {getRestaurants} from '../actions/restaurants'
 
 import RestaurantSingle from './RestaurantSingle'
 
-class RestaurantList extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      singleView: false
-    }
-    this.toggleSingleView = this.toggleSingleView.bind(this)
-  }
-
-  toggleSingleView() {
-    const newSingle = !this.state.singleView
-    this.setState({singleView: newSingle})
-  }
-
-  render() {
-    return (
-      <div>
-        <h1 className="">Food Cafe</h1>
-        {
-          this.state.singleView ? <RestaurantSingle toggleSingleView={this.toggleSingleView} /> : <a href="#" onClick={this.toggleSingleView}>Details</a>
-        }
-      </div>
-    )
-  }
+const RestaurantList = ({restaurants, toggleSingleView, singleView, selected}) => {
+  return (
+    <div>
+      {restaurants.map((restaurant, i) => {
+        return (
+          <div key={i}>
+            {restaurant.restaurant_name}
+            <a onClick={() => selected(restaurant) }>Details</a>
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default RestaurantList

@@ -10,6 +10,7 @@ router.get('/restaurants', (req, res) => {
       res.json(restaurants)
     })
 })
+
 router.get('/comments', (req, res) => {
   let db = req.app.get('db')
   DbAccess.getComments(db)
