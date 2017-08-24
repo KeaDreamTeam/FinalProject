@@ -15,24 +15,27 @@ API for use with the What's For Lunch app project.
 | Task | Method | Requires authentication? |
 | ------ | -------- | -------- |
 | [Return a list of all restaurants](#) | GET | no |
-| [Return a list of all comment entries](#) | GET | no |
-| [Return a list of all users](#) | GET | no |
 | [Return all comment entries by a specific user](#) | GET | no |
 | [Return all comments on a specified restaurant](#) | GET | no |
-| [Like or dislike a specific restaurant](#) | POST | no |
-| [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | no |
+| [Like or dislike a specific restaurant](#) | POST | yes |
+| [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | yes |
 | [Create a new user](#) | POST | no |
 | [Log in as a user](#) | POST | yes |
 
 
 ### Return a list of all restaurants
-to follow
+| Method | Endpoint | Usage | Returns |
+| ------ | -------- | ----- | ------- |
+| GET   | `/api/restaurants` | get a list of all restaurants| restaurants |
+
+This route get will return an array of objects associated with restaurants. The restaurants will be arranged in an ascending order, meaning the last index will be the latest restaurant.
+
 
 ### Get all comments on a specified restaurant
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
-| GET   | `/api/comments/:comment_id` | get all comments on a restaurant| entry_comments |
+| GET   | `/api/comments/:restaurant_id` | get all comments on a restaurant| comments |
 
 This route get will return an array of the comment objects associated to the specified restaurant. The comments will be arranged in a descending order, meaning the first index will be the latest comment.
 The :comment_id parameter in the request url is the id of the entry you wish to retrieve the comments of
