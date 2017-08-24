@@ -11,20 +11,29 @@ router.get('/restaurants/:restaurant_id/comments', (req, res) => {
       res.json(restaurantComments)
   })
 })
-//ania - finish this part
-// router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
-//   let db = req.app.get('db')
-//   let id = req.params.restaurant_id
-//   DbAccess.getRestaurantRating(id, db)
-//     .then(rating => {
-//       res.json(
-//         {
-//         restaurant_name: rating.restaurant_name,
-//         positive_votes: 10,
-//         negative_votes: 20,
-//        })
-//   })
-// })
+// ania - finish this part
+router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
+  let db = req.app.get('db')
+  let id = req.params.restaurant_id
+  DbAccess.getComments_byRest(id, db)
+    .then(comments => {
+      if (comments.length == 0) {
+        res.json("No Ratings") //there are no ratings for this restaurant
+        return
+      }
+      var tally = {
+        positive_vote: 0,
+        negative_votes: 0,
+        restaurant_name: comments[0].restaurant_name
+      }
+      comments.forEach(comment => {
+        if (comment.is_pos) tally.positive_vote++
+        else tally.negative_votes++
+      })
+      console.log(tally);
+      res.json(tally)
+  })
+})
 
 router.get('/restaurants', (req, res) => {
   let db = req.app.get('db')
