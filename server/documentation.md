@@ -16,8 +16,8 @@ API for use with the What's For Lunch app project.
 | [Return a list of all restaurants](#Return-a-list-of-all-restaurants) | GET | no |
 | [Return all comments on a specified restaurant](#Get-all-comments-on-a-specified-restaurant) | GET | no |
 | [Return all comment entries by a specific user](#Return-all-comment-entries-by-a-specific-user) | GET | no |
-| [Like or dislike a specific restaurant](#Like-or-dislike-a-specific-restaurant) | POST | yes |
 | [Add a new comment to a specified restaurant](#add-a-new-comment-to-an-entry) | POST | yes |
+| [Like or dislike a specific restaurant](#Like-or-dislike-a-specific-restaurant) | POST | yes |
 | [Create a new user](#) | POST | no |
 | [Log in as a user](#) | POST | yes |
 
@@ -82,7 +82,7 @@ The :comment_id parameter in the request url is the id of the restaurant you wis
 
 #### Response
 ##### Status Codes:
-* If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Created').
+* If the comments exist and the comments are retrieved, the HTTP status code is 200 ('Ok').
 * If the restaurant_id given does not match any entries in the database, the HTTP status code in the response header is 400 ('Bad Request').
 * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
 
@@ -94,18 +94,18 @@ The server will return an object structured as following
         user_id: 1,
         restaurant_id: 1,
         content: "good price and great food",
-        is_pos: 1,
-        is_fair: 1,
+        is_pos: true,
+        is_fair: true,
         created_at: "2017-08-23 22:52:12"
         },
         {
         comment_id: 4,
         user_id: 3,
         restaurant_id: 1,
-        content: "good price and great food",
-        is_pos: 1,
-        is_fair: 1,
-        created_at: "2017-08-23 22:52:12"
+        content: "not too good price and average food",
+        is_pos: false,
+        is_fair: false,
+        created_at: "2017-08-20 22:52:12"
         }
       ]
 
@@ -132,24 +132,41 @@ The server will return an object structured as following
       comment_id: 2,
       restaurant_id: 1,
       content: "good price and great food",
-      is_pos: 1,
-      is_fair: 1,
+      is_pos: true,
+      is_fair: true,
       created_at: "2017-08-23 22:52:12"
       }
     ]
 
-### Like or dislike a specific restaurant
+### Add a new comment to a specified restaurant
 
 | Method | Endpoint | Usage | Returns |
 | ------ | -------- | ----- | ------- |
 | GET   | `/api/comments` | post a comment for a specific restaurant| add comment |
 
-This post creates a new comment in the comments table, associating the user who posted it to the restaurant it was posted on. It will also increment the commentCount column of the entries table for the given entry.
-The submission is an object containing the entry id & user id and the comment string to be posted e.g.:
+This post creates a new comment in the comments table, associating the user who posted it to the restaurant it was posted on. The submission is an object containing the entry id & user id and the comment string to be posted e.g.:
 
-    {
-  
-    }
+  {
+    comment_id: 2,
+    user_id: 1,
+    restaurant_id: 1,
+    content: "good price and great food",
+    is_pos: true,
+    is_fair: true,
+    created_at: "2017-08-23 22:52:12"
+  }
+
+  #### Response
+  ##### Status Codes:
+  * If the comment is posted, the HTTP status code in the response header is 201 ('Created').
+  * If the object provided is incorrectly formatted, the HTTP status code in the response header is 400 ('Bad Request').
+  * If the user is not authenticated (requires login), the HTTP status code in the response header is 401 ("Unauthorized")
+  * In case of server error, the header status code is a 5xx error code and the response body contains an error object.
+
+
+
+
+
 
 
 ([back to summary](#summary))
