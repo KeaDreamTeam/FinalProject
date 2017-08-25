@@ -23,8 +23,8 @@ class Ratings extends React.Component {
     // let posPercentage = sum / positive_vote
     let data = {
         	labels: [
-        		'Positive reviews',
-        		'Negative reviews'
+        		'Negative reviews',
+        		'Positive reviews'
         	],
         	datasets: [{
         		data: [positive_vote, negative_votes],
@@ -33,8 +33,8 @@ class Ratings extends React.Component {
         		'#36A2EB'
         		],
         		hoverBackgroundColor: [
-        		'#FF6384',
-        		'#36A2EB'
+        		'black',
+        		'black'
         		]
         	}]
         };
@@ -43,8 +43,8 @@ class Ratings extends React.Component {
         <div>
            <Doughnut
              data={data}
-             width={200}
-	           height={200}
+             width={250}
+	           height={250}
 	           options={{maintainAspectRatio: false}}/>
             {/* <div style={{width: sum / positive_vote * 100, backgroundColor: 'blue'}} >hello</div> */}
         </div>
