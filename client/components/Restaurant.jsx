@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
 import {getRestaurants} from '../actions/restaurants'
 
 import RestaurantList from './RestaurantList'
