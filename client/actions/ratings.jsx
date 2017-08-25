@@ -10,12 +10,13 @@ export const receiveRating = (ratings) => {
 export function getRatings (restaurantId) {
   return (dispatch) => {
     request
-      .get('restaurants/' + restaurantId + '/ratings')
+      .get('/api/restaurants/' + restaurantId + '/ratings')
       .end((err, res) => {
         if (err) {
           console.error(err.message)
           return
         }
+        console.log(res.body);
         dispatch(receiveRating(res.body))
       })
   }

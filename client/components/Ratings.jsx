@@ -1,8 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
-import {getRarings} from '../actions/ratings'
-
+import {getRatings} from '../actions/ratings'
 
 
 class Ratings extends React.Component {
@@ -11,15 +9,37 @@ class Ratings extends React.Component {
     this.state = {}
   }
 
+  componentWillMount () {
+    this.props.dispatch(getRatings(this.props.restaurantId))
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.restaurantId != this.props.restaurantId) {
+      this.props.dispatch(getRatings(nextProps.restaurantId))
+    }
+  }
+
   render() {
-    console.log(this.state.ratings);
+    let {positive_vote, negative_votes} = this.props.ratings
+    console.log(typeof positive_vote, typeof negative_votes);
+    let sum = positive_vote + negative_votes
+    let posPercentage = sum / positive_vote
+    console.log({posPercentage, sum});
     return (
-      <div>Rating</div>
+        <div>
+          <div style={{width: sum / positive_vote * 100, backgroundColor: 'blue'}} >hello</div>
+            {this.props.ratings.positive_vote} /
+            {this.props.ratings.negative_votes}
+            {this.props.ratings.restaurant_name}
+        </div>
     )
   }
+
 }
 
+
 const mapStateToProps = (state) => {
+      console.log(state)
   return {ratings: state.ratings}
 }
 

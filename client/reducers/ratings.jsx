@@ -1,7 +1,7 @@
-function ratings (state = [], action) {
+function ratings (state = {}, action) {
   switch(action.type) {
     case 'RECEIVE_RATING':
-      return [...action.ratings]
+      return action.ratings
     default:
       return state
   }
