@@ -49,4 +49,5 @@ User Stories for the What's For Lunch app project.
 | Be able to use the app on a mobile | no | no |
 
 
+## API Documentation
 [See API documentation](https://github.com/KeaDreamTeam/Planning/blob/master/API-Documentation.md)
