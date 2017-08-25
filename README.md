@@ -2,27 +2,23 @@
 
 Project name: What's For Lunch?!
 
-## Contributors
-
-- Usha MacDonald
-- Magda Gierg
-- Ania Podhajska
-
-### Roles
-
-- Usha MacDonald - product owner, full stack developer
-- Magda Gierg - facilitator, full stack developer
-- Ania Podhajska - git master, full stack developer
-
 ### Description
 
 An app that displays and searches through vegetarian restaurants.
 
-### Features:
+### Roles
+
+- Usha MacDonald - product owner, full stack developer, tester
+- Magda Gierg - facilitator, full stack developer, tester
+- Ania Podhajska - git master, full stack developer, tester
+
+### Main features:
+
 - filtering
-- search
+- rating, commenting
 - google maps
 - single-page app
+- mobile-ready
 
 ### Learning Objectives:
 
@@ -31,3 +27,26 @@ An app that displays and searches through vegetarian restaurants.
 - google maps implementation
 - improving team-work and organisation skills
 - sprint planning sessions at the start of each day
+
+
+## User Stories
+
+User Stories for the What's For Lunch app project.
+
+| As a user I want: | Require authentication? | Stretch? |
+| ------ | -------- | -------- |
+| View a list of vegetarian restaurants in Wellington | no | no |
+| Filter restaurants by food type / dine option / order type | no | no |
+| View a list of filtered restaurants | no | no |
+| View filtered restaurants on a map  | no | yes |
+| View specific restaurant description, photo, and contact details | no | no |
+| View a map of a specific restaurant  | no | no |
+| View a graph rating of a specific restaurant  | no | no |
+| View users' comments of a specific restaurant | no | no |
+| Add a new comment to a specified restaurant  | yes | yes |
+| Register as a new user  | yes | yes |
+| Log in as a user | yes | yes |
+| Be able to use the app on a mobile | no | no |
+
+
+[See API documentation](https://github.com/KeaDreamTeam/Planning/blob/master/API-Documentation.md)
