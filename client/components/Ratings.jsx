@@ -43,8 +43,8 @@ class Ratings extends React.Component {
         <div>
            <Doughnut
              data={data}
-             width={300}
-	           height={300}
+             width={200}
+	           height={200}
 	           options={{maintainAspectRatio: false}}/>
             {/* <div style={{width: sum / positive_vote * 100, backgroundColor: 'blue'}} >hello</div> */}
         </div>
