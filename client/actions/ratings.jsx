@@ -16,7 +16,6 @@ export function getRatings (restaurantId) {
           console.error(err.message)
           return
         }
-        console.log(res.body);
         dispatch(receiveRating(res.body))
       })
   }
