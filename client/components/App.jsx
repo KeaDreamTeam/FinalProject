@@ -20,7 +20,7 @@ class App extends React.Component {
 
 
         <Route path="/" component={Filter} />
-        <Route path="/" component={(props) => <Restaurant />} />
+         <Route path="/" component={(props) => <Restaurant />} />
         <Route path="/" component={Footer} />
       </div>
     </Router>
