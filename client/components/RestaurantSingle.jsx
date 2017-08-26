@@ -3,7 +3,6 @@ import Ratings from './Ratings'
 import {connect} from 'react-redux'
 
 const RestaurantSingle = ({selected, select}) => {
-  console.log(selected.restaurant_id);
   return (
     <div>
       <Ratings restaurantId={selected.restaurant_id}/>

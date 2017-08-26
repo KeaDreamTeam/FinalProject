@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-export const receiveRestaurants = (filterOptions) => {
+export const updateFilterAction = (filterOptions) => {
   return {
     type: 'UPDATE_FILTER',
     filterOptions

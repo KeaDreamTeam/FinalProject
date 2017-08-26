@@ -4,7 +4,7 @@ import {getRestaurants} from '../actions/restaurants'
 import RestaurantList from './RestaurantList'
 import RestaurantSingle from './RestaurantSingle'
 import MainMap from './MainMap'
-
+import applyFilter from '../utils/filter'
 
 class Restaurant extends React.Component {
   constructor (props) {
@@ -38,8 +38,7 @@ class Restaurant extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {restaurants: state.restaurants}
-
+  return {restaurants: applyFilter(state.restaurants, state.filterOptions)}
 }
 
 export default connect(mapStateToProps)(Restaurant)
