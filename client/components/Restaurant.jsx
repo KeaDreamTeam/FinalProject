@@ -44,7 +44,6 @@ class Restaurant extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {restaurants: applyFilter(state.restaurants, state.filterOptions)}
 }
 
