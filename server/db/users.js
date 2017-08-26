@@ -13,7 +13,6 @@ function createUser (user_name, password, conn) {
   const db = conn
   return db('users')
     .insert({user_name, hash: passwordHash})
-    console.log(hash);
 }
 
 function userExists (user_name, conn) {
@@ -26,10 +25,10 @@ function userExists (user_name, conn) {
     })
 }
 
-function getUserByName (username, conn) {
+function getUserByName (user_name, conn) {
   const db = conn
   return db('users')
     .select()
-    .where('username', username)
+    .where('user_name', user_name)
     .first()
 }
