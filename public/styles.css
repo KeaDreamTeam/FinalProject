@@ -5,9 +5,12 @@
   background-color: lightgray;
   border: 2px solid white;
 }
-.filterButton:hover {
+/*.filterButton:hover {
   background-color: #00d1b2;
-}
+}*/
 .toggle {
   margin-bottom: 15px;
+}
+.filterSelected {
+  background-color: #00d1b2;
 }
