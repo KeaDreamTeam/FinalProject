@@ -1,5 +1,6 @@
 import React from 'react'
 import {updateFilterAction} from "../actions/filter"
+import {connect} from 'react-redux'
 
 class FilterOptions extends React.Component {
   constructor(props) {
@@ -62,16 +63,11 @@ class FilterOptions extends React.Component {
     this.state.filterOptions.forEach(
       (option) => {filterOptions[option.filter_name] = option.filter_value}
     )
+    return filterOptions
   }
 
 }
 
 
 
-// const mapStateToProps = (state) => {
-//   return {restaurants: state.restaurants}
-// }
-
-
-
-export default FilterOptions
+export default connect()(FilterOptions)
