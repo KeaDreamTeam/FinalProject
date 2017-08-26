@@ -18,7 +18,7 @@ class Restaurant extends React.Component {
   componentWillMount () {
     this.props.dispatch(getRestaurants())
   }
-  
+
   selectRestaurant(selected) {
     this.setState({selected})
   }
@@ -28,7 +28,7 @@ class Restaurant extends React.Component {
       <div className="columns">
         <div className="column is-8 is-offset-2 box">
           Restaurants!!!
-          <MainMap restaurants={this.props.restaurants}/>
+          <MainMap restaurants={this.props.restaurants} />
           <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
           {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
         </div>
