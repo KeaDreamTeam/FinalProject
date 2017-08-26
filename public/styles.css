@@ -8,3 +8,6 @@
 .filterButton:hover {
   background-color: #00d1b2;
 }
+.toggle {
+  margin-bottom: 15px;
+}

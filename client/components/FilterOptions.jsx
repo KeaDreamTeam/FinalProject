@@ -39,7 +39,8 @@ class FilterOptions extends React.Component {
 
   renderFilterOptions() {
     return (
-      this.state.filterOptions.map((option, i) => <div  className="column is-half filterButton" key={i}>{option.filter_displayname}</div> )
+      this.state.filterOptions.map((option, i) =>
+      <button  className="column is-half filterButton" key={i}>{option.filter_displayname}</button> )
     )
   }
 
