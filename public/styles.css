@@ -14,3 +14,9 @@
 .filterSelected {
   background-color: #00d1b2;
 }
+.map {
+  position: unset!important;
+}
+.mapcol {
+  height: 500px;
+}
