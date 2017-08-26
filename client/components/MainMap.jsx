@@ -1,5 +1,6 @@
 import React from 'react'
 import {Map, Marker, InfoWindow} from 'google-maps-react';
+
 class MainMap extends React.Component {
   constructor (props) {
     super(props)
@@ -9,25 +10,25 @@ class MainMap extends React.Component {
       selectedPlace: {},
     }
     this.onMarkerClick = this.onMarkerClick.bind(this);
-   this.onMapClicked = this.onMapClicked.bind(this);
+    this.onMapClicked = this.onMapClicked.bind(this);
   }
 
   onMarkerClick(props, marker, e) {
-      this.setState({
-        selectedPlace: props,
-        activeMarker: marker,
-        showingInfoWindow: true
-      });
-    }
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+  }
 
-    onMapClicked(props) {
-      if (this.state.showingInfoWindow) {
-        this.setState({
-          showingInfoWindow: false,
-          activeMarker: null
-        })
-      }
+  onMapClicked(props) {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
     }
+  }
 
   render() {
     return (
