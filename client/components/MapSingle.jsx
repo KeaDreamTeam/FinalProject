@@ -1,0 +1,36 @@
+import React from 'react'
+import {Map, Marker} from 'google-maps-react';
+
+
+class MapSingle extends React.Component {
+  constructor (props) {
+    super(props)
+
+  }
+  render() {
+    return (
+      <div className="columns">
+        <div className="mapSinglecol column is-5 is-offset-2 box">
+          <Map google={window.google}
+            style={{height: '95%', position: 'relative', margin: '10px'}}
+            className={'mapSingle'}
+            zoom={14}
+            initialCenter={{
+              lat: this.props.restaurant.lat,
+              lng: this.props.restaurant.lng
+            }}
+            >
+
+            <Marker
+              title={this.props.restaurant.restaurant_name}
+              name={this.props.restaurant.restaurant_name}
+              position={{lat: this.props.restaurant.lat, lng: this.props.restaurant.lng}} />
+
+          </Map>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default MapSingle

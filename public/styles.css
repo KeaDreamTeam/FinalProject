@@ -20,3 +20,9 @@
 .mapcol {
   height: 500px;
 }
+.mapSingle {
+  position: unset!important;
+}
+.mapSinglecol {
+  height: 250px;
+}
