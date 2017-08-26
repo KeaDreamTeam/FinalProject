@@ -11,3 +11,10 @@
 .toggle {
   margin-bottom: 15px;
 }
+.map {
+  position: unset!important;
+}
+
+.mapcol {
+  height: 500px;
+}
