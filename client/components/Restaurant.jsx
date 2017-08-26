@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {getRestaurants} from '../actions/restaurants'
+import jump from 'jump.js'
 import RestaurantList from './RestaurantList'
 import RestaurantSingle from './RestaurantSingle'
 import MainMap from './MainMap'
@@ -11,7 +12,8 @@ class Restaurant extends React.Component {
     super(props)
     this.state = {
       singleView: false,
-      selected: null
+      selected: null,
+      jumpReady: false
     }
   }
 
@@ -19,8 +21,16 @@ class Restaurant extends React.Component {
     this.props.dispatch(getRestaurants())
   }
 
+componentWillUpdate() {
+  if (this.state.jumpReady) {
+    this.setState({jumpReady: false})
+  }
+  console.log("updated");
+}
+
   selectRestaurant(selected) {
-    this.setState({selected})
+    this.setState({selected, jumpReady: true})
+    jump('.singleAnchor')
   }
 
   render() {
@@ -35,8 +45,10 @@ class Restaurant extends React.Component {
 
 
           <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
-
+          <div className="singleAnchor">
             {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
+          </div>
+
         </div>
       </div>
     )
@@ -44,6 +56,7 @@ class Restaurant extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {restaurants: state.restaurants}
 
 }

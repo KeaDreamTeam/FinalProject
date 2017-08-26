@@ -32,4 +32,6 @@ router.get('/username', token.decode, (req, res) => {
   })
 })
 
+router.post('/login', token.issue)
+
 module.exports = router
