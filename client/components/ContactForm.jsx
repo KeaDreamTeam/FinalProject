@@ -31,14 +31,13 @@ class ContactForm extends React.Component {
     else this.setState({message, submitted: true, errorMessage: ''})
   }
   renderMessage () {
-    return <p className='contact-submit-message'>{this.state.message}</p>
+    return <p>{this.state.message}</p>
   }
   renderForm () {
     return (
-      <form className='contact-form' onSubmit={(e) => this.submitForm(e)}>
+      <form onSubmit={(e) => this.submitForm(e)}>
         <fieldset>
-          <h4 className='contact-us'>Contact us</h4>
-          <hr className='orange-hr' />
+          <h4>Contact us</h4>
           <label className="labelone" htmlFor="name">Name: </label>
           <input name="name" onChange={(e) => this.updateFormDetails(e)}/>
           <label className="labelone" htmlFor="email">Email: </label>
@@ -47,7 +46,7 @@ class ContactForm extends React.Component {
           <textarea name="comments" onChange={(e) => this.updateFormDetails(e)}></textarea>
         </fieldset>
         <div className="send">
-          <p className="contact-error-message">{this.state.errorMessage}</p>
+          <p>{this.state.errorMessage}</p>
           <button className="btn" type="submit" >Send Message</button><br/>
           <button className="btn" type="reset">Reset form</button>
         </div>
@@ -56,14 +55,12 @@ class ContactForm extends React.Component {
   }
   render () {
     return (
-      <div className = 'wallpaper-no-border'>
-        <div className='container contact'>
+      <div>
           {this.state.submitted
             ? this.renderMessage()
             : this.renderForm()
           }
         </div>
-      </div>
     )
   }
 }
