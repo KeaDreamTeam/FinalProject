@@ -1,4 +1,5 @@
 import React from 'react'
+import {updateFilterAction} from "../actions/filter"
 
 class FilterOptions extends React.Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class FilterOptions extends React.Component {
     let filterOptions = this.state.filterOptions
     filterOptions[i].filter_value = !filterOptions[i].filter_value
     this.setState({filterOptions: filterOptions})
-    this.createFilterOptions()
+    this.props.dispatch(updateFilterAction(this.createFilterOptions()))
   }
 
   createFilterOptions() {
@@ -61,7 +62,6 @@ class FilterOptions extends React.Component {
     this.state.filterOptions.forEach(
       (option) => {filterOptions[option.filter_name] = option.filter_value}
     )
-    console.log(filterOptions)
   }
 
 }
