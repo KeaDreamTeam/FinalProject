@@ -27,6 +27,8 @@ class Register extends React.Component {
        const {user_name, password} = this.state
       this.props.onSubmit({user_name, password})
      }
+     this.setState({user_name: '', password: '', confirm: '' })
+     alert('success!')
    }
 
    render() {
@@ -34,7 +36,7 @@ class Register extends React.Component {
        <div>
          <h1>Register!</h1>
          <form onSubmit={this.handleSubmit.bind(this)}>
-           <input type="text" name="user_name" value={this.state.user_name} placeholder="user_name" onChange={this.updateField.bind(this)} />
+           <input type="text" name="user_name" value={this.state.user_name} placeholder="username" onChange={this.updateField.bind(this)} />
            <input type="password" name="password" value={this.state.password} onChange={this.updateField.bind(this)} />
            <input type="password" name="confirm" value={this.state.confirm} onChange={this.updateField.bind(this)} />
            <input type="submit" value="Register" />
