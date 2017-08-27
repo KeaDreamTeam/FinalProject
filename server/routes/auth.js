@@ -10,7 +10,6 @@ router.post('/register', register, token.issue)
 
 function register (req, res, next) {
   const {user_name, password} = req.body
-  console.log(req.body);
   userExists(user_name, req.app.get('db'))
     .then(exists => {
       if(exists) {

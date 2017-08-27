@@ -25,8 +25,8 @@ class CommentsView extends React.Component {
             <div key={i}>
               <span>Comment: {comment.content} </span>
               <br />
-              <span>Positive: {comment.is_pos ? 'yes' : '-'} </span>
-              <span>Fair: {comment.is_fair ? 'yes' : '-'} </span>
+              <span>Positive: {comment.is_pos ? 'yes' : 'no'} </span>
+              <span>Fair: {comment.is_fair ? 'yes' : 'no'} </span>
               <br />
               <br />
             </div>
