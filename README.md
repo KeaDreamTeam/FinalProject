@@ -9,8 +9,8 @@ Clone this repo:
 git clone https://github.com/KeaDreamTeam/FinalProject WhatsForLunch
 
 then:
-cd WhatsForLunch
-npm install
+- cd WhatsForLunch
+- npm install
 
 ### Description
 
@@ -24,18 +24,19 @@ An app that displays and searches through vegetarian restaurants. The client-sid
 
 ### Main features:
 
-- filtering
 - rating, commenting
+- filtering
 - Google maps
-- SPA app
+- enabled authorisation and adding users
 - mobile-ready
+- SPA
 
 ### Team Learning Objectives:
 
 - full stack development (React, Redux, Express, Knex)
 - creating a mobile-ready SPA app
-- google maps implementation
-- applying application Agile project techniques
+- Google maps implementation
+- applying Agile project techniques
 
 
 ## User Stories
