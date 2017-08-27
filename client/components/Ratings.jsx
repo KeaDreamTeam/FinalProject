@@ -54,7 +54,6 @@ class Ratings extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-      console.log(state)
   return {ratings: state.ratings}
 }
 

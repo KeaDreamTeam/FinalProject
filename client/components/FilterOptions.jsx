@@ -1,4 +1,6 @@
 import React from 'react'
+import {updateFilterAction} from "../actions/filter"
+import {connect} from 'react-redux'
 
 class FilterOptions extends React.Component {
   constructor(props) {
@@ -39,7 +41,7 @@ class FilterOptions extends React.Component {
     return (
       this.state.filterOptions.map((option, i) =>
       <button
-        className={"column is-half filterButton" + (option.filter_value ? " filterSelected" : "")}
+        className={"column is-half is-medium filterButton" + (option.filter_value ? " filterSelected" : "")}
         key={i}
         onClick={this.setFilter.bind(this, i)}>
         {option.filter_displayname}
@@ -51,7 +53,7 @@ class FilterOptions extends React.Component {
     let filterOptions = this.state.filterOptions
     filterOptions[i].filter_value = !filterOptions[i].filter_value
     this.setState({filterOptions: filterOptions})
-    this.createFilterOptions()
+    this.props.dispatch(updateFilterAction(this.createFilterOptions()))
   }
 
   createFilterOptions() {
@@ -61,17 +63,11 @@ class FilterOptions extends React.Component {
     this.state.filterOptions.forEach(
       (option) => {filterOptions[option.filter_name] = option.filter_value}
     )
-    console.log(filterOptions)
+    return filterOptions
   }
 
 }
 
 
 
-// const mapStateToProps = (state) => {
-//   return {restaurants: state.restaurants}
-// }
-
-
-
-export default FilterOptions
+export default connect()(FilterOptions)

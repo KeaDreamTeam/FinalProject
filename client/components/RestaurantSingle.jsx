@@ -1,9 +1,9 @@
 import React from 'react'
 import Ratings from './Ratings'
 import {connect} from 'react-redux'
+import MapSingle from './MapSingle'
 
 const RestaurantSingle = ({selected, select}) => {
-  console.log(selected.restaurant_id);
   return (
     <div>
       <Ratings restaurantId={selected.restaurant_id}/>
@@ -12,6 +12,7 @@ const RestaurantSingle = ({selected, select}) => {
       <p>{selected.phone}</p>
       <p>{selected.description}</p>
       <img src={selected.image_url} />
+      <MapSingle restaurant={selected} />
       <a href="#" onClick={() => select(null)}>Close</a>
     </div>
   )

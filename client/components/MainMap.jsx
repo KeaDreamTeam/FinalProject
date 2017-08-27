@@ -33,9 +33,8 @@ class MainMap extends React.Component {
   render() {
     return (
       <div className="columns">
-
         <div className="mapcol column is-8 is-offset-2 box">
-          <Map className="mainmap" google={window.google}
+          <Map google={window.google}
             style={{ height: '95%', position: 'relative', margin: '10px'}}
             onClick={this.onMapClicked}
             className={'map'}
