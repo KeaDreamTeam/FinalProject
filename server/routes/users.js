@@ -3,16 +3,17 @@ var router = express.Router()
 
 var DbUsers = require('../db/DbUsers')
 
-//api/users/
 router.get('/', (req, res) => {
   let db = req.app.get('db')
   DbUsers.getUsers(db)
     .then(users => {
       res.json(users)
     })
+    .catch(err => {
+      res.status(500).send({message: err.message})
+    })
 })
 
-//api/users/:user_id/comments
 router.get('/:user_id/comments', (req, res) => {
   let db = req.app.get('db')
   let id = req.params.user_id
@@ -20,9 +21,11 @@ router.get('/:user_id/comments', (req, res) => {
     .then(userComments => {
       res.json(userComments)
     })
+    .catch(err => {
+      res.status(500).send({message: err.message})
+    })
 })
 
-//api/users/signup
 router.post('/signup', (req, res) => {
   let db = req.app.get('db')
   let newUser = req.body
@@ -38,9 +41,11 @@ router.post('/signup', (req, res) => {
           })
       }
     })
+    .catch(err => {
+      res.status(500).send({message: err.message})
+    })
 })
 
-// ADD /api/users/login
 
 
 module.exports = router
