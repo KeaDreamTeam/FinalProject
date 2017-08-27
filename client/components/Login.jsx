@@ -32,7 +32,7 @@ class Login extends Component {
 
   render () {
     return (
-      <div className="column is-third">
+      <div className="column is-one-third">
         <h1>Login!</h1>
         <p><input name='user_name' onChange={this.handleChange} placeholder='Username' /></p>
         <p><input type='password' name='password' onChange={this.handleChange} placeholder='Password' /></p>

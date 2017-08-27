@@ -9,9 +9,9 @@ import Logout from './Logout'
 import Register from './Register'
 
 const Header = ({isAuthenticated}) => (
-  <div className="navbar mHeader">
-    <div className="columns">
-      <div className="column is-third">
+  <div className="navbar mHeader columns">
+    <div className="">
+      <div className="column is-one-third">
         <h1>What's for Lunch?</h1>
       </div>
       {!isAuthenticated && (

@@ -33,7 +33,7 @@ class Register extends React.Component {
 
    render() {
      return (
-       <div className="column is-third">
+       <div className="column is-one-third">
          <h1>Register!</h1>
          <form onSubmit={this.handleSubmit.bind(this)}>
            <input type="text" name="user_name" value={this.state.user_name} placeholder="username" onChange={this.updateField.bind(this)} />
