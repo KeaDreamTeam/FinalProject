@@ -15,13 +15,13 @@ class App extends React.Component {
   render() {
   return (
     <Router>
-      <div className='app-container container'>
+      <div className='app-container'>
         <Route path="/" component={Header} />
-
-
-        <Route path="/" component={Filter} />
-         <Route path="/" component={(props) => <Restaurant />} />
-        <Route path="/" component={Footer} />
+        <div className="app-body">
+          <Route path="/" component={Filter} />
+           <Route path="/" component={(props) => <Restaurant />} />
+          <Route path="/" component={Footer} />
+        </div>
       </div>
     </Router>
   )
