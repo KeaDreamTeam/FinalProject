@@ -23,7 +23,6 @@ render() {
   return (
     <div className="columns">
       <div className="column is-8 is-offset-2 box">
-        Filters!!!
         {
           this.state.filtersVisible ?
           <FilterOptions toggleFilters={this.toggleFilters} /> :

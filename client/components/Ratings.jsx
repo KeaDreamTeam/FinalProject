@@ -23,8 +23,8 @@ class Ratings extends React.Component {
     // let posPercentage = sum / positive_vote
     let data = {
         	labels: [
-        		'Negative reviews',
-        		'Positive reviews'
+        		'Positive reviews',
+            'Negative reviews'
         	],
         	datasets: [{
         		data: [positive_vote, negative_votes],
@@ -33,8 +33,8 @@ class Ratings extends React.Component {
         		'#36A2EB'
         		],
         		hoverBackgroundColor: [
-        		'black',
-        		'black'
+        		'#777b82',
+        		'#777b82'
         		]
         	}]
         };
