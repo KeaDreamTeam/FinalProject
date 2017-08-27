@@ -52,7 +52,8 @@ componentWillUpdate() {
 }
 
 const mapStateToProps = (state) => {
-  return {restaurants: applyFilter(state.restaurants, state.filterOptions)}
+  return {
+    restaurants: applyFilter(state.restaurants, state.filterOptions)}
 }
 
 export default connect(mapStateToProps)(Restaurant)

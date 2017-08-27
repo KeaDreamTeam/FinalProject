@@ -32,14 +32,18 @@ export function loginUser (creds) {
     dispatch(requestLogin(creds))
     return request('post', 'auth/login', creds)
       .then((response) => {
-        if (!response.ok) {
+        console.log("creds", creds);
+        if (response.status === 403) {
+          alert("Try Again!")
           dispatch(loginError(response.body.message))
           return Promise.reject(response.body.message)
         } else {
           const userInfo = saveUserToken(response.body.token)
           dispatch(receiveLogin(userInfo))
-          alert("You've loooged in!")
+          alert("You've logged in!")
         }
-      }).catch(err => dispatch(loginError(err.response.body.message)))
+      }).catch(err => alert("Try Again!")
+
+      )
   }
 }

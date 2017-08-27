@@ -29,6 +29,6 @@ export function getUserTokenInfo () {
   return token ? decode(token) : null
 }
 
-export function removerUser () {
+export function removeUser () {
   set('token', null)
 }
