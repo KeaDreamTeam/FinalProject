@@ -4,29 +4,28 @@ Project name: What's For Lunch?!
 
 ### Description
 
-An app that displays and searches through vegetarian restaurants.
+An app that displays and searches through vegetarian restaurants. The client-side build using SPA pattern.
 
-### Roles
+### Authors
 
-- Usha MacDonald - product owner, full stack developer, tester
-- Magda Gierg - facilitator, full stack developer, tester
-- Ania Podhajska - git master, full stack developer, tester
+- Usha MacDonald - Product owner, full stack developer and tester, Authorisation goddess
+- Magda Gierg - Facilitator, full stack developer and tester, Google maps conqueror
+- Ania Podhajska - Git master, full stack developer and tester, filtering and API whisperer
 
 ### Main features:
 
 - filtering
 - rating, commenting
-- google maps
-- single-page app
+- Google maps
+- SPA app
 - mobile-ready
 
 ### Learning Objectives:
 
 - full stack development (React, Redux, Express, Knex)
-- creating a mobile-ready one-page app
+- creating a mobile-ready SPA app
 - google maps implementation
-- improving team-work and organisation skills
-- sprint planning sessions at the start of each day
+- applying application Agile project techniques
 
 
 ## User Stories
