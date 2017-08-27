@@ -30,7 +30,7 @@ class RatingCommentAdd extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="RatingCommentAdd-container">
         {this.props.auth.isAuthenticated
@@ -68,7 +68,7 @@ class RatingCommentAdd extends React.Component {
 
 }
 const mapStateToProps = (state) => {
-  console.log(state.auth);
+  // console.log(state.auth);
   return {auth: state.auth, newComment: state.newComment}
 }
 export default connect(mapStateToProps)(RatingCommentAdd)
