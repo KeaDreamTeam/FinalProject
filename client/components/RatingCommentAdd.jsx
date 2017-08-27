@@ -32,13 +32,13 @@ class RatingCommentAdd extends React.Component {
     return (
       <div className="RatingCommentAdd-container">
         <form onSubmit={this.submitDetails.bind(this)}>
-          <span>is the portion fair?</span>
+          <span>Is the portion fair?</span>
           <select name="is_fair" onChange={this.updateDetails.bind(this)}>
             <option value="true">yes</option>
             <option value="false">no</option>
           </select>
           <br />
-          <span>is the portion fair?</span>
+          <span>Would you reccommend the restaurant?</span>
           <select name="is_pos" label="do you recommend this restaurant?" onChange={this.updateDetails.bind(this)}>
             <option value="true">yes</option>
             <option value="false">no</option>
