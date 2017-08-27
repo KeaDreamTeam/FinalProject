@@ -18,7 +18,7 @@ router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
   DbAccess.getComments_byRest(id, db)
     .then(comments => {
         if (comments.length == 0) {
-          res.json("No Ratings") 
+          res.json("No Ratings")
           return
         }
         var tally = {
@@ -30,7 +30,6 @@ router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
           if (comment.is_pos) tally.positive_vote++
           else tally.negative_votes++
         })
-        console.log(tally);
         res.json(tally)
       })
     .catch(err => {
