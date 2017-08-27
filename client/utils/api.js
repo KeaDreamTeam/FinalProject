@@ -3,7 +3,7 @@ import request from 'superagent'
 import { get } from './localstorage'
 import { isAuthenticated } from './auth'
 
-const baseURL = 'api/'
+const baseURL = '/api/'
 
 export default function consume(method = 'get', endpoint, data = {}) {
   const dataMethod = method.toLowerCase() === 'get' && 'query' || 'send'

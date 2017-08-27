@@ -24,7 +24,7 @@ const RestaurantSingle = ({selected, select}) => {
           <CommentsView restaurantId={selected.restaurant_id} />
         </div>
       </div>
-      <div lassName="restaurantAddComment-container">
+      <div className="restaurantAddComment-container">
         <h1 className="AddComment-title">Add comment and rating</h1>
           <RatingCommentAdd user_id={500} restaurant_id={selected.restaurant_id} />
       </div>

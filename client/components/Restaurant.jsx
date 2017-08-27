@@ -12,20 +12,13 @@ class Restaurant extends React.Component {
     super(props)
     this.state = {
       singleView: false,
-      selected: null,
-      jumpReady: false
+      selected: null
     }
   }
 
   componentWillMount () {
     this.props.dispatch(getRestaurants())
   }
-
-componentWillUpdate() {
-  if (this.state.jumpReady) {
-    this.setState({jumpReady: false})
-  }
-}
 
   selectRestaurant(selected) {
     this.setState({selected, jumpReady: true})
@@ -36,7 +29,7 @@ componentWillUpdate() {
     return (
       <div className="columns">
         <div className="column is-8 is-offset-2 box">
-          
+
           <MainMap restaurants={this.props.restaurants} />
           <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
 
