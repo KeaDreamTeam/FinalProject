@@ -29,7 +29,6 @@ router.get('/:user_id/comments', (req, res) => {
 router.post('/signup', (req, res) => {
   let db = req.app.get('db')
   let newUser = req.body
-  console.log(req.body);
   DbUsers.getUsersByUserName(newUser, db)
     .then(usersFound => {
       if (usersFound.length > 0) {

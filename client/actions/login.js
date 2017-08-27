@@ -32,7 +32,6 @@ export function loginUser (creds) {
     dispatch(requestLogin(creds))
     return request('post', 'auth/login', creds)
       .then((response) => {
-        console.log("creds", creds);
         if (response.status === 403) {
           alert("Try Again!")
           dispatch(loginError(response.body.message))
