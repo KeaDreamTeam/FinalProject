@@ -36,14 +36,13 @@
 .mapSinglecol {
   height: 250px;
 }
-<<<<<<< HEAD
 
 .NavItem {
   float:left;
 }
 .app-body {
   margin-top: 30px;
-=======
+
 /*single restaurant component text style*/
 .restaurantName {
   text-align: center;
@@ -71,5 +70,8 @@
   height: 100px;
   width: 100%;
   font-size: 100%;
+<<<<<<< HEAD
 >>>>>>> 9d3e44c74b830dadeefe903cd6b95292db2999e8
+=======
+>>>>>>> f23b5658d3a3b5b76f852fdd4f0017aa949a34f9
 }

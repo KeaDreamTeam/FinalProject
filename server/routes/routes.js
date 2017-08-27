@@ -1,6 +1,8 @@
 var express = require('express')
 var router = express.Router()
 
+var decode = require('../auth/token').decode
+
 var DbAccess = require('../db/DbAccess')
 
 router.get('/restaurants/:restaurant_id/comments', (req, res) => {
@@ -59,9 +61,10 @@ router.get('/comments', (req, res) => {
       })
 })
 
-router.post('/comments', (req, res) => {
+router.post('/comments', decode, (req, res) => {
   let db = req.app.get('db')
   let comment = req.body
+  comment.user_id = req.user.id
   DbAccess.saveComment(comment, db)
       .then(newCommentId => {
         res.sendStatus(201)
