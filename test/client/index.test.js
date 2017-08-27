@@ -10,10 +10,10 @@ import store from '../../client/store'
 
 App.prototype.componentDidMount = () => {}
 
-test.only('Hello World renders on App', t => {
-  nock('http://localhost:80')
-    .get('/api/restaurants')
-    .reply(200, [])
-  const wrapper = mount(<Provider store={store}><App /></Provider>)
-  console.log(wrapper.html())
-})
+// test('Hello World renders on App', t => {
+//   nock('http://localhost:80')
+//     .get('/api/restaurants')
+//     .reply(200, [])
+//   const wrapper = mount(<Provider store={store}><App /></Provider>)
+//   console.log(wrapper.html())
+// })
