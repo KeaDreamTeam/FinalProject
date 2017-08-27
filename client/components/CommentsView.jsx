@@ -23,10 +23,10 @@ class CommentsView extends React.Component {
         {this.props.comments.map((comment, i) => {
           return (
             <div key={i}>
-              <span>Comment: {comment.content} </span>
+              <span>{comment.user_name}: {comment.content} </span>
               <br />
-              <span>Positive: {comment.is_pos ? 'yes' : '-'} </span>
-              <span>Fair: {comment.is_fair ? 'yes' : '-'} </span>
+              <span>Positive: {comment.is_pos ? 'yes' : 'no'} </span>
+              <span>Fair: {comment.is_fair ? 'yes' : 'no'} </span>
               <br />
               <br />
             </div>

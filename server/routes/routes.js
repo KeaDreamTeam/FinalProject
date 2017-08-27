@@ -1,6 +1,8 @@
 var express = require('express')
 var router = express.Router()
 
+var decode = require('../auth/token').decode
+
 var DbAccess = require('../db/DbAccess')
 
 router.get('/restaurants/:restaurant_id/comments', (req, res) => {
@@ -18,7 +20,7 @@ router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
   DbAccess.getComments_byRest(id, db)
     .then(comments => {
         if (comments.length == 0) {
-          res.json("No Ratings") 
+          res.json("No Ratings")
           return
         }
         var tally = {
@@ -30,7 +32,6 @@ router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
           if (comment.is_pos) tally.positive_vote++
           else tally.negative_votes++
         })
-        console.log(tally);
         res.json(tally)
       })
     .catch(err => {
@@ -60,9 +61,10 @@ router.get('/comments', (req, res) => {
       })
 })
 
-router.post('/comments', (req, res) => {
+router.post('/comments', decode, (req, res) => {
   let db = req.app.get('db')
   let comment = req.body
+  comment.user_id = req.user.id
   DbAccess.saveComment(comment, db)
       .then(newCommentId => {
         res.sendStatus(201)

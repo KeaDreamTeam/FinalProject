@@ -1,7 +1,8 @@
 const getComments_byRest = (id, db) => {
   return db('comments')
-  .join('restaurants', 'comments.restaurant_id', "restaurants.restaurant_id")
+  .join('users', 'comments.user_id', "users.user_id")
   .where('comments.restaurant_id', id)
+  .select('comments.*', 'users.user_name')
 }
 
 const getRestaurants = (db) => {
