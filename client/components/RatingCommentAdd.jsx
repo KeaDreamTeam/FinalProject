@@ -31,17 +31,21 @@ class RatingCommentAdd extends React.Component {
   render() {
     return (
       <div className="RatingCommentAdd-container">
-        <div>Rating</div>
         <form onSubmit={this.submitDetails.bind(this)}>
+          <span>is the portion fair?</span>
           <select name="is_fair" onChange={this.updateDetails.bind(this)}>
-            <option selected value="true">yes</option>
+            <option value="true">yes</option>
             <option value="false">no</option>
           </select>
-          <select name="is_pos" onChange={this.updateDetails.bind(this)}>
-            <option selected value="true">yes</option>
+          <br />
+          <span>is the portion fair?</span>
+          <select name="is_pos" label="do you recommend this restaurant?" onChange={this.updateDetails.bind(this)}>
+            <option value="true">yes</option>
             <option value="false">no</option>
           </select>
-          <input type="text" name="content" onChange={this.updateDetails.bind(this)}></input>
+          <br />
+          <span>Your comment</span>
+          <textarea className="Comment-content" name="content" onChange={this.updateDetails.bind(this)}></textarea>
           <input type="submit" value="submit"/>
         </form>
       </div>
