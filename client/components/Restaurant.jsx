@@ -25,7 +25,6 @@ componentWillUpdate() {
   if (this.state.jumpReady) {
     this.setState({jumpReady: false})
   }
-  console.log("updated");
 }
 
   selectRestaurant(selected) {
@@ -53,7 +52,8 @@ componentWillUpdate() {
 }
 
 const mapStateToProps = (state) => {
-  return {restaurants: applyFilter(state.restaurants, state.filterOptions)}
+  return {
+    restaurants: applyFilter(state.restaurants, state.filterOptions)}
 }
 
 export default connect(mapStateToProps)(Restaurant)
