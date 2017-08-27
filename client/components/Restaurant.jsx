@@ -25,7 +25,6 @@ componentWillUpdate() {
   if (this.state.jumpReady) {
     this.setState({jumpReady: false})
   }
-  console.log("updated");
 }
 
   selectRestaurant(selected) {
