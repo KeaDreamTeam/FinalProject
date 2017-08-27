@@ -1,4 +1,4 @@
-import request from 'superagent'
+import request from '../utils/api'
 import {getRatings} from './ratings'
 
 export const receiveComments = (comments) => {
@@ -9,14 +9,13 @@ export const receiveComments = (comments) => {
 }
 export function getComments (restaurantId) {
   return (dispatch) => {
-    request
-      .get('/api/restaurants/' + restaurantId + '/comments')
-      .end((err, res) => {
-        if (err) {
-          alert(err.message)
-          return
-        }
+    request('get', 'restaurants/' + restaurantId + '/comments')
+      .then(res => {
         dispatch(receiveComments(res.body))
+      })
+      .catch(err => {
+        alert(err.message)
+        return
       })
   }
 }
@@ -30,16 +29,14 @@ export const createComment = (newComment) => {
 }
 export function createNewUserComment (newComment) {
   return (dispatch) => {
-    request
-    .post('/api/comments')
-    .send(newComment)
-    .end((err, res) => {
-      if (err) {
-        alert(err.message)
-        return
-      }
+    request('post', 'comments', newComment)
+    .then(res => {
       dispatch(createComment(newComment))
       dispatch(getRatings(newComment.restaurant_id))
+    })
+    .catch(err => {
+      alert(err.message)
+      return
     })
 
   }
