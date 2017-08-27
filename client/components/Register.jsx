@@ -33,12 +33,12 @@ class Register extends React.Component {
 
    render() {
      return (
-       <div className="column is-third">
+       <div className="column">
          <h1>Register!</h1>
          <form onSubmit={this.handleSubmit.bind(this)}>
-           <input type="text" name="user_name" value={this.state.user_name} placeholder="username" onChange={this.updateField.bind(this)} />
-           <input type="password" name="password" value={this.state.password} onChange={this.updateField.bind(this)} />
-           <input type="password" name="confirm" value={this.state.confirm} onChange={this.updateField.bind(this)} />
+           <p><input type="text" name="user_name" value={this.state.user_name} placeholder="Username" onChange={this.updateField.bind(this)} /></p>
+           <p><input type="password" name="password" value={this.state.password} placeholder="Password" onChange={this.updateField.bind(this)} /></p>
+           <p><input type="password" name="confirm" value={this.state.confirm} placeholder="Confirm Password" onChange={this.updateField.bind(this)} /></p>
            <input type="submit" value="Register" />
          </form>
        </div>
