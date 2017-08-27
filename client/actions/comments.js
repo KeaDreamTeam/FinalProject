@@ -1,4 +1,5 @@
 import request from 'superagent'
+import {getRatings} from './ratings'
 
 export const receiveComments = (comments) => {
   return {
@@ -38,6 +39,7 @@ export function createNewUserComment (newComment) {
         return
       }
       dispatch(createComment(newComment))
+      dispatch(getRatings(newComment.restaurant_id))
     })
 
   }

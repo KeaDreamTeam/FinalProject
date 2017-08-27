@@ -19,8 +19,8 @@ An app that displays and searches through vegetarian restaurants. The client-sid
 ### Authors
 
 - Usha MacDonald - Product owner, full stack developer and tester, Authorisation Goddess
-- Magda Gierg - Facilitator, full stack developer and tester, Google Maps Conqueror
-- Ania Podhajska - Git master, full stack developer and tester, filtering and API Whisperer
+- Magda Giergiczny - Facilitator, full stack developer and tester, Google Maps Conqueror
+- Ania Podhajska - Git master, full stack developer and tester, Filter & API Whisperer
 
 ### Main features:
 
@@ -59,5 +59,5 @@ User Stories for the What's For Lunch app project.
 | Be able to use the app on a mobile | no | no |
 
 
-## API Documentation
+# API Documentation
 [See API documentation](https://github.com/KeaDreamTeam/Planning/blob/master/API-Documentation.md)
