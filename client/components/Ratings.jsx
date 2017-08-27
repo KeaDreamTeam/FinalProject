@@ -18,9 +18,6 @@ class Ratings extends React.Component {
   }
   render() {
     let {positive_vote, negative_votes} = this.props.ratings
-    // console.log(typeof positive_vote, typeof negative_votes);
-    // let sum = positive_vote + negative_votes
-    // let posPercentage = sum / positive_vote
     let data = {
         	labels: [
         		'Positive reviews',
