@@ -26,8 +26,8 @@ class Ratings extends React.Component {
         	datasets: [{
         		data: [positive_vote, negative_votes],
         		backgroundColor: [
-        		'#FF6384',
-        		'#36A2EB'
+        		'#36A2EB',
+        		'#FF6384'
         		],
         		hoverBackgroundColor: [
         		'#777b82',
