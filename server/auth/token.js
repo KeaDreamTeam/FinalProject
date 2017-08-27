@@ -10,9 +10,10 @@ module.exports = {
 }
 
 function issue (req, res) {
-
+  console.log(req.body);
   db.getUserByName(req.body.user_name, req.app.get('db'))
     .then(user => {
+      console.log(user);
       const token = createToken(user, process.env.JWT_SECRET)
       res.json({
         message: 'Authentication successful.',
