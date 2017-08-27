@@ -2,31 +2,41 @@
 
 Project name: What's For Lunch?!
 
+## Install
+
+Clone this repo:
+
+git clone https://github.com/KeaDreamTeam/FinalProject WhatsForLunch
+
+then:
+- cd WhatsForLunch
+- npm install
+
 ### Description
 
-An app that displays and searches through vegetarian restaurants.
+An app that displays and searches through vegetarian restaurants. The client-side build using SPA pattern.
 
-### Roles
+### Authors
 
-- Usha MacDonald - product owner, full stack developer, tester
-- Magda Gierg - facilitator, full stack developer, tester
-- Ania Podhajska - git master, full stack developer, tester
+- Usha MacDonald - Product owner, full stack developer and tester, Authorisation Goddess
+- Magda Gierg - Facilitator, full stack developer and tester, Google Maps Conqueror
+- Ania Podhajska - Git master, full stack developer and tester, filtering and API Whisperer
 
 ### Main features:
 
-- filtering
 - rating, commenting
-- google maps
-- single-page app
+- filtering
+- Google maps
+- enabled authorisation and adding users
 - mobile-ready
+- SPA
 
-### Learning Objectives:
+### Team Learning Objectives:
 
 - full stack development (React, Redux, Express, Knex)
-- creating a mobile-ready one-page app
-- google maps implementation
-- improving team-work and organisation skills
-- sprint planning sessions at the start of each day
+- creating a mobile-ready SPA app
+- Google maps implementation
+- applying Agile project techniques
 
 
 ## User Stories

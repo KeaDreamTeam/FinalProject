@@ -6,7 +6,8 @@ import Header from './Header'
 import Filter from './Filter'
 import MainMap from './MainMap'
 import Restaurant from './Restaurant'
-import Rating from './Rating'
+import Register from './Register'
+import Login from './Login'
 import Footer from './Footer'
 
 class App extends React.Component {
@@ -15,7 +16,8 @@ class App extends React.Component {
   return (
     <Router>
       <div className='app-container'>
-        <Route path="/" component={Rating} />
+        <Route path="/" component={Register} />
+        <Route path="/" component={Login} />
         <Route path="/" component={Header} />
 
 

@@ -40,7 +40,7 @@ class Ratings extends React.Component {
         };
 
     return (
-        <div>
+        <div className="ratings">
            <Doughnut
              data={data}
              width={250}

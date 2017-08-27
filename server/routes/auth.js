@@ -10,6 +10,7 @@ router.post('/register', register, token.issue)
 
 function register (req, res, next) {
   const {user_name, password} = req.body
+  console.log(req.body);
   userExists(user_name, req.app.get('db'))
     .then(exists => {
       if(exists) {
@@ -30,5 +31,7 @@ router.get('/username', token.decode, (req, res) => {
     user_name
   })
 })
+
+router.post('/login', token.issue)
 
 module.exports = router
