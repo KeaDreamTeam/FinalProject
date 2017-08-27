@@ -2,14 +2,14 @@ var test = require('ava')
 var request = require('supertest')
 
 var createServer = require('../../server/server')
-var greetingsDb = require('../../server/db/greeting')
+var restaurantsDb = require('../../server/db/DbAccess')
 var setupDb = require('./setup-db')
 
 setupDb(test,createServer)
 
 test.cb('GET /', t => {
   request(t.context.app)
-    .get('/api/greetings')
+    .get('/api/restaurants')
     .expect(200)
     .end((err,res) => {
       if (err) console.log(err);
@@ -18,11 +18,11 @@ test.cb('GET /', t => {
     })
 })
 
-test.cb('read greetings db', t => {
-  greetingsDb.getGreetings(t.context.db)
-    .then(greetings => {
-      t.is(greetings.length, 3)
-      t.true(greetings[0].hasOwnProperty('text'))
+test.cb('read restaurants db', t => {
+  restaurantsDb.getRestaurants(t.context.db)
+    .then(restaurants => {
+      t.is(restaurants.length, 3)
+      t.true(restaurants[0].hasOwnProperty('address'))
       t.end()
     })
 })
