@@ -36,3 +36,31 @@
 .mapSinglecol {
   height: 250px;
 }
+/*single restaurant component text style*/
+.restaurantName {
+  text-align: center;
+  font-size: 200%;
+}
+.restaurantDescription,
+.AddComment-title,
+.Address-title,
+.Comments-title {
+  font-weight: bolder;
+}
+.address {
+  margin-bottom: 1rem;
+}
+.restaurantPhoto {
+  height: 400px;
+}
+.Comments-list {
+  width: 100%;
+  height: 300px;
+  overflow: scroll;
+  margin-bottom: 2rem;
+}
+.Comment-content {
+  height: 100px;
+  width: 100%;
+  font-size: 100%;
+}
