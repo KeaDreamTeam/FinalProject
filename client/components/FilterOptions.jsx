@@ -41,7 +41,7 @@ class FilterOptions extends React.Component {
     return (
       this.state.filterOptions.map((option, i) =>
       <button
-        className={"column is-half filterButton" + (option.filter_value ? " filterSelected" : "")}
+        className={"column is-half is-medium filterButton" + (option.filter_value ? " filterSelected" : "")}
         key={i}
         onClick={this.setFilter.bind(this, i)}>
         {option.filter_displayname}

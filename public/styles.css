@@ -4,15 +4,25 @@
 .filterButton {
   background-color: #f7f7f7;
   border: 2px solid white;
+  border-radius: 10px;
 }
-/*.filterButton:hover {
-  background-color: #00d1b2;
-}*/
 .toggle {
   margin-bottom: 15px;
 }
 .filterSelected {
-  background-color: #36A2EB;
+  background-color: #7eb1d3;
+  font-size: 110%;
+  color: white;
+  border-radius: 10px;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 5s;
+}
+@-webkit-keyframes example {
+  0%   {background-color:#5bcacc; left:0px; top:0px;}
+  50%  {background-color:#5bafcc; left:200px; top:0px;}
+  100%  {background-color:#7eb1d3; left:200px; top:200px;}
 }
 .map {
   position: unset!important;
