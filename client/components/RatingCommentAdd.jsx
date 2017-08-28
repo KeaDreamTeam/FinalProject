@@ -11,7 +11,6 @@ class RatingCommentAdd extends React.Component {
             content: "",
             is_pos: 1,
             is_fair: 1,
-            // user_id: props.auth.user.id
           }
       }
   }
