@@ -32,11 +32,30 @@ class Login extends Component {
 
   render () {
     return (
-      <div className="column">
+      <div className="column is-one-third is-offset-one-third">
         <h1>Login!</h1>
-        <p><input name='user_name' onChange={this.handleChange} placeholder='Username' /></p>
-        <p><input type='password' name='password' onChange={this.handleChange} placeholder='Password' /></p>
-        <button onClick={this.handleClick}>Login</button>
+        <div className="field">
+          <div className="control has-icons-left">
+            <input className="input" name='user_name' onChange={this.handleChange} placeholder='Username' />
+            <span className="icon is-small is-left">
+              <i className="fa fa-user"></i>
+            </span>
+          </div>
+        </div>
+        <div className="field">
+          <div className="control has-icons-left">
+            <input className="input" type='password' name='password' onChange={this.handleChange} placeholder='Password' />
+              <span className="icon is-small is-left">
+                <i className="fa fa-lock"></i>
+              </span>
+          </div>
+        </div>
+        <div className="field">
+          <div className="control">
+            <button className='button is-primary is-inverted' onClick={this.handleClick}>Login</button>
+          </div>
+        </div>
+
       </div>
     )
   }

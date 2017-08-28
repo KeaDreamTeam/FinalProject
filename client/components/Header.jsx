@@ -13,7 +13,7 @@ const Header = ({isAuthenticated}) => (
 
   <section className="hero is-primary is-fullheight">
     <div className="hero-head">
-      <div className="nav">
+      <div className="nav Nav">
         <div className="container">
           <div className="nav-left">
             <div className="nav-item">

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {connect} from 'react-redux'
 import {registerUserRequest} from '../actions/register'
@@ -33,13 +34,29 @@ class Register extends React.Component {
 
    render() {
      return (
-       <div className="column">
+       <div className="column is-one-third is-offset-one-third">
          <h1>Register!</h1>
          <form onSubmit={this.handleSubmit.bind(this)}>
-           <p><input type="text" name="user_name" value={this.state.user_name} placeholder="Username" onChange={this.updateField.bind(this)} /></p>
-           <p><input type="password" name="password" value={this.state.password} placeholder="Password" onChange={this.updateField.bind(this)} /></p>
-           <p><input type="password" name="confirm" value={this.state.confirm} placeholder="Confirm Password" onChange={this.updateField.bind(this)} /></p>
-           <input type="submit" value="Register" />
+           <div className="field">
+             <div className="control">
+               <input className="input" type="text" name="user_name" value={this.state.user_name} placeholder="Username" onChange={this.updateField.bind(this)} />
+             </div>
+           </div>
+           <div className="field">
+             <div className="control">
+               <input className="input" type="password" name="password" value={this.state.password} placeholder="Password" onChange={this.updateField.bind(this)} />
+             </div>
+           </div>
+           <div className="field">
+             <div className="control">
+               <input className="input" type="password" name="confirm" value={this.state.confirm} placeholder="Confirm Password" onChange={this.updateField.bind(this)} />
+             </div>
+           </div>
+           <div className="field">
+             <div className="control">
+               <button className='button is-primary is-inverted' onClick={this.handleClick}>Register</button>
+             </div>
+           </div>
          </form>
        </div>
      )
