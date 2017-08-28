@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 import Header from './Header'
 import MainMap from './MainMap'
-import Restaurant from './Restaurant'
+import RestaurantContainer from './RestaurantContainer'
 import Register from './Register'
 import Login from './Login'
 import Footer from './Footer'
@@ -12,18 +12,18 @@ import Footer from './Footer'
 class App extends React.Component {
 
   render() {
-  return (
-    <Router>
-      <div className='app-container'>
-        <Route path="/" component={Header} />
-        <div className="app-body">
-          <Route path="/" component={(props) => <Restaurant />} />
-          <Route path="/" component={Footer} />
+    return (
+      <Router>
+        <div className='app-container'>
+          <Route path="/" component={Header} />
+          <div className="app-body">
+            <Route path="/" component={RestaurantContainer} />
+            <Route path="/" component={Footer} />
+          </div>
         </div>
-      </div>
-    </Router>
-  )
-}
+      </Router>
+    )
+  }
 }
 
 
