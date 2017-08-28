@@ -9,7 +9,7 @@ setupDb(test,createServer)
 
 test.cb('GET / restaurants returns restaurants', t => {
   request(t.context.app)
-    .get('/api/restaurants')
+    .get('/api/v1/restaurants')
     .expect(200)
     .end((err,res) => {
       if (err) console.log(err);
@@ -36,7 +36,7 @@ test.cb('read comments db', t => {
 
 test.cb('GET / comments', t => {
   request(t.context.app)
-    .get('/api/comments')
+    .get('/api/v1/comments')
     .expect(200)
     .end((err,res) => {
       if (err) console.log(err);
