@@ -10,7 +10,7 @@ export const receiveRating = (ratings) => {
 export function getRatings (restaurantId) {
   return (dispatch) => {
     request
-      .get('/api/restaurants/' + restaurantId + '/ratings')
+      .get('/api/v1/restaurants/' + restaurantId + '/ratings')
       .end((err, res) => {
         if (err) {
           alert(err.message)
@@ -32,7 +32,7 @@ export const addRatingAction = (newRating) => {
 export function addRatingComment (newRatingWithComment) {
   return (dispatch) => {
     request
-      .post('api/comments')
+      .post('api/v1/comments')
       .end((err, res) => {
         if (err) {
           alert('error when posting the comment!')
