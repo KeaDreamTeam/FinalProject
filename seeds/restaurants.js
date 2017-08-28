@@ -387,7 +387,7 @@ exports.seed = function(knex, Promise) {
         {
           net_rating: 4,
           pricing: "$$$",
-          restaurant_name: "Hippopotamus Restaurant and Cocktail Bar",
+          restaurant_name: "Hippopotamus Restaurant",
           restaurant_url: "https://www.qthotelsandresorts.com/wellington/eat-drink/hippopotamus/",
           image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/3f/66/f9/hippopotamus-restaurant.jpg",
           address: "Museum Art Hotel, Level 3, 90 Cable St, Te Aro, Wellington 6011",
@@ -405,7 +405,7 @@ exports.seed = function(knex, Promise) {
         {
           net_rating: 14,
           pricing: "$",
-          restaurant_name: "Aunty Mena's Vegetarian Cafe Restaurant",
+          restaurant_name: "Aunty Mena's Vegetarian Cafe",
           restaurant_url: "",
           image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0d/e7/c4/dd/photo3jpg.jpg",
           address: "167 Cuba St, Te Aro, Wellington 6011",

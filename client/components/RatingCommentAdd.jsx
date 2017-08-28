@@ -32,36 +32,39 @@ class RatingCommentAdd extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div className="RatingCommentAdd-container">
-        {this.props.auth.isAuthenticated
-          ? <form onSubmit={this.submitDetails.bind(this)}>
-            <span>Is the portion fair?</span>
-            <br />
-            <label>{"Yes "}
-              <input type="radio" name="is_fair" value={1} onClick={this.updateDetails.bind(this)} />
-            </label>
-            <br />
-            <label>{"No "}
-              <input type="radio" name="is_fair" value={0} onClick={this.updateDetails.bind(this)}/>
-            </label>
-            <br />
-            <span>Would you reccommend the restaurant?</span>
-            <br />
-            <label>{"Yes "}
-              <input type="radio" name="is_pos" value={1} onClick={this.updateDetails.bind(this)} />
-            </label>
-            <br />
-            <label>{"No "}
-              <input type="radio" name="is_pos" value={0} onClick={this.updateDetails.bind(this)}/>
-            </label>
-            <br />
-            <span>Your comment</span>
-            <textarea className="Comment-content" name="content" onChange={this.updateDetails.bind(this)}></textarea>
-            <input type="submit" value="submit"/>
-          </form>
-          : <h1>Please Login to post a review</h1>
-        }
+      <div className="section">
+        <div className="container">
+            <h2 className="AddComment-title title has-text-centered">Add your comment</h2>
+            {this.props.auth.isAuthenticated
+              ? <form onSubmit={this.submitDetails.bind(this)}>
+                  <span>Was the price fair for the portion?</span>
+                  <br />
+                  <label className="radio">{"Yes "}
+                    <input type="radio" name="is_fair" value={1} onClick={this.updateDetails.bind(this)} />
+                  </label>
 
+                  <label className="radio">{"No "}
+                    <input type="radio" name="is_fair" value={0} onClick={this.updateDetails.bind(this)}/>
+                  </label>
+
+                  <span>Would you reccommend the restaurant?</span>
+                  <br />
+                  <label className="radio">{"Yes "}
+                    <input type="radio" name="is_pos" value={1} onClick={this.updateDetails.bind(this)} />
+                  </label>
+
+                  <label className="radio">{"No "}
+                    <input type="radio" name="is_pos" value={0} onClick={this.updateDetails.bind(this)}/>
+                  </label>
+                  <br />
+                  <span>Your comment</span>
+                  <br />
+                  <textarea rows="4" cols="50" className="Comment-content" name="content" onChange={this.updateDetails.bind(this)}></textarea>
+                  <input type="submit" value="submit"/>
+              </form>
+              : <h1>Please Login to post a review</h1>
+            }
+        </div>
       </div>
     )
   }
