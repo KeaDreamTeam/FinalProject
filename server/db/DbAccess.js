@@ -1,4 +1,4 @@
-const getComments_byRest = (id, db) => {
+const getCommentsForRestaurant = (id, db) => {
   return db('comments')
   .join('users', 'comments.user_id', "users.user_id")
   .where('comments.restaurant_id', id)
@@ -24,6 +24,6 @@ const saveComment = (comment, db) => {
 module.exports = {
   getRestaurants,
   getComments,
-  getComments_byRest,
+  getCommentsForRestaurant,
   saveComment
 }

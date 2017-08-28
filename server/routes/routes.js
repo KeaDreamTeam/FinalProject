@@ -8,7 +8,7 @@ var DbAccess = require('../db/DbAccess')
 router.get('/restaurants/:restaurant_id/comments', (req, res) => {
   let db = req.app.get('db')
   let id = req.params.restaurant_id
-  DbAccess.getComments_byRest(id, db)
+  DbAccess.getCommentsForRestaurant(id, db)
     .then(restaurantComments => {
       res.json(restaurantComments)
   })
@@ -17,7 +17,7 @@ router.get('/restaurants/:restaurant_id/comments', (req, res) => {
 router.get('/restaurants/:restaurant_id/ratings', (req, res) => {
   let db = req.app.get('db')
   let id = req.params.restaurant_id
-  DbAccess.getComments_byRest(id, db)
+  DbAccess.getCommentsForRestaurant(id, db)
     .then(comments => {
         if (comments.length == 0) {
           res.json("No Ratings")

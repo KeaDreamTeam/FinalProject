@@ -9,7 +9,7 @@ export const receiveComments = (comments) => {
 }
 export function getComments (restaurantId) {
   return (dispatch) => {
-    request('get', 'restaurants/' + restaurantId + '/comments')
+    request('get', '/restaurants/' + restaurantId + '/comments')
       .then(res => {
         dispatch(receiveComments(res.body))
       })
