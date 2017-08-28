@@ -28,7 +28,6 @@ const RestaurantSingle = ({selected, select}) => {
               </div>
             </div>
             <div className="restaurantAddComment-container">
-              <h1 className="AddComment-title">Add comment and rating</h1>
                 <RatingCommentAdd user_id={500} restaurant_id={selected.restaurant_id} />
             </div>
 
