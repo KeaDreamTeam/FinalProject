@@ -34,10 +34,39 @@ test.cb('read comments db', t => {
     })
 })
 
-test.cb('read comments db', t => {
-  restaurantsDb.getComments(t.context.db)
-    .then(comments => {
+test.cb('GET / comments', t => {
+  request(t.context.app)
+    .get('/api/comments')
+    .expect(200)
+    .end((err,res) => {
+      if (err) console.log(err);
       t.is(comments.length, 5)
       t.end()
     })
 })
+
+
+
+// test.only.cb('POST /register ', t => {
+//   process.env.JWT_SECRET = 'secret'
+//   const newUser = {
+//     username: 'testuser',
+//     name: 'bob bob',
+//     password: 'testpassword'
+//   }
+//
+//   const originalCount = 11
+//
+//   request(t.context.server)
+//     .post('/api/register')
+//     .send(newUser)
+//     .expect(200)
+//     .end((err, res) => {
+//       if (err) throw err
+//       t.context.connection('members')
+//       .then((members) => {
+//         t.is(members.length, originalCount + 1)
+//         t.end()
+//       })
+//     })
+// })
