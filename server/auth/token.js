@@ -53,7 +53,6 @@ function issueJwt (req, res, next) {
 function verify (user_name, password, callback) {
   db.getUserByName(user_name, connection)
       .then(db => {
-        console.log(db);
         if (db.length === 0 || !hash.verifyUser(db, password)) {
           return callback(null, false)
       }

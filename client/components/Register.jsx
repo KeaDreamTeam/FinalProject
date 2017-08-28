@@ -28,8 +28,7 @@ class Register extends React.Component {
        const {user_name, password} = this.state
       this.props.onSubmit({user_name, password})
       this.setState({user_name: '', password: '', confirm: '' })
-      alert('success!')
-      document.location = '/#/'
+      // document.location = '/#/'
      }
    }
 
