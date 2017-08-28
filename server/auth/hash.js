@@ -5,6 +5,17 @@ function generate (password) {
   return hash
 }
 
+function getHash (password) {
+  return bcrypt.hashSync(password, 12)
+}
+
+function verifyUser (user, password) {
+  console.log(user);
+  return bcrypt.compareSync(password, user.hash);
+}
+
 module.exports = {
-  generate
+  generate,
+  getHash,
+  verifyUser
 }

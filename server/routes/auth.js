@@ -7,7 +7,7 @@ const {userExists, createUser} = require('../db/users')
 const token = require('../auth/token')
 
 
-router.post('/register', register, token.issue)
+router.post('/register', register, token.issueJwt)
 
 function register (req, res, next) {
   const {user_name, password} = req.body
@@ -32,6 +32,6 @@ router.get('/username', token.decode, (req, res) => {
   })
 })
 
-router.post('/login', token.issue)
+router.post('/login', token.issueJwt)
 
 module.exports = router
