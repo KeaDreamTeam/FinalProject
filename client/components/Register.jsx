@@ -22,14 +22,15 @@ class Register extends React.Component {
    handleSubmit(e) {
      e.preventDefault()
      if (this.state.password != this.state.confirm) {
-        alert('wrong password, practice your typing')
+        alert('passwords don\'t match, please try again')
         this.setState({ password: '', confirm: '' })
      } else {
        const {user_name, password} = this.state
       this.props.onSubmit({user_name, password})
+      this.setState({user_name: '', password: '', confirm: '' })
+      alert('success!')
+      document.location = '/#/'
      }
-     this.setState({user_name: '', password: '', confirm: '' })
-     alert('success!')
    }
 
    render() {

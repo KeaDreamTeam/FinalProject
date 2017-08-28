@@ -28,6 +28,7 @@ class Login extends Component {
       password: password.trim()
     }
     this.props.loginUser(creds)
+    document.location = '/#/'
   }
 
   render () {
