@@ -32,10 +32,10 @@ class Restaurant extends React.Component {
       <div>
         <div className="hero is-fullheight">
           <div className="">
-            <MainMap restaurants={this.props.restaurants} />
+            <MainMap restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
             <Filter />
-            <div onClick={() => jump('.restaurant-container')}>Continue</div>
-            <div onClick={() => jump('.nav')}>Back</div>
+            <div onClick={() => jump('.restaurant-container')}><i className="fa fa-arrow-down fa-2x" aria-hidden="true"></i></div>
+            <div onClick={() => jump('.nav')}><i className="fa fa-arrow-up fa-2x" aria-hidden="true"></i></div>
           </div>
 
         </div>

@@ -11,7 +11,7 @@ const RestaurantList = ({restaurants, toggleSingleView, singleView, select}) => 
           <div className="columns is-multiline restaurant-container">
             {restaurants.map((restaurant, i) => {
               return (
-                <div className="has-text-centered column is-half box" key={i}>
+                <div className="has-text-centered column is-one-third box" key={i}>
                   <a onClick={() => select(restaurant) }>{restaurant.restaurant_name}</a>
                 </div>
               )
