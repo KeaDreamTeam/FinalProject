@@ -10,7 +10,7 @@ export const receiveRestaurants = (restaurants) => {
 export function getRestaurants () {
   return (dispatch) => {
     request
-      .get('/api/restaurants')
+      .get('/api/v1/restaurants')
       .end((err, res) => {
         if (err) {
           console.error(err.message)

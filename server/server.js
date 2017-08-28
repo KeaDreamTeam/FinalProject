@@ -17,9 +17,9 @@ server.use(passport.initialize())
 server.use(bodyParser.json())
 server.use(express.static(path.join(__dirname, '../public')))
 
-server.use('/api/auth', auth)
-server.use('/api', routes )
-server.use('/api/users', users )
+server.use('/api/v1/auth', auth)
+server.use('/api/v1', routes )
+server.use('/api/v1/users', users )
 
 
 module.exports = function(db) {

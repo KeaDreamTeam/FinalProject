@@ -20,14 +20,6 @@ class FilterOptions extends React.Component {
   render() {
     return (
       <div className="filterOptions-container">
-
-        <div className="toggle">
-          <br />
-          <a href='#' onClick={this.props.toggleFilters}>
-            Hide Filters
-          </a>
-        </div>
-
         <div className="columns is-multiline">
             {this.renderFilterOptions()}
         </div>
@@ -40,7 +32,7 @@ class FilterOptions extends React.Component {
     return (
       this.state.filterOptions.map((option, i) =>
       <button
-        className={"column is-half filterButton" + (option.filter_value ? " filterSelected" : "")}
+        className={"column is-one-third filterButton" + (option.filter_value ? " filterSelected" : "")}
         key={i}
         onClick={this.setFilter.bind(this, i)}>
         {option.filter_displayname}

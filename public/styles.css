@@ -36,11 +36,13 @@
 .mapSinglecol {
   height: 250px;
 }
+
 .NavItem {
   float:left;
 }
 .app-body {
   margin-top: 30px;
+
 /*single restaurant component text style*/
 .restaurantName {
   text-align: center;
@@ -68,4 +70,9 @@
   height: 100px;
   width: 100%;
   font-size: 100%;
+}
+.restaurant-name {
+}
+.ClickMe {
+  -vendor-animation-iteration-count: 5;
 }
