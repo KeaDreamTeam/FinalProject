@@ -70,8 +70,9 @@
   height: 100px;
   width: 100%;
   font-size: 100%;
-<<<<<<< HEAD
->>>>>>> 9d3e44c74b830dadeefe903cd6b95292db2999e8
-=======
->>>>>>> f23b5658d3a3b5b76f852fdd4f0017aa949a34f9
+}
+.restaurant-name {
+}
+.ClickMe {
+  -vendor-animation-iteration-count: 5;
 }
