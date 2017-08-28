@@ -11,12 +11,13 @@ class RatingCommentAdd extends React.Component {
             content: "",
             is_pos: 1,
             is_fair: 1,
+            // user_id: props.auth.user.id
           }
       }
   }
 
   updateDetails = (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     let {newComment} = this.state
     newComment[e.target.name] = e.target.value
     this.setState({newComment})
@@ -30,7 +31,7 @@ class RatingCommentAdd extends React.Component {
   }
 
   render() {
-    // console.log(this.state);
+    console.log(this.state);
     return (
       <div className="RatingCommentAdd-container">
         {this.props.auth.isAuthenticated
