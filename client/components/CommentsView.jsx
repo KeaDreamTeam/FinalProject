@@ -20,11 +20,11 @@ class CommentsView extends React.Component {
   renderFair() {
     return (
       <div>
-          <a className="level-item">
-            <span className="icon is-small">
-              <i className="fa fa-usd"></i>
-            </span>
-          </a>
+        <a className="level-item">
+          <span className="icon is-small">
+            <i className="fa fa-usd"></i>
+          </span>
+        </a>
       </div>
     )
   }
@@ -48,51 +48,29 @@ class CommentsView extends React.Component {
 
   render() {
     return (
-      <div className="comments-box container">
-
+      <div className="container">
         {this.props.comments.map((comment, i) => {
           return (
-          <div key={i} className="box">
-            <article className="media">
-              <div className="media-left">
-                <figure className="image is-64x64">
-                  <img src="http://bulma.io/images/placeholders/64x64.png" alt="Image" />
-                  </figure>
+            <div key={i} className="media-left">
+              <div className="container">
+                <div className="content has-text-centered">
+                  <p>
+                    <strong>{comment.user_name} </strong>
+                    {comment.content}
+                    <i className={(comment.is_pos ? "fa fa-thumbs-up" : "fa fa-thumbs-down")} label="is positive?"></i>
+                    <i className={(comment.is_fair ? "fa fa-usd positive" : "fa fa-usd negative")} label="is positive?"></i>
+                  </p>
                 </div>
-                <div className="media-content">
-                  <div className="content">
-                    <p>
-                      <strong>{comment.user_name} </strong>
-                      <small>{comment.user_name+"@gmail.com"}</small>
-                      <br />
-                        {comment.content}
-                    </p>
-                    </div>
-                    <nav className="level is-mobile">
-                      <div className="level-left icon-links">
-
-                        <a className="level-item black">
-                          <span className="icon is-small">
-                            <i className={(comment.is_pos ? "fa fa-thumbs-up" : "fa fa-thumbs-down")} label="is positive?"></i>
-                          </span>
-                        </a>
-
-                        {(comment.is_pos ? this.renderFair() : this.renderExpensive() )}
-
-                      </div>
-                    </nav>
-                  </div>
-                </article>
               </div>
+            </div>
           )})}
-
-      </div>
+        </div>
       )
     }
-}
+  }
 
 
-const mapStateToProps = (state) => {
-  return {comments: state.comments}
-}
-export default connect(mapStateToProps)(CommentsView)
+  const mapStateToProps = (state) => {
+    return {comments: state.comments}
+  }
+  export default connect(mapStateToProps)(CommentsView)

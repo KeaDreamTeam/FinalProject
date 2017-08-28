@@ -1,3 +1,12 @@
+.negative {
+  color: #FF6384 !important;
+}
+.positive {
+  color: #36A2EB !important;
+}
+.headerColor {
+  background-color: #473730 !important;
+}
 .ico {
   width: 10px;
   height: 10px;
@@ -64,12 +73,9 @@
 .restaurantPhoto {
   height: 400px;
 }
-/*.comments-list {
-  width: 100%;
-  height: 300px;
-  overflow: scroll;
-  margin-bottom: 2rem;
-}*/
+.Comments-list {
+  text-align: center;
+}
 .Comment-content {
   height: 100px;
   width: 100%;
