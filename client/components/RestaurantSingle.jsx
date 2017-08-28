@@ -15,7 +15,7 @@ const RestaurantSingle = ({selected, select}) => {
       <div className="RestaurantSingle-container column is-10 is-offset-1" style={divStyle}>
         <div className="columns">
           <div className="column is-8">
-            <h1 className="restaurantName">{selected.restaurant_name}</h1>
+            <h1 className="restaurantName title">{selected.restaurant_name}</h1>
             <Ratings restaurantId={selected.restaurant_id} />
             <h3 className="restaurantDescription">Restaurant description</h3>
             <p>{selected.description}</p>
@@ -27,7 +27,7 @@ const RestaurantSingle = ({selected, select}) => {
           </div>
           <div className="column is-4">
             <div className="restaurantComments-container">
-              <h1 className="Comments-title">Comments</h1>
+              <h1 className="Comments-title title">Comments</h1>
               <div className="Comments-list">
                 <CommentsView restaurantId={selected.restaurant_id} />
               </div>
