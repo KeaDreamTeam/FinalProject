@@ -42,11 +42,6 @@ class CommentsView extends React.Component {
             <i className="fa fa-usd"></i>
           </span>
         </a>
-        <a className="level-item">
-          <span className="icon is-small">
-            <i className="fa fa-usd"></i>
-          </span>
-        </a>
       </div>
     )
   }
