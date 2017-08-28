@@ -39,6 +39,7 @@ class CommentsView extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state.comments);
   return {comments: state.comments}
 }
 export default connect(mapStateToProps)(CommentsView)

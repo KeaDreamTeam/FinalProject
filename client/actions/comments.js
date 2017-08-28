@@ -31,7 +31,7 @@ export function createNewUserComment (newComment) {
   return (dispatch) => {
     request('post', 'comments', newComment)
     .then(res => {
-      dispatch(createComment(newComment))
+      dispatch(createComment(res.body))
       dispatch(getRatings(newComment.restaurant_id))
     })
     .catch(err => {
