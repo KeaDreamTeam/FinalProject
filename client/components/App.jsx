@@ -3,7 +3,6 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 import Header from './Header'
-import Filter from './Filter'
 import MainMap from './MainMap'
 import Restaurant from './Restaurant'
 import Register from './Register'
@@ -18,8 +17,7 @@ class App extends React.Component {
       <div className='app-container'>
         <Route path="/" component={Header} />
         <div className="app-body">
-          <Route path="/" component={Filter} />
-           <Route path="/" component={(props) => <Restaurant />} />
+          <Route path="/" component={(props) => <Restaurant />} />
           <Route path="/" component={Footer} />
         </div>
       </div>

@@ -6,6 +6,8 @@ import RestaurantList from './RestaurantList'
 import RestaurantSingle from './RestaurantSingle'
 import MainMap from './MainMap'
 import applyFilter from '../utils/filter'
+import Filter from './Filter'
+
 
 class Restaurant extends React.Component {
   constructor (props) {
@@ -27,18 +29,23 @@ class Restaurant extends React.Component {
 
   render() {
     return (
-      <div className="columns">
-        <div className="column is-8 is-offset-2 box">
+      <div>
+        <div className="hero is-fullheight">
+          <div className="">
+            <MainMap restaurants={this.props.restaurants} />
+            <Filter />
+            <div onClick={() => jump('.restaurant-container')}>Continue</div>
+            <div onClick={() => jump('.nav')}>Back</div>
+          </div>
 
-          <MainMap restaurants={this.props.restaurants} />
+        </div>
+
           <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
 
           <div className="singleAnchor">
             {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
           </div>
 
-
-        </div>
       </div>
     )
   }

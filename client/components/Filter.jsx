@@ -6,7 +6,7 @@ class Filter extends React.Component {
 constructor (props) {
   super(props)
   this.state = {
-    filtersVisible: false
+    filtersVisible: true
   }
   this.toggleFilters = this.toggleFilters.bind(this)
 }
