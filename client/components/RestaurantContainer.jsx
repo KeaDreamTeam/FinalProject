@@ -9,7 +9,7 @@ import applyFilter from '../utils/filter'
 import Filter from './Filter'
 
 
-class RestaurantContainer extends React.Component {
+class Restaurant extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -37,11 +37,15 @@ class RestaurantContainer extends React.Component {
             <div onClick={() => jump('.restaurant-container')}><i className="fa fa-arrow-down fa-2x" aria-hidden="true"></i></div>
             <div onClick={() => jump('.nav')}><i className="fa fa-arrow-up fa-2x" aria-hidden="true"></i></div>
           </div>
+
         </div>
-        <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
-        <div className="singleAnchor">
-          {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
-        </div>
+
+          <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
+
+          <div className="singleAnchor">
+            {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
+          </div>
+
       </div>
     )
   }
@@ -50,6 +54,6 @@ class RestaurantContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     restaurants: applyFilter(state.restaurants, state.filterOptions)}
-  }
+}
 
-  export default connect(mapStateToProps)(RestaurantContainer)
+export default connect(mapStateToProps)(Restaurant)
