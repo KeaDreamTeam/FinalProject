@@ -26,24 +26,7 @@ router.get('/:user_id/comments', (req, res) => {
     })
 })
 
-router.post('/signup', (req, res) => {
-  let db = req.app.get('db')
-  let newUser = req.body
-  DbUsers.getUsersByUserName(newUser, db)
-    .then(usersFound => {
-      if (usersFound.length > 0) {
-        res.sendStatus(400, "user already exists!")
-      } else {
-        DbUsers.createUser(newUser, db)
-          .then(newUserId => {
-            res.json({user_id: newUserId})
-          })
-      }
-    })
-    .catch(err => {
-      res.status(500).send({message: err.message})
-    })
-})
+
 
 
 
