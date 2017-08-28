@@ -8,6 +8,7 @@ const getCommentsForRestaurant = (id, db) => {
 const getRestaurants = (db) => {
   return db('restaurants')
   .select('*')
+  .orderBy('restaurant_name')
 }
 
 const getComments = (db) => {

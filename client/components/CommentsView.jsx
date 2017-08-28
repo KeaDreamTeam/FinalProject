@@ -63,7 +63,7 @@ class CommentsView extends React.Component {
                   <div className="content">
                     <p>
                       <strong>{comment.user_name} </strong>
-                      <small>{comment.user_name+"@gmail.com"}</small>
+                      {/* <small>{comment.user_name+"@gmail.com"}</small> */}
                       <br />
                         {comment.content}
                     </p>
