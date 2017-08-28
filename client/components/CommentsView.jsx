@@ -17,35 +17,6 @@ class CommentsView extends React.Component {
     }
   }
 
-  renderFair() {
-    return (
-      <div>
-        <a className="level-item">
-          <span className="icon is-small">
-            <i className="fa fa-usd"></i>
-          </span>
-        </a>
-      </div>
-    )
-  }
-
-  renderExpensive() {
-    return (
-      <div className="level-left icon-links">
-        <a className="level-item">
-          <span className="icon is-small">
-            <i className="fa fa-usd"></i>
-          </span>
-        </a>
-        <a className="level-item">
-          <span className="icon is-small">
-            <i className="fa fa-usd"></i>
-          </span>
-        </a>
-      </div>
-    )
-  }
-
   render() {
     return (
       <div className="container">
