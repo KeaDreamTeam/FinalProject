@@ -23,7 +23,7 @@ class Restaurant extends React.Component {
   }
 
   selectRestaurant(selected) {
-    this.setState({selected, jumpReady: true})
+    this.setState({selected})
     jump('.singleAnchor')
   }
 
