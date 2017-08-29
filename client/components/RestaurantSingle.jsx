@@ -27,12 +27,12 @@ const RestaurantSingle = ({selected, select}) => {
         </div>
         <div className="columns">
           <div className="column">
-            <div className="restaurantContact-container">
+            <div className="restaurantContact-container section">
               <h1 className="Address-title">Address</h1>
               <p className="address">{selected.address}, <a href={selected.phone}>{selected.phone}</a> </p>
             </div>
             <div className="restaurantComments-container">
-              <h1 className="Comments-title title has-text-centered">Comments</h1>
+              <h1 className="Comments-title title">Comments</h1>
               <div className="Comments-list">
                 <CommentsView restaurantId={selected.restaurant_id} />
               </div>
