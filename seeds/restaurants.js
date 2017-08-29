@@ -51,11 +51,11 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2924698",
           lng:"174.7793674",
 
-         
+
          description: "A funky cafe/bar serving up tasty counter food, good coffee and alcoholic beverages.",
 
           phone: "+6443852905",
-        
+
 
           is_meat: true,
           is_vegan: true,
@@ -74,11 +74,11 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2959071",
           lng:"174.7739487",
 
-         
+
           description: "Brothers & sisters of the revolution! Welcome to Fidel’s. Where the coffee is Cuban and the hospitality is pure New Zealand.This iconic Wellington institution has made its mark as a bohemian bastion on upper Cuba Street. From an early morning espresso, midday brunch, or late night rum; this bustling landmark specialises in being whatever you want it to be.",
 
           phone: "+6448016868",
-         
+
 
           is_meat: true,
           is_vegan: true,
@@ -97,11 +97,11 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2898022",
           lng:"174.7744975",
 
-        
+
           description: "Wellington's first Burger Bar. Serving great burgers, along with the burger's favourite accompaniments; fries, tacos, cocktails, hard shakes, beers, and with a great selection of bourbons and rums.Open from 11.30am until late daily. We take bookings during lunch and early in the evenings for groups of 8 or more, otherwise just rock on in.",
 
           phone: "+6443851104",
-          
+
 
           is_meat: true,
           is_vegan: true,
@@ -120,11 +120,11 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2825527",
           lng:"174.7765304",
 
-          
+
           description: "Perched on the edge of Midland Park, at the heart of Wellington’s shopping and business districts, Astoria offers a blend of grand European cafe culture and the quintessential bustle of Wellington city life.A celebrated atmosphere is fueled by the cafe’s  contribution to the popular park, particularly when the sun graces us with its presence. On colder days, loyal clientele enjoy the cozy expanse of our vintage interior.The menu is inspired by seasonal produce, paired with coffee roasted on-site",
 
           phone: "+6444738500",
-         
+
 
           is_meat: true,
           is_vegan: true,
@@ -143,11 +143,11 @@ exports.seed = function(knex, Promise) {
           lat:"-41.3130669",
           lng:"174.7794356",
 
-        
+
           description: "Newtown, Wellington is one of the most culturally diverse suburbs in New Zealand, creating a melting pot of bohemian style & eclectic culture. Since we opened in 2008, Baobab has grown to twice the original size and created one of the largest outdoor dining spaces in Wellington. It has become a favourite local hub for the community, a place to relax & forget about how busy the outside world can be, while sipping on a premium blend of Ethiopian espresso or a pint of local boutique craft beer in our tranquil courtyard. Baobab is open 7 days per week serving all day breakfast & lunch. Our seasonal menus are created with love by qualified chefs with locally sourced products. Our wholesome & unique cabinet treats are baked fresh every day; including gluten-free, dairy free & vegan options. We are also open Friday evenings with live music, serving delicious tapas & after work drinks.",
 
           phone: "+6443800470",
-        
+
 
           is_meat: true,
           is_vegan: true,
@@ -205,7 +205,7 @@ exports.seed = function(knex, Promise) {
           lat:"-41.3304322",
           lng:"174.7933458",
 
-        
+
           description: "Laundry is a funky little establishment aimed at bringing Wellington's Cuba street dining back to its roots.",
 
           phone: "+6443844280",
@@ -222,7 +222,7 @@ exports.seed = function(knex, Promise) {
           pricing: "$$",
           restaurant_name: "Queen Sally's Diamond Deli",
           restaurant_url: "http://www.queens.co.nz/about.html",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/06/5e/26/23/queen-sally-s-diamond.jpg",
+          image_url: "https://unsplash.com/search/photos/coffee?photo=6VhPY27jdps",
           address: "200 Queens Dr, Lyall Bay, Wellington 6022",
           lat:"-41.3307173",
           lng:"174.7915316",
@@ -240,7 +240,7 @@ exports.seed = function(knex, Promise) {
           pricing: "$",
           restaurant_name: "Monterey Bar",
           restaurant_url: "https://montereynewtown.co.nz/index.html",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0c/a2/99/a9/monterey-bar.jpg",
+          image_url: "https://unsplash.com/search/photos/burger?photo=QbSflBwMOmo",
           address: "4 Rintoul St, Newtown, Wellington 6021",
           lat:"-41.3118045",
           lng:"174.7790072",
@@ -299,7 +299,7 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2964952",
           lng:"174.7744768",
           phone: "+6443849085",
-          description: "For over 100 years our place here in Te Aro, Wellington, has been a favourite meeting place for locals. We love being a part of the community and we are ready to throw in the hard yards to make sure everyone who visits us has a great experience. The Cross has something for everyone - have a look around and choose the perfect spot to suit your mood. Each area has been designed to create a different experience, a different ambience. Bring in your team from work, your mates, your kids, your grandparents, your study group, your special someone, your laptop, your dog (in the garden bar!) or your party guests – we can set you up with a space, top-notch food and drinks to suit your occasion.",
+          description: "For over 50 years our place here in Te Aro, Wellington, has been a favourite meeting place for locals. We love being a part of the community and we are ready to throw in the hard yards to make sure everyone who visits us has a great experience. The Cross has something for everyone - have a look around and choose the perfect spot to suit your mood. Each area has been designed to create a different experience, a different ambience. Bring in your team from work, your mates, your kids, your grandparents, your study group, your special someone, your laptop, your dog (in the garden bar!) or your party guests – we can set you up with a space, top-notch food and drinks to suit your occasion.",
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -317,7 +317,7 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2916855",
           lng:"174.7795819",
           phone: "+6443856650",
-          description: "For over 100 years our place here in Te Aro, Wellington, has been a favourite meeting place for locals. We love being a part of the community and we are ready to throw in the hard yards to make sure everyone who visits us has a great experience. The Cross has something for everyone - have a look around and choose the perfect spot to suit your mood. Each area has been designed to create a different experience, a different ambience. Bring in your team from work, your mates, your kids, your grandparents, your study group, your special someone, your laptop, your dog (in the garden bar!) or your party guests – we can set you up with a space, top-notch food and drinks to suit your occasion.",
+          description: "Wellington on a plate best menu 2015! Located upstairs, our 85-seat restaurant serves Mediterranean-style food. The open kitchen, with its large rotisserie and wood-fired oven, adds to the lively ambience. Friendly, professional staff strive to make your dining experience a memorable one, while our team of chefs consistently produce food of the highest quality.The restaurant is open for lunch on Fridays from 11.30am (and on other days by request). During Wellington on a Plate in August, the restaurant will be open for lunch Monday-Friday",
           is_meat: true,
           is_vegan: true,
           is_breakfast: false,
@@ -348,7 +348,7 @@ exports.seed = function(knex, Promise) {
           pricing: "$",
           restaurant_name: "Seize",
           restaurant_url: "",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-w/08/53/f6/a2/seize-cafe.jpg",
+          image_url: "https://unsplash.com/search/photos/fruit?photo=aTtxqs7FFgY",
           address: "117 Lambton Quay, Wellington, 6011",
           lat:"-41.2810346",
           lng:"174.7760794",
@@ -366,7 +366,7 @@ exports.seed = function(knex, Promise) {
           pricing: "$$",
           restaurant_name: "The Botanist",
           restaurant_url: "http://thebotanistlyallbay.co.nz/",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0f/4a/7c/4e/photo1jpg.jpg",
+          image_url: "https://unsplash.com/search/photos/brunch?photo=MSxw2vpQzx4",
           address: "219 Onepu Rd, Lyall Bay, Wellington 6022",
           lat:"-41.3288544",
           lng:"174.7954628",
@@ -403,7 +403,7 @@ exports.seed = function(knex, Promise) {
           pricing: "$",
           restaurant_name: "Tommy Millions",
           restaurant_url: "https://www.tommymillions.co.nz/",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-w/03/bb/16/3f/tommy-millions.jpg",
+          image_url: "https://unsplash.com/photos/HPZs4EXRFSU",
           address: "105 Courtenay Pl, Te Aro, Wellington 6011",
           lat:"-41.2927307",
           lng:"174.7788817",
@@ -456,13 +456,13 @@ exports.seed = function(knex, Promise) {
           net_rating: 6,
           pricing: "$",
           restaurant_name: "Satay Kingdom",
-          restaurant_url: "",
-          image_url: "https://media-cdn.tripadvisor.com/media/photo-o/03/a4/36/6d/satay-kingdom.jpg",
+          restaurant_url: "https://www.zomato.com/wellington/satay-kingdom-cafe-te-aro-wellington-city",
+          image_url: "https://unsplash.com/search/photos/noodle?photo=9aUU5PGZfxY",
           address: "212 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2953803",
           lng:"174.7743624",
           phone: "+6443813730",
-          description: "Hidden Treasure in Wellington",
+          description: "Hidden Treasure in Wellington. Takeaway is available, we offer outdoor seating, and we are vegetarian friendly!",
           is_meat: true,
           is_vegan: false,
           is_breakfast: true,
