@@ -84,14 +84,12 @@ test.cb('POST /login ', t => {
     user_name: 'Magda',
     password: 'password'
   }
-
   request(t.context.app)
     .post('/api/v1/auth/login')
     .send(existingUser)
     .expect(200)
     .end((err, res) => {
       t.ifError(err)
-      console.log(res.status, res.text)
       t.is(decode(res.body.token).user_name, 'Magda')
         t.end()
     })
