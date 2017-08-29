@@ -5,7 +5,7 @@ import { logoutUser } from '../actions/logout'
 
 const Logout = (props) => {
   return (
-    <button onClick={props.logoutUser}>
+    <button className='button is-primary is-inverted' onClick={props.logoutUser}>
       Logout
     </button>
   )

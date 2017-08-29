@@ -7,7 +7,7 @@ class CommentsView extends React.Component {
     super(props)
   }
 
-  componentWillMount () {
+  componentWillMount() {
     this.props.dispatch(getComments(this.props.restaurantId))
   }
 
@@ -19,27 +19,29 @@ class CommentsView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         {this.props.comments.map((comment, i) => {
           return (
-            <div key={i}>
-              <span>{comment.user_name}: {comment.content} </span>
-              <br />
-              <span>Positive: {comment.is_pos ? 'yes' : 'no'} </span>
-              <span>Fair: {comment.is_fair ? 'yes' : 'no'} </span>
-              <br />
-              <br />
+            <div key={i} className="media-left">
+              <div className="container">
+                <div className="content has-text-centered">
+                  <p>
+                    <strong>{comment.user_name} </strong>
+                    {comment.content}
+                    <i className={(comment.is_pos ? "fa fa-thumbs-up" : "fa fa-thumbs-down")} label="is positive?"></i>
+                    <i className={(comment.is_fair ? "fa fa-usd positive" : "fa fa-usd negative")} label="is positive?"></i>
+                  </p>
+                </div>
+              </div>
             </div>
-          )
-        }
-        )}
-      </div>
-    )
+          )})}
+        </div>
+      )
+    }
   }
-}
 
-const mapStateToProps = (state) => {
-  console.log(state.comments);
-  return {comments: state.comments}
-}
-export default connect(mapStateToProps)(CommentsView)
+
+  const mapStateToProps = (state) => {
+    return {comments: state.comments}
+  }
+  export default connect(mapStateToProps)(CommentsView)
