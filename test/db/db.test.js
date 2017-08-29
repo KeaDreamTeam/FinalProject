@@ -4,7 +4,7 @@ var server = require('../../server/server')
 var setupDb = require('../server//setup-db')
 var restaurantsDb = require('../../server/db/DbAccess')
 var usersDb = require ('../../server/db/DbUsers')
-
+var users = require ('../../server/db/users')
 
 setupDb(test, server)
 
@@ -24,9 +24,18 @@ test.cb('read comments db', t => {
     t.end()
   })
 })
-// 
+
+test.cb('read users db', t => {
+  usersDb.getUsers(t.context.db)
+  .then(users => {
+    t.true(users[0].hasOwnProperty('user_name'))
+    t.end()
+  })
+})
+
+
 // test.only.cb('getUserByName returns correct user', t => {
-//   usersDb.getUserByName('Magda', t.context.connection)
+//   users.getUserByName('Magda', t.context.conn)
 //     .then((user) => {
 //       t.is(user[0].id, 51)
 //       // t.is(user.length, 1)
