@@ -14,6 +14,8 @@ import Footer from '../../client/components/Footer'
 import ContactForm from '../../client/components/ContactForm'
 import Filter from '../../client/components/Filter'
 import FilterOptions from '../../client/components/FilterOptions'
+import RestaurantList from '../../client/components/RestaurantList'
+
 
 App.prototype.componentDidMount = () => {}
 
@@ -50,4 +52,14 @@ test("What's For Lunch? renders on HeaderBody", t => {
  test("FilterOptions has a button", t => {
    const wrapper =  mount(<Provider store={store}><FilterOptions /></Provider>)
    t.is(wrapper.find('button').length,6)
+ })
+
+ test('ContactForm contains an a tag', t => {
+   const wrapper = mount(<Provider store={store}><ContactForm /></Provider>)
+   t.is(wrapper.find('a').exists(), true)
+ })
+
+ test('RestaurantList contains an a tag', t => {
+   const wrapper = mount(<Provider store={store}><RestaurantList restaurants={[{name: 'Harrisons hamburgers'}]} /></Provider>)
+   t.is(wrapper.find('a').exists(), true)
  })
