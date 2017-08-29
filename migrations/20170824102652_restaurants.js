@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
     table.string('address')
     table.string('lat')
     table.string('lng')
-    table.integer('phone')
+    table.string('phone')
     table.text('description')
     table.boolean('is_meat').defaultTo(false)
     table.boolean('is_vegan').defaultTo(false)

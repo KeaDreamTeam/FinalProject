@@ -14,7 +14,7 @@ exports.seed = function(knex, Promise) {
           address: "178 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2945429",
           lng:"174.7748678",
-          phone: "006443847014",
+          phone: "+6443847014",
           description: "Warm, cosy, and yummy!",
           is_meat: true,
           is_vegan: true,
@@ -50,8 +50,13 @@ exports.seed = function(knex, Promise) {
           address: "128 Courtenay Pl, Te Aro, Wellington 6011",
           lat:"-41.2924698",
           lng:"174.7793674",
-          phone: "006443852905",
-          description: "A funky cafe/bar serving up tasty counter food, good coffee and alcoholic beverages.",
+
+         
+         description: "A funky cafe/bar serving up tasty counter food, good coffee and alcoholic beverages.",
+
+          phone: "+6443852905",
+        
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -68,8 +73,13 @@ exports.seed = function(knex, Promise) {
           address: "234 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2959071",
           lng:"174.7739487",
-          phone: "006448016868",
+
+         
           description: "Brothers & sisters of the revolution! Welcome to Fidel’s. Where the coffee is Cuban and the hospitality is pure New Zealand.This iconic Wellington institution has made its mark as a bohemian bastion on upper Cuba Street. From an early morning espresso, midday brunch, or late night rum; this bustling landmark specialises in being whatever you want it to be.",
+
+          phone: "+6448016868",
+         
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -86,8 +96,13 @@ exports.seed = function(knex, Promise) {
           address: "129 Willis St, Te Aro, Wellington 6011",
           lat:"-41.2898022",
           lng:"174.7744975",
-          phone: "006443851104",
+
+        
           description: "Wellington's first Burger Bar. Serving great burgers, along with the burger's favourite accompaniments; fries, tacos, cocktails, hard shakes, beers, and with a great selection of bourbons and rums.Open from 11.30am until late daily. We take bookings during lunch and early in the evenings for groups of 8 or more, otherwise just rock on in.",
+
+          phone: "+6443851104",
+          
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: false,
@@ -104,8 +119,13 @@ exports.seed = function(knex, Promise) {
           address: "159 Lambton Quay, Wellington 6011",
           lat:"-41.2825527",
           lng:"174.7765304",
-          phone: "006444738500",
+
+          
           description: "Perched on the edge of Midland Park, at the heart of Wellington’s shopping and business districts, Astoria offers a blend of grand European cafe culture and the quintessential bustle of Wellington city life.A celebrated atmosphere is fueled by the cafe’s  contribution to the popular park, particularly when the sun graces us with its presence. On colder days, loyal clientele enjoy the cozy expanse of our vintage interior.The menu is inspired by seasonal produce, paired with coffee roasted on-site",
+
+          phone: "+6444738500",
+         
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -122,8 +142,13 @@ exports.seed = function(knex, Promise) {
           address: "152 Riddiford St, Newtown, Wellington 6021",
           lat:"-41.3130669",
           lng:"174.7794356",
-          phone: "006443800470",
+
+        
           description: "Newtown, Wellington is one of the most culturally diverse suburbs in New Zealand, creating a melting pot of bohemian style & eclectic culture. Since we opened in 2008, Baobab has grown to twice the original size and created one of the largest outdoor dining spaces in Wellington. It has become a favourite local hub for the community, a place to relax & forget about how busy the outside world can be, while sipping on a premium blend of Ethiopian espresso or a pint of local boutique craft beer in our tranquil courtyard. Baobab is open 7 days per week serving all day breakfast & lunch. Our seasonal menus are created with love by qualified chefs with locally sourced products. Our wholesome & unique cabinet treats are baked fresh every day; including gluten-free, dairy free & vegan options. We are also open Friday evenings with live music, serving delicious tapas & after work drinks.",
+
+          phone: "+6443800470",
+        
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -140,8 +165,11 @@ exports.seed = function(knex, Promise) {
           address: "119 Dixon St, Te Aro, Wellington 6011",
           lat:"-41.2907929",
           lng:"174.7735663",
-          phone: "006448300909",
+
           description: "Flight Coffee is a family of driven people that work together to produce amazing coffee, while always aiming to have the best impact we can on the industry and the lives it connects. Our focus is on coffee appreciation, education, and development. Education is key. Stay hungry. Stay curious. Have fun.",
+
+          phone: "+6448300909",
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -158,7 +186,7 @@ exports.seed = function(knex, Promise) {
           address: "242 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2961319",
           lng:"174.7740165",
-          phone: "006443844280",
+          phone: "+6443844280",
           description: "Fun spot, great service",
           is_meat: true,
           is_vegan: true,
@@ -176,8 +204,12 @@ exports.seed = function(knex, Promise) {
           address: "7 Lyall Parade, Lyall Bay, Wellington 6022",
           lat:"-41.3304322",
           lng:"174.7933458",
-          phone: "006443844280",
+
+        
           description: "Laundry is a funky little establishment aimed at bringing Wellington's Cuba street dining back to its roots.",
+
+          phone: "+6443844280",
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: false,
@@ -194,7 +226,7 @@ exports.seed = function(knex, Promise) {
           address: "200 Queens Dr, Lyall Bay, Wellington 6022",
           lat:"-41.3307173",
           lng:"174.7915316",
-          phone: "006443872829",
+          phone: "+6443872829",
           description: "Queen Sally's Diamond Deli is a true testament to the strength of coffee. Like a phoenix, it rose from the ashes of fire-ravaged Maranui Café, opening in Queen's Drive to quell the rumbling stomachs of Lyall Bay.",
           is_meat: true,
           is_vegan: true,
@@ -212,7 +244,7 @@ exports.seed = function(knex, Promise) {
           address: "4 Rintoul St, Newtown, Wellington 6021",
           lat:"-41.3118045",
           lng:"174.7790072",
-          phone: "0064210474530",
+          phone: "+64210474530",
           description: "Monterey is a neighbourhood bar and diner established in Newtown in 2010. We serve independent beers and sodas, burgers made with homemade sauces, house-smoked meats and quality produce. Our kitchen serves great food seven days a week. Where possible our ingredients are organic, free-range and ethically sourced. We have tables you can sketch on, a sunny backyard, friendly staff, excellent music, and games that remind you of being a kid.",
           is_meat: true,
           is_vegan: true,
@@ -230,7 +262,7 @@ exports.seed = function(knex, Promise) {
           address: "132 Willis St, Te Aro, Wellington 6011",
           lat:"-41.2894575",
           lng:"174.7743433",
-          phone: "006443859553",
+          phone: "+6443859553",
           description: "Neo Cafe & Eatery offers contemporary NZ cafe cuisine celebrating local artisan producers & suppliers and is continually developing exciting offerings for Wellington’s legion of foodies.Our seasonal menu specialises in all day brunch, fresh salads, in-house baking and caters to a range of diets including gluten-free, vegetarian, and vegan. Neo has a clean modern aesthetic which offers a relaxed environment to our inner-city clientele.We’d love to seat you at a table so you can enjoy the warmth of our space and the excellent coffee, beverage and food offerings.",
           is_meat: true,
           is_vegan: true,
@@ -248,7 +280,7 @@ exports.seed = function(knex, Promise) {
           address: "32 Waring Taylor St, Wellington, 6011",
           lat:"-41.282125",
           lng:"174.776951",
-          phone: "006444726815",
+          phone: "+6444726815",
           description: "Best cheese scones in town!",
           is_meat: true,
           is_vegan: true,
@@ -266,7 +298,7 @@ exports.seed = function(knex, Promise) {
           address: "39 Abel Smith St, Te Aro, Wellington 6011",
           lat:"-41.2964952",
           lng:"174.7744768",
-          phone: "006443849085",
+          phone: "+6443849085",
           description: "For over 100 years our place here in Te Aro, Wellington, has been a favourite meeting place for locals. We love being a part of the community and we are ready to throw in the hard yards to make sure everyone who visits us has a great experience. The Cross has something for everyone - have a look around and choose the perfect spot to suit your mood. Each area has been designed to create a different experience, a different ambience. Bring in your team from work, your mates, your kids, your grandparents, your study group, your special someone, your laptop, your dog (in the garden bar!) or your party guests – we can set you up with a space, top-notch food and drinks to suit your occasion.",
           is_meat: true,
           is_vegan: true,
@@ -284,7 +316,7 @@ exports.seed = function(knex, Promise) {
           address: "25-29 Taranaki St, Te Aro, Wellington 6011",
           lat:"-41.2916855",
           lng:"174.7795819",
-          phone: "006443856650",
+          phone: "+6443856650",
           description: "For over 100 years our place here in Te Aro, Wellington, has been a favourite meeting place for locals. We love being a part of the community and we are ready to throw in the hard yards to make sure everyone who visits us has a great experience. The Cross has something for everyone - have a look around and choose the perfect spot to suit your mood. Each area has been designed to create a different experience, a different ambience. Bring in your team from work, your mates, your kids, your grandparents, your study group, your special someone, your laptop, your dog (in the garden bar!) or your party guests – we can set you up with a space, top-notch food and drinks to suit your occasion.",
           is_meat: true,
           is_vegan: true,
@@ -302,7 +334,7 @@ exports.seed = function(knex, Promise) {
           address: "4 Chews Ln, Wellington, 6011",
           lat:"-41.2874775",
           lng:"174.776393",
-          phone: "00649106009",
+          phone: "+649106009",
           description: "Gotham has for years now, been one of Wellington’s best-loved independent Cafes. Situated right in the heart of the city in the very stylish Chews Lane precinct, Gotham Cafe & Bar is a haven from the capital’s mercurial weather – warm in winter, while in summer the large bi-fold doors are swung open to create a relaxing place to enjoy the day. Coffee and freshly prepared home-style food is the hallmark of Gotham, which offers the best organic Havana blend, organic milk, local produce where possible, cafe style meals, your favourite wine or beer in a low-key atmosphere.",
           is_meat: true,
           is_vegan: true,
@@ -320,7 +352,7 @@ exports.seed = function(knex, Promise) {
           address: "117 Lambton Quay, Wellington, 6011",
           lat:"-41.2810346",
           lng:"174.7760794",
-          phone: "0064274585886",
+          phone: "+64274585886",
           description: "All my favourites - perfect for gluten free!",
           is_meat: true,
           is_vegan: true,
@@ -338,7 +370,7 @@ exports.seed = function(knex, Promise) {
           address: "219 Onepu Rd, Lyall Bay, Wellington 6022",
           lat:"-41.3288544",
           lng:"174.7954628",
-          phone: "006448910198",
+          phone: "+6448910198",
           description: "The Botanist is Lyall Bay's latest addition to the beautiful south coast, bringing the best in tasty organic vegetarian & vegan fare. Views to the sea, with a sunny north facing courtyard, six rotating craft beer taps, botanical cocktails, vegan & organic wines.",
           is_meat: false,
           is_vegan: true,
@@ -356,7 +388,7 @@ exports.seed = function(knex, Promise) {
           address: "156 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2940558",
           lng:"174.775136",
-          phone: "006443852462",
+          phone: "+6443852462",
           description: "Great food and wonderful staff",
           is_meat: true,
           is_vegan: true,
@@ -375,7 +407,7 @@ exports.seed = function(knex, Promise) {
           address: "105 Courtenay Pl, Te Aro, Wellington 6011",
           lat:"-41.2927307",
           lng:"174.7788817",
-          phone: "006443828866",
+          phone: "+6443828866",
           description: "Laverly special pizza of the day and great veggie options",
           is_meat: true,
           is_vegan: true,
@@ -393,7 +425,7 @@ exports.seed = function(knex, Promise) {
           address: "Museum Art Hotel, Level 3, 90 Cable St, Te Aro, Wellington 6011",
           lat:"-41.2918229",
           lng:"174.7824664",
-          phone: "006448028935",
+          phone: "+6448028935",
           description: "When you are looking for a delicious dining experience in a stunning setting try our flagship, French inspired restaurant – Hippopotamus. Our broad menu is peppered with a delicious mix of comfort food and fine-dining dishes that are designed to satisfy your hunger.Our skilled service team will weave their way in and out of your experience ready to recommend their favourite dish and aperitif. In our adjoining Cocktail Bar mixologists armed with all the hip, new cocktails and a host of firm favourites that can either be enjoyed while you dine, or as a pre and post dining spot.Perfect for people watching in Wellywood!",
           is_meat: true,
           is_vegan: true,
@@ -411,7 +443,7 @@ exports.seed = function(knex, Promise) {
           address: "167 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2940181",
           lng:"174.7754852",
-          phone: "006443828288",
+          phone: "+6443828288",
           description: "Great meal, great value.",
           is_meat: false,
           is_vegan: true,
@@ -429,7 +461,7 @@ exports.seed = function(knex, Promise) {
           address: "212 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2953803",
           lng:"174.7743624",
-          phone: "006443813730",
+          phone: "+6443813730",
           description: "Hidden Treasure in Wellington",
           is_meat: true,
           is_vegan: false,
@@ -447,7 +479,7 @@ exports.seed = function(knex, Promise) {
           address: "23 Kent Terrace, Mount Victoria, Wellington 6011",
           lat:"-41.2952101",
           lng:"174.7836867",
-          phone: "0064272492589",
+          phone: "+64272492589",
           description: "Real, delicious, plant-based Mexican food. Food for life: plant-based tacos, salads and soups.La Boca Loca’s clean-eating, veggie-loving little sister. Mexican the way your mama’s mama’s mama made it. No nasties, no short-cuts and no compromise on flavour.",
           is_meat: false,
           is_vegan: true,

@@ -20,17 +20,26 @@ class CommentsView extends React.Component {
   render() {
     return (
       <div className="container">
+        <div className="columns">
+          <div className="">name and comment</div>
+          <div>is positive?</div>
+          <div>is fair?</div>
+        </div>
         {this.props.comments.map((comment, i) => {
           return (
-            <div key={i} className="media-left">
+            <div key={i}>
               <div className="container">
-                <div className="content has-text-centered">
-                  <p>
-                    <strong>{comment.user_name} </strong>
+                <div className="columns">
+                  <div className="column is-4">
+                    <strong>{comment.user_name}: </strong>
                     {comment.content}
+                  </div>
+                  <div className="column is-1">
                     <i className={(comment.is_pos ? "fa fa1 fa-thumbs-up" : "fa fa-thumbs-down")} label="is positive?"></i>
+                  </div>
+                  <div className="column is-1">
                     <i className={(comment.is_fair ? "fa fa-usd positive" : "fa fa-usd negative")} label="is positive?"></i>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
