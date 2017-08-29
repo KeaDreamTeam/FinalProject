@@ -2,18 +2,30 @@ import React from 'react'
 
 const ContactForm = ({toggleContactForm}) => {
   return (
-    <div className = 'wallpaper-no-border'>
-      <div className='container contact'>
-        <form method="POST" action="http://formspree.io/mjgiergiczny@gmail.com">
-          <input type="email" name="email" placeholder="Your email" />
-          <textarea name="message" placeholder="Your message"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-      <a href='#' onClick={toggleContactForm}>
-        Hide ContactForm
-      </a>
-    </div>
+      <div className="ContactForm columns">
+        <div className="column">
+          <a onClick={toggleContactForm}>
+            Contact Form
+          </a>
+          <form method="POST" action="http://formspree.io/mjgiergiczny@gmail.com">
+            <div className="field">
+              <div className="control">
+                <input className="input" type="email" name="email" placeholder="Your email" />
+                </div>
+            </div>
+            <div className="field">
+              <div className="control">
+                <textarea className="textarea" name="message" placeholder="Your message"></textarea>
+              </div>
+            </div>
+            <div className="field">
+              <div className="control">
+                <button className="button is-primary" type="submit">Send</button>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
   )
 }
 

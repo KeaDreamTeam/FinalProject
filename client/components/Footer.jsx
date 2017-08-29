@@ -1,4 +1,7 @@
 import React from 'react'
+import jump from 'jump.js'
+
+
 import ContactForm from './ContactForm'
 
 class Footer extends React.Component {
@@ -20,12 +23,11 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        ContactForm |
         {
           this.state.contactFormVisible ?
           <ContactForm toggleContactForm={this.toggleContactForm} /> :
-            <a href='#' onClick={this.toggleContactForm}>
-              Show ContactForm
+            <a onClick={this.toggleContactForm}>
+              Contact Form
             </a>
           }
         </div>
