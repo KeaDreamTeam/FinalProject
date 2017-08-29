@@ -1,6 +1,7 @@
 var bcrypt = require('bcrypt');
 
 function generate (password) {
+  console.log({password})
   var hash = bcrypt.hashSync(password, 12);
   return hash
 }
