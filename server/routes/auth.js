@@ -11,12 +11,11 @@ router.post('/register', register, token.issueJwt)
 
 
 function register (req, res, next) {
-  console.log(req.body);
   const {user_name, password} = req.body
   userExists(user_name, req.app.get('db'))
-    .then(userExists => {
-      if(userExists) {
-        return res.status(409).send({message: 'User exists'})
+    .then(exists => {
+      if(exists) {
+        return res.status(400).send({message: 'User exists'})
       }
       createUser(user_name, password, req.app.get('db'))
         .then(() => next())

@@ -1,23 +1,22 @@
-import request from '../utils/api'
+
+import request from 'superagent'
 import {saveUserToken} from '../utils/auth'
 
 export function registerUserRequest ({user_name, password}) {
   return (dispatch) => {
-    console.log("creating user", user_name);
-    request('post', 'auth/register', {user_name, password})
-      .then((res) => {
-          let user = saveUserToken(res.body.token)
-          dispatch(receiveLogin(user))
-          console.log("register response", res.body);
-          alert("success")
+    request
+      .post('/api/v1/auth/register')
+      .send({
+        user_name, password
       })
-      .catch(err => {
-        console.log({err});
-        if (err.status === 409) {
-          alert("user exists")
+      .end((err, res) => {
+        if (err) {
+          alert("didn't work")
         }
         else {
-          alert("error:", err.message)
+          saveUserToken(res.body.token)
+          alert("success")
+
         }
       })
   }
