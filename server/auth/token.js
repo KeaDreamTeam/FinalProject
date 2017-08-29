@@ -25,8 +25,9 @@ module.exports = {
 // }
 
 function issueJwt (req, res, next) {
-  connection = req.app.get('db')
-  verify(req.body.user_name, req.body.password,
+  const connection = req.app.get('db')
+  console.log(req.body)
+  verify(req.body.user_name, req.body.password, connection,
     (err, user) => {
       if (err) {
         console.log(err)
@@ -34,29 +35,24 @@ function issueJwt (req, res, next) {
           message: 'Authentication failed due to a server error.'
         })
       }
-
       if (!user) {
         return res.status(403).json({
           message: 'Authentication failed.',
         })
       }
-
       const token = createToken(user, process.env.JWT_SECRET)
       res.json({
         message: 'Authentication successful.',
         token
       })
     })
-    .catch(err => {
-      res.status(500).send(err.message)
-    })
 }
 
-function verify (user_name, password, callback) {
+function verify (user_name, password, connection, callback) {
   db.getUserByName(user_name, connection)
       .then(db => {
-        console.log(db);
         if (db.length === 0 || !hash.verifyUser(db, password)) {
+          console.log('user not ofund')
           return callback(null, false)
       }
       const user = db

@@ -82,7 +82,7 @@ test.cb('POST/ register ', t => {
 test.cb('POST /login ', t => {
   const existingUser = {
     user_name: 'Magda',
-    password: 'adsewxcvxcv3r23rdsds'
+    password: 'password'
   }
 
   request(t.context.app)
@@ -91,6 +91,7 @@ test.cb('POST /login ', t => {
     .expect(200)
     .end((err, res) => {
       t.ifError(err)
+      console.log(res.status, res.text)
       t.is(decode(res.body.token).user_name, 'Magda')
         t.end()
     })
