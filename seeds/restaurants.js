@@ -33,7 +33,7 @@ exports.seed = function(knex, Promise) {
           lat:"-41.2943203",
           lng:"174.7840576",
           phone:"006448015455",
-          description: "All about the coffee",
+          description: "One of Wellington's first hip late night cafes. Enjoy the eclectic vibe and the tasty food that's healthy and fresh - tons of vegetarian options.Deluxe also sells great Havana coffee which will make your bellies smile!",
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -50,8 +50,13 @@ exports.seed = function(knex, Promise) {
           address: "128 Courtenay Pl, Te Aro, Wellington 6011",
           lat:"-41.2924698",
           lng:"174.7793674",
+
+         
+         description: "A funky cafe/bar serving up tasty counter food, good coffee and alcoholic beverages.",
+
           phone: "+6443852905",
-          description: "Good food, great service",
+        
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -68,8 +73,13 @@ exports.seed = function(knex, Promise) {
           address: "234 Cuba St, Te Aro, Wellington 6011",
           lat:"-41.2959071",
           lng:"174.7739487",
+
+         
+          description: "Brothers & sisters of the revolution! Welcome to Fidel’s. Where the coffee is Cuban and the hospitality is pure New Zealand.This iconic Wellington institution has made its mark as a bohemian bastion on upper Cuba Street. From an early morning espresso, midday brunch, or late night rum; this bustling landmark specialises in being whatever you want it to be.",
+
           phone: "+6448016868",
-          description: "Cuban tastes",
+         
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -86,8 +96,13 @@ exports.seed = function(knex, Promise) {
           address: "129 Willis St, Te Aro, Wellington 6011",
           lat:"-41.2898022",
           lng:"174.7744975",
+
+        
+          description: "Wellington's first Burger Bar. Serving great burgers, along with the burger's favourite accompaniments; fries, tacos, cocktails, hard shakes, beers, and with a great selection of bourbons and rums.Open from 11.30am until late daily. We take bookings during lunch and early in the evenings for groups of 8 or more, otherwise just rock on in.",
+
           phone: "+6443851104",
-          description: "Cool atmosphere, good burgers",
+          
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: false,
@@ -104,8 +119,13 @@ exports.seed = function(knex, Promise) {
           address: "159 Lambton Quay, Wellington 6011",
           lat:"-41.2825527",
           lng:"174.7765304",
+
+          
+          description: "Perched on the edge of Midland Park, at the heart of Wellington’s shopping and business districts, Astoria offers a blend of grand European cafe culture and the quintessential bustle of Wellington city life.A celebrated atmosphere is fueled by the cafe’s  contribution to the popular park, particularly when the sun graces us with its presence. On colder days, loyal clientele enjoy the cozy expanse of our vintage interior.The menu is inspired by seasonal produce, paired with coffee roasted on-site",
+
           phone: "+6444738500",
-          description: "Great place for breakfast",
+         
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -122,8 +142,13 @@ exports.seed = function(knex, Promise) {
           address: "152 Riddiford St, Newtown, Wellington 6021",
           lat:"-41.3130669",
           lng:"174.7794356",
+
+        
+          description: "Newtown, Wellington is one of the most culturally diverse suburbs in New Zealand, creating a melting pot of bohemian style & eclectic culture. Since we opened in 2008, Baobab has grown to twice the original size and created one of the largest outdoor dining spaces in Wellington. It has become a favourite local hub for the community, a place to relax & forget about how busy the outside world can be, while sipping on a premium blend of Ethiopian espresso or a pint of local boutique craft beer in our tranquil courtyard. Baobab is open 7 days per week serving all day breakfast & lunch. Our seasonal menus are created with love by qualified chefs with locally sourced products. Our wholesome & unique cabinet treats are baked fresh every day; including gluten-free, dairy free & vegan options. We are also open Friday evenings with live music, serving delicious tapas & after work drinks.",
+
           phone: "+6443800470",
-          description: "Coffee with turmeric - the perfect winter warmer!",
+        
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -140,8 +165,11 @@ exports.seed = function(knex, Promise) {
           address: "119 Dixon St, Te Aro, Wellington 6011",
           lat:"-41.2907929",
           lng:"174.7735663",
+
+          description: "Flight Coffee is a family of driven people that work together to produce amazing coffee, while always aiming to have the best impact we can on the industry and the lives it connects. Our focus is on coffee appreciation, education, and development. Education is key. Stay hungry. Stay curious. Have fun.",
+
           phone: "+6448300909",
-          description: "Great coffee!",
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: true,
@@ -176,8 +204,12 @@ exports.seed = function(knex, Promise) {
           address: "7 Lyall Parade, Lyall Bay, Wellington 6022",
           lat:"-41.3304322",
           lng:"174.7933458",
+
+        
+          description: "Laundry is a funky little establishment aimed at bringing Wellington's Cuba street dining back to its roots.",
+
           phone: "+6443844280",
-          description: "Fun spot, great service",
+
           is_meat: true,
           is_vegan: true,
           is_breakfast: false,
