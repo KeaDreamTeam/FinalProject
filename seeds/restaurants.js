@@ -292,7 +292,7 @@ exports.seed = function(knex, Promise) {
         {
           net_rating: 11,
           pricing: "$$",
-          restaurant_name: "Southern Cross Garden Bar Restaurant",
+          restaurant_name: "Southern Cross Garden",
           restaurant_url: "https://www.thecross.co.nz/",
           image_url: "https://media-cdn.tripadvisor.com/media/photo-o/0e/d2/69/29/the-restaurant.jpg",
           address: "39 Abel Smith St, Te Aro, Wellington 6011",
