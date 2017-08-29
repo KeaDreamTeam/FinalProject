@@ -17,6 +17,10 @@ server.use(passport.initialize())
 server.use(bodyParser.json())
 server.use(express.static(path.join(__dirname, '../public')))
 
+server.get('/:number', (req, res) => {
+  res.redirect('/#/')
+})
+
 server.use('/api/v1/auth', auth)
 server.use('/api/v1', routes )
 server.use('/api/v1/users', users )

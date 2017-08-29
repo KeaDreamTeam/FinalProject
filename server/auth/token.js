@@ -26,7 +26,7 @@ module.exports = {
 
 function issueJwt (req, res, next) {
   const connection = req.app.get('db')
-  console.log(req.body)
+  console.log("issue", req.body)
   verify(req.body.user_name, req.body.password, connection,
     (err, user) => {
       if (err) {
@@ -49,10 +49,11 @@ function issueJwt (req, res, next) {
 }
 
 function verify (user_name, password, connection, callback) {
+  console.log("verify", {user_name, password});
   db.getUserByName(user_name, connection)
       .then(db => {
         if (db.length === 0 || !hash.verifyUser(db, password)) {
-          console.log('user not ofund')
+          console.log('user not found')
           return callback(null, false)
       }
       const user = db

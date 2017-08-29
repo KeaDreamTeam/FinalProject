@@ -6,22 +6,22 @@ const router = express.Router()
 const {userExists, createUser} = require('../db/users')
 const token = require('../auth/token')
 
-
 router.post('/register', register, token.issueJwt)
 
-
 function register (req, res, next) {
+  console.log("register route", req.body);
   const {user_name, password} = req.body
   userExists(user_name, req.app.get('db'))
-    .then(exists => {
-      if(exists) {
-        return res.status(400).send({message: 'User exists'})
+    .then(userExists => {
+      if(userExists) {
+        return res.status(409).json({message: 'User exists'})
       }
       createUser(user_name, password, req.app.get('db'))
         .then(() => next())
     })
     .catch(err => {
-      res.status(500).send({message: err.message})
+      console.log({err});
+      res.status(500).json({message: err.message})
     })
 
 }

@@ -9,7 +9,7 @@ function requestLogin () {
   }
 }
 
-function receiveLogin (user) {
+export function receiveLogin (user) {
   return {
     type: 'LOGIN_SUCCESS',
     isFetching: false,
@@ -32,6 +32,7 @@ export function loginUser (creds) {
     dispatch(requestLogin(creds))
     return request('post', 'auth/login', creds)
       .then((response) => {
+        console.log({response});
         if (response.status === 403) {
           alert("Try Again!")
           dispatch(loginError(response.body.message))
