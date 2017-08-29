@@ -1,3 +1,4 @@
+require('dotenv').config()
 var test = require('ava')
 var request = require('supertest')
 var createServer = require('../../server/server')
@@ -57,7 +58,6 @@ test.cb('GET/ each commen return specific content', t => {
 // tests routes/auth.js
 
 test.cb('POST/ register ', t => {
-  process.env.JWT_SECRET = 'secret'
   const newUser = {
     user_name: 'Magda123',
     name: 'Magda',
@@ -79,32 +79,23 @@ test.cb('POST/ register ', t => {
   })
 })
 
-// test.only.cb('POST /login ', t => {
-//   process.env.JWT_SECRET = 'a31sl86dfk862jsd54lfk123lksjhd92'
-//   const existingUser = {
-//     username: 'Magda',
-//     password: 'adsewxcvxcv3r23rdsds'
-//   }
-//
-//   request(t.context.app)
-//     .post('/api/v1/login')
-//     .send(existingUser)
-//     .expect(200)
-//     .end((err, res) => {
-//       t.ifError(err)
-//       t.is(decode(res.body.token).name, 'Magda')
-//       request(t.context.app)
-//       // /test private route
-//       .get('/api/v1/users')
-//       .set('Authorization', `Bearer ${res.body.token}`)
-//       .expect(200)
-//       .end((err, res) => {
-//         t.ifError(err)
-//         t.is(res.body.user, 'Your user ID is: 61')
-//         t.end()
-//       })
-//     })
-// })
+test.cb('POST /login ', t => {
+  const existingUser = {
+    user_name: 'Magda',
+    password: 'password'
+  }
+
+  request(t.context.app)
+    .post('/api/v1/auth/login')
+    .send(existingUser)
+    .expect(200)
+    .end((err, res) => {
+      t.ifError(err)
+      console.log(res.status, res.text)
+      t.is(decode(res.body.token).user_name, 'Magda')
+        t.end()
+    })
+})
 
 // tests routes/users.js
 

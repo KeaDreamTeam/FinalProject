@@ -5,6 +5,7 @@ var setupDb = require('../server//setup-db')
 var restaurantsDb = require('../../server/db/DbAccess')
 var usersDb = require ('../../server/db/DbUsers')
 
+
 setupDb(test, server)
 
 
@@ -23,5 +24,15 @@ test.cb('read comments db', t => {
     t.end()
   })
 })
+// 
+// test.only.cb('getUserByName returns correct user', t => {
+//   usersDb.getUserByName('Magda', t.context.connection)
+//     .then((user) => {
+//       t.is(user[0].id, 51)
+//       // t.is(user.length, 1)
+//       t.end()
+//     })
+//   })
+
 
 // total 9 tests

@@ -13,6 +13,7 @@ import HeaderBody  from '../../client/components/HeaderBody'
 import Footer from '../../client/components/Footer'
 import ContactForm from '../../client/components/ContactForm'
 import Filter from '../../client/components/Filter'
+// import RestaurantList  from '../../client/components/RestaurantList '
 
 App.prototype.componentDidMount = () => {}
 
@@ -46,9 +47,6 @@ test("What's For Lunch? renders on HeaderBody", t => {
  //   wrapper.find('button').simulate('click')
  //   t.is(wrapper.find('form').exists(), true)
  // })
-
-
-
 
 
 

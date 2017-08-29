@@ -1,4 +1,4 @@
-
+const {generate} = require('../server/auth/hash')
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
   return knex('users').del()
@@ -11,7 +11,7 @@ exports.seed = function(knex, Promise) {
         {user_id: 4, user_name: 'Ania', hash: "adsew3r2ddvdxv3rdsds"},
         {user_id: 5, user_name: 'Ula', hash: "cvxxzcxzcxzccv"},
         {user_id: 6, user_name: 'Usha', hash: "adsew3rcxvcxv23rdsds"},
-        {user_id: 7, user_name: 'Magda', hash: "adsewxcvxcv3r23rdsds"}
+        {user_id: 7, user_name: 'Magda', hash: generate('password')}
       ]);
     });
 };
