@@ -9,8 +9,7 @@ class MapSingle extends React.Component {
   }
   render() {
     return (
-      <div className="columns">
-        <div className="mapSinglecol column is-5 is-offset-2 box">
+        <div className="mapSinglecol box">
           <Map google={window.google}
             style={{height: '95%', position: 'relative', margin: '10px'}}
             className={'mapSingle'}
@@ -28,7 +27,6 @@ class MapSingle extends React.Component {
               position={{lat: this.props.restaurant.lat, lng: this.props.restaurant.lng}} />
           </Map>
         </div>
-      </div>
     );
   }
 }

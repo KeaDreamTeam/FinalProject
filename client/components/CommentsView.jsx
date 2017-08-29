@@ -28,7 +28,7 @@ class CommentsView extends React.Component {
                   <p>
                     <strong>{comment.user_name} </strong>
                     {comment.content}
-                    <i className={(comment.is_pos ? "fa fa-thumbs-up" : "fa fa-thumbs-down")} label="is positive?"></i>
+                    <i className={(comment.is_pos ? "fa fa1 fa-thumbs-up" : "fa fa-thumbs-down")} label="is positive?"></i>
                     <i className={(comment.is_fair ? "fa fa-usd positive" : "fa fa-usd negative")} label="is positive?"></i>
                   </p>
                 </div>
