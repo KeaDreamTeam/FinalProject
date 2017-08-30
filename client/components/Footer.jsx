@@ -21,7 +21,8 @@ class Footer extends React.Component {
   }
   render() {
     return (
-      <div className="footer has-text-centered">
+      <div className="footer has-text-centered columns">
+        <div className="column is-one-third is-offset-one-third">
         <span className="">
 
           <p className="">
@@ -40,6 +41,7 @@ class Footer extends React.Component {
               Contact Form
             </a>
           }
+        </div>
         </div>
       )
     }

@@ -27,10 +27,7 @@
   font-size: 100%;
   color: white;
   border-radius: 10px;
-  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 5s;
+
 }
 @-webkit-keyframes example {
   0%   {background-color:#5bcacc; left:0px; top:0px;}
@@ -122,11 +119,20 @@ i.fa.fa-thumbs-up {
   height: 430px;
 }
 
-.Comments {
+.Comment {
   padding:5px!important;
   margin-bottom: 20px!important;
 }
 
 .ratings {
   margin-bottom: 20px;
+}
+
+.Comments {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 }

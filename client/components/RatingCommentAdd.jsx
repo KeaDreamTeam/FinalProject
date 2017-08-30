@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {createNewUserComment} from '../actions/comments'
+import jump from 'jump.js'
+import {Link} from 'react-router-dom'
 
 class RatingCommentAdd extends React.Component {
   constructor(props) {
@@ -16,7 +18,6 @@ class RatingCommentAdd extends React.Component {
   }
 
   updateDetails = (e) => {
-    // console.log(e.target);
     let {newComment} = this.state
     newComment[e.target.name] = e.target.value
     this.setState({newComment})
@@ -30,7 +31,6 @@ class RatingCommentAdd extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="column box">
             <h2 className="AddComment-title title">Add your comment</h2>
@@ -71,7 +71,7 @@ class RatingCommentAdd extends React.Component {
                   </div>
                 </div>
               </form>
-              : <h1>Please Login to post a review</h1>
+              : <h1>Please <Link onClick={() => jump(".nav")} to="/login">Login</Link> to post a review</h1>
             }
       </div>
     )
@@ -79,7 +79,6 @@ class RatingCommentAdd extends React.Component {
 
 }
 const mapStateToProps = (state) => {
-  // console.log(state.auth);
   return {auth: state.auth, newComment: state.newComment}
 }
 export default connect(mapStateToProps)(RatingCommentAdd)
