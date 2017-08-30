@@ -51,7 +51,6 @@ test.cb('getUserByName returns correct user', t => {
   users.getUserByName('Magda', t.context.db)
     .then((user) => {
       t.is(user.user_id, 7)
-      // t.is(user.length, 1)
       t.end()
     })
 })
@@ -104,8 +103,5 @@ test.cb('saveComment adds a comment to the correct restaurant', (t) => {
           t.is(comments.length, originalLength + 1)
           t.end()
         })
-
     })
 })
-
-// total 9 tests
