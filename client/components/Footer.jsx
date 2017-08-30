@@ -19,10 +19,20 @@ class Footer extends React.Component {
       contactFormVisible: newContact
     })
   }
-
   render() {
     return (
-      <div className="footer">
+      <div className="footer has-text-centered">
+        <span className="">
+
+          <p className="">
+            <i className="fa fa-heart is-small is-right red" aria-hidden="true"></i>
+            made with love
+            <i className="fa fa-heart is-small is-left red" aria-hidden="true"></i>
+          </p>
+          <p className="">
+            by Usha, Magda and Ania
+          </p>
+        </span>
         {
           this.state.contactFormVisible ?
           <ContactForm toggleContactForm={this.toggleContactForm} /> :
