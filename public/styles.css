@@ -132,11 +132,11 @@ i.fa.fa-thumbs-up {
 }
 
 .logo {
-
-  width: 40px!important;
-  height: 40px!important;
+  height: 60px;
 }
-
+.logo-footer {
+  height: 20px;
+}
 .red {
   color: #FF6384
 
