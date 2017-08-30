@@ -18,7 +18,7 @@ test('isAuthenticated returns false if user not logged in', t => {
 // })
 
 test('isAuthenticated returns false if user token expired', t => {
-  global.window.localStorage.setItem('token', jwt.sign({ user_name: 'Magda' }, 'secret', {
+  global.window.localStorage.setItem('token', jwt.sign({ user_name: 'Liam' }, 'secret', {
     expiresIn: 0
   }))
   t.is(auth.isAuthenticated(), false)
@@ -26,16 +26,16 @@ test('isAuthenticated returns false if user token expired', t => {
 })
 
 test('saveUserToken saves to storage and returns decoded token', t => {
-  let decoded = auth.saveUserToken(token.createToken({ user_name: 'Magda' }, 'imasecret'))
+  let decoded = auth.saveUserToken(token.createToken({ user_name: 'Liam' }, 'imasecret'))
   let storage = global.window.localStorage
   t.not(storage.getItem('token'), '')
-  t.is(decoded.user_name, 'Magda')
+  t.is(decoded.user_name, 'Liam')
 })
 
 // test.only('getUserTokenInfo returns decoded token', t => {
-//   global.window.localStorage.setItem('token', token.createToken({ user_name: 'Magda' }, 'secret'))
+//   global.window.localStorage.setItem('token', token.createToken({ user_name: 'Liam' }, 'secret'))
 //   let info = auth.getUserTokenInfo()
-//   t.is(info.user_name, 'Magda')
+//   t.is(info.user_name, 'Liam')
 // })
 
 test('getUserTokenInfo returns null if no token exists', t => {

@@ -81,7 +81,7 @@ test.cb('POST/ register ', t => {
 
 test.cb('POST /login ', t => {
   const existingUser = {
-    user_name: 'Magda',
+    user_name: 'Liam',
     password: 'password'
   }
   request(t.context.app)
@@ -90,7 +90,7 @@ test.cb('POST /login ', t => {
     .expect(200)
     .end((err, res) => {
       t.ifError(err)
-      t.is(decode(res.body.token).user_name, 'Magda')
+      t.is(decode(res.body.token).user_name, 'Liam')
         t.end()
     })
 })
@@ -103,7 +103,7 @@ test.cb('GET/ users returns users', t => {
   .expect(200)
   .end((err,res) => {
     if (err) console.log(err);
-    t.is(res.body[1].user_name, "Jan")
+    t.is(res.body[1].user_name, "Matthew")
     t.end()
   })
 })

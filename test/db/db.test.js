@@ -48,7 +48,7 @@ test('create new user', t => {
 })
 
 test.cb('getUserByName returns correct user', t => {
-  users.getUserByName('Magda', t.context.db)
+  users.getUserByName('Liam', t.context.db)
     .then((user) => {
       t.is(user.user_id, 7)
       t.end()
@@ -56,7 +56,7 @@ test.cb('getUserByName returns correct user', t => {
 })
 
 test.cb('userExists returns true for existing user', (t) => {
-  var user_name = 'Magda'
+  var user_name = 'Liam'
   users.userExists(user_name, t.context.db)
     .then(doesExist => {
       t.is(doesExist, true)
