@@ -19,11 +19,11 @@ class CommentsView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Comments">
         {this.props.comments.map((comment, i) => {
           return (
             <div key={i}>
-                <div className="Comments box columns">
+                <div className="Comment box columns">
                   <div className="column">
                     <strong>{comment.user_name}: </strong>
                     {comment.content}

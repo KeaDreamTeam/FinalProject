@@ -21,13 +21,14 @@ class Footer extends React.Component {
   }
   render() {
     return (
-      <div className="footer has-text-centered">
+      <div className="footer has-text-centered columns">
+        <div className="column is-one-third is-offset-one-third">
         <span className="">
 
           <p className="">
-            <i className="fa fa-heart is-small is-right red" aria-hidden="true"></i>
+            <img className="logo-footer" src="logo.png"></img>
             made with love
-            <i className="fa fa-heart is-small is-left red" aria-hidden="true"></i>
+            <img className="logo-footer" src="logo.png"></img>
           </p>
           <p className="">
             by Usha, Magda and Ania
@@ -40,6 +41,7 @@ class Footer extends React.Component {
               Contact Form
             </a>
           }
+        </div>
         </div>
       )
     }

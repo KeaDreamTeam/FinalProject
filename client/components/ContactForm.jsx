@@ -1,7 +1,14 @@
 import React from 'react'
+import jump from 'jump.js'
 
-const ContactForm = ({toggleContactForm}) => {
-  return (
+class ContactForm extends React.Component {
+componentDidMount = () => {
+  jump('.ContactForm')
+}
+
+  render = () => {
+    let {toggleContactForm} = this.props
+    return (
       <div className="ContactForm columns">
         <div className="column">
           <a onClick={toggleContactForm}>
@@ -26,7 +33,8 @@ const ContactForm = ({toggleContactForm}) => {
           </form>
           </div>
         </div>
-  )
+    )
+  }
 }
 
 

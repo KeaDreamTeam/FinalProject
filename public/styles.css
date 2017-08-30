@@ -1,11 +1,10 @@
 .negative {
-  color: #FF6384 !important; //used for icons in rating//
+  color: #FF6384 !important;
 }
 .positive {
-  color: #36A2EB !important; //used for icons in rating//
+  color: #36A2EB !important;
 }
-.red {
-  color: #FF6384; //used for footer//
+.headerColor {
 }
 .ico {
   width: 10px;
@@ -15,9 +14,9 @@
   margin-bottom: 20px;
 }
 .filterButton {
-  /*background-color: #f7f7f7;
+  background-color: #f7f7f7;
   border: 2px solid white;
-  border-radius: 10px;*/
+  border-radius: 10px;
 }
 .toggle {
   margin-bottom: 15px;
@@ -28,9 +27,9 @@
   color: white;
   border-radius: 10px;
   -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
   animation-name: example;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 @-webkit-keyframes example {
   0%   {background-color:#5bcacc; left:0px; top:0px;}
@@ -41,7 +40,7 @@
   position: unset!important;
 }
 .mapcol {
-  height: 500px;
+  height: 400px;
 }
 .mapSingle {
   position: unset!important;
@@ -54,6 +53,7 @@
   float:left;
 }
 .app-body {
+  margin-top: 30px;
 }
 /*single restaurant component text style*/
 .restaurantName {
@@ -85,7 +85,7 @@
 .ClickMe {
   -vendor-animation-iteration-count: 5;
 }
-/*.Nav { position: fixed !important; top: 0; left: 0; right: 0; }*/
+
 i.fa.fa-thumbs-up {
   color: black;
 }
@@ -122,15 +122,35 @@ i.fa.fa-thumbs-up {
   height: 430px;
 }
 
-.Comments {
+.Comment {
   padding:5px!important;
   margin-bottom: 20px!important;
+}
+
+.Comments {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 300px;
+  padding-top:20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .ratings {
   margin-bottom: 20px;
 }
+
 .logo {
-  width: 40px;
-  height: 40px;
+  height: 60px;
+}
+.logo-footer {
+  height: 20px;
+}
+.red {
+  color: #FF6384;
+  height: 80px;
+  padding-bottom: -30px !important;
+}
+.filterButton {
+  font-size: 100%;
 }
