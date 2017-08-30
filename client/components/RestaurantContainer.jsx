@@ -37,15 +37,11 @@ class Restaurant extends React.Component {
             <div onClick={() => jump('.restaurant-container')}><i className="fa fa-arrow-down fa-2x" aria-hidden="true"></i></div>
             <div onClick={() => jump('.nav')}><i className="fa fa-arrow-up fa-2x" aria-hidden="true"></i></div>
           </div>
-
         </div>
-
-          <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
-
-          <div className="singleAnchor">
-            {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
-          </div>
-
+        <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
+        <div className="singleAnchor">
+          {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
+        </div>
       </div>
     )
   }
@@ -54,6 +50,6 @@ class Restaurant extends React.Component {
 const mapStateToProps = (state) => {
   return {
     restaurants: applyFilter(state.restaurants, state.filterOptions)}
-}
+  }
 
-export default connect(mapStateToProps)(Restaurant)
+  export default connect(mapStateToProps)(Restaurant)
