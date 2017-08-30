@@ -10,7 +10,7 @@ function createUser (user_name, password, conn) {
 function userExists (user_name, conn) {
   const db = conn
   return db('users')
-  .count('id as n')
+  .count('user_id as n')
   .where('user_name', user_name)
   .then(count => {
     return count[0].n > 0
