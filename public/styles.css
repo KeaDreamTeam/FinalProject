@@ -40,7 +40,7 @@
   position: unset!important;
 }
 .mapcol {
-  height: 500px;
+  height: 400px;
 }
 .mapSingle {
   position: unset!important;
@@ -97,10 +97,22 @@ i.fa.fa-thumbs-up {
   margin-top: 20px!important;
 }
 
-. MapCont {
+.MapCont {
   margin-bottom: 50px;
 }
 .logo {
   width: 40px;
   height: 40px;
+}
+
+.restaurantHero {
+  margin-top: 20px!important;
+}
+
+.footer {
+  margin-top: 20px!important;
+}
+
+body {
+  background-color:red!important;
 }
