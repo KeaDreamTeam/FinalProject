@@ -21,7 +21,7 @@ toggleFilters() {
 
 render() {
   return (
-    <div className="columns">
+    <div className="FilterCont columns">
       <div className="column is-10 is-offset-1 box">
         {
           this.state.filtersVisible ?

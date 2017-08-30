@@ -20,7 +20,7 @@ class FilterOptions extends React.Component {
   render() {
     return (
       <div className="filterOptions-container">
-        <div className="columns">
+        <div className="columns is-multiline">
             {this.renderFilterOptions()}
         </div>
 
@@ -31,15 +31,12 @@ class FilterOptions extends React.Component {
   renderFilterOptions() {
     return (
       this.state.filterOptions.map((option, i) =>
-      <div className="">
-        <button
-          className={" button is-primary is-outlined filterButton" + (option.filter_value ? " filterSelected" : "")}
-          key={i}
-          onClick={this.setFilter.bind(this, i)}>
-          {option.filter_displayname}
-        </button>
-    </div>
-     )
+      <button
+        className={"column is-one-third filterButton" + (option.filter_value ? " filterSelected" : "")}
+        key={i}
+        onClick={this.setFilter.bind(this, i)}>
+        {option.filter_displayname}
+      </button> )
     )
   }
 

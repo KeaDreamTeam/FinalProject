@@ -18,10 +18,12 @@ class Footer extends React.Component {
     this.setState({
       contactFormVisible: newContact
     })
+    jump(".ContactForm")
   }
   render() {
     return (
-      <div className="footer has-text-centered">
+      <div className="footer has-text-centered columns">
+        <div className="column is-one-third is-offset-one-third">
         <span className="">
 
           <p className="">
@@ -40,6 +42,7 @@ class Footer extends React.Component {
               Contact Form
             </a>
           }
+        </div>
         </div>
       )
     }
