@@ -33,11 +33,8 @@ class Restaurant extends React.Component {
         <div className="MapHero hero is-fullheight">
 
           <MainMap restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
-          <div className="columns">
-            <div className="column">
-              <Filter />
-            </div>
-          </div>
+          <Filter />
+
           <div className="columns">
             <div className="column"></div>
             <div className="Arrow column is-1">
