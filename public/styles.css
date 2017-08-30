@@ -14,9 +14,9 @@
   margin-bottom: 20px;
 }
 .filterButton {
-  background-color: #f7f7f7;
+  /*background-color: #f7f7f7;
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 10px;*/
 }
 .toggle {
   margin-bottom: 15px;
@@ -27,9 +27,9 @@
   color: white;
   border-radius: 10px;
   -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
   animation-name: example;
-  animation-duration: 3s;
+  animation-duration: 5s;
 }
 @-webkit-keyframes example {
   0%   {background-color:#5bcacc; left:0px; top:0px;}
@@ -53,8 +53,7 @@
   float:left;
 }
 .app-body {
-  margin-top: 30px;
-
+}
 /*single restaurant component text style*/
 .restaurantName {
   text-align: center;
@@ -85,10 +84,43 @@
 .ClickMe {
   -vendor-animation-iteration-count: 5;
 }
-.Nav { position: fixed !important; top: 0; left: 0; right: 0; }
+/*.Nav { position: fixed !important; top: 0; left: 0; right: 0; }*/
 i.fa.fa-thumbs-up {
   color: black;
 }
 .fa1 {
   padding: 5px!important;
+}
+
+.Arrow {
+  text-align: center;
+}
+
+.MapHero {
+  margin-top: 10px;
+}
+
+.restaurantHero {
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 30px;
+}
+
+.singleAnchor {
+  margin-top: 30px;
+}
+
+.mapSinglecol {
+  height: 430px;
+}
+
+.Comments {
+  padding:5px!important;
+  margin-bottom: 20px!important;
+}
+
+.ratings {
+  margin-bottom: 20px;
 }
