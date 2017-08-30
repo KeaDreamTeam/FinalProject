@@ -6,9 +6,7 @@ var passport = require('passport')
 
 
 var routes = require('./routes/routes')
-var users = require('./routes/users')
 var auth = require('./routes/auth')
-
 var server = express()
 
 server.use(cors('*'))
@@ -22,7 +20,6 @@ server.get('/:number', (req, res) => {
 })
 server.use('/api/v1/auth', auth)
 server.use('/api/v1', routes )
-server.use('/api/v1/users', users )
 
 
 module.exports = function(db) {

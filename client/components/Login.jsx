@@ -34,7 +34,6 @@ class Login extends Component {
   render () {
     return (
       <div className="column is-one-third is-offset-one-third">
-        <h1>Login!</h1>
         <div className="field">
           <div className="control has-icons-left">
             <input className="input" name='user_name' onChange={this.handleChange} placeholder='Username' />

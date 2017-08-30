@@ -33,7 +33,7 @@ test("What's For Lunch? renders on HeaderBody", t => {
 
  test("Filter has <div>", t => {
    const wrapper =  mount(<Provider store={store}><Filter /></Provider>)
-    t.is(wrapper.find('div').length, 4)
+    t.is(wrapper.find('div').length, 10)
   })
 
   test("ContactForm has a form", t => {
@@ -62,4 +62,10 @@ test("What's For Lunch? renders on HeaderBody", t => {
  test('RestaurantList contains an a tag', t => {
    const wrapper = mount(<Provider store={store}><RestaurantList restaurants={[{name: 'Harrisons hamburgers'}]} /></Provider>)
    t.is(wrapper.find('a').exists(), true)
+ })
+
+ test('RestaurantList has <div>', t => {
+   RestaurantList.prototype.componentDidMount = () => {}
+   const wrapper = mount(<Provider store={store}><RestaurantList restaurants={[{restaurant_name: 'Deluxe cafe'}]} /></Provider>)
+   t.is(wrapper.find('div').length, 7)
  })
