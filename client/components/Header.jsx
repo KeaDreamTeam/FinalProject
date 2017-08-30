@@ -17,7 +17,7 @@ const Header = ({isAuthenticated}) => (
         <div className="container">
           <div className="nav-left">
             <div className="nav-item">
-              <Link exact to="/"><img className="logo" src="logo.png"></img></Link>
+              <Link exact to="/"><img className="logo" src="logo_wfl_white.png"></img></Link>
             </div>
             </div>
             <span className="nav-toggle">

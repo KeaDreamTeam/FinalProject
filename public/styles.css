@@ -131,6 +131,6 @@ i.fa.fa-thumbs-up {
   margin-bottom: 20px;
 }
 .logo {
-  width: 40px;
-  height: 40px;
+  height: 80px;
+  padding-bottom: -30px !important;
 }
