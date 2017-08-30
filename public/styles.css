@@ -54,7 +54,7 @@
 }
 .app-body {
   margin-top: 30px;
-
+}
 /*single restaurant component text style*/
 .restaurantName {
   text-align: center;
@@ -85,7 +85,7 @@
 .ClickMe {
   -vendor-animation-iteration-count: 5;
 }
-.Nav { position: fixed !important; top: 0; left: 0; right: 0; }
+
 i.fa.fa-thumbs-up {
   color: black;
 }
@@ -93,26 +93,49 @@ i.fa.fa-thumbs-up {
   padding: 5px!important;
 }
 
-.FilterCont {
-  margin-top: 20px!important;
+/*colors set:
+'#FF6384',
+'#36A2EB',
+'#FFCE56'*/
+
+.Arrow {
+  text-align: center;
 }
 
-.MapCont {
-  margin-bottom: 50px;
-}
-.logo {
-  width: 40px;
-  height: 40px;
+.MapHero {
+  margin-top: 10px;
 }
 
 .restaurantHero {
-  margin-top: 20px!important;
+  margin-top: 10px;
 }
 
 .footer {
-  margin-top: 20px!important;
+  margin-top: 30px;
 }
 
-body {
-  background-color:red!important;
+.singleAnchor {
+  margin-top: 30px;
+}
+
+.mapSinglecol {
+  height: 430px;
+}
+
+.Comments {
+  padding:5px!important;
+  margin-bottom: 20px!important;
+}
+
+.ratings {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 40px!important;
+  height: 40px!important;
+}
+
+.red {
+  color: #FF6384
 }
