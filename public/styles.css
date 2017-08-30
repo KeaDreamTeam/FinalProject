@@ -147,9 +147,10 @@ i.fa.fa-thumbs-up {
   height: 20px;
 }
 .red {
-  color: #FF6384
-
+  color: #FF6384;
   height: 80px;
   padding-bottom: -30px !important;
-
+}
+.filterButton {
+  font-size: 100%;
 }
