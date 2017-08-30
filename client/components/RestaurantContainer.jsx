@@ -30,12 +30,29 @@ class Restaurant extends React.Component {
   render() {
     return (
       <div>
-        <div className="hero is-fullheight">
-          <div className="">
-            <MainMap restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
-            <Filter />
-            <div onClick={() => jump('.restaurant-container')}><i className="fa fa-arrow-down fa-2x" aria-hidden="true"></i></div>
-            <div onClick={() => jump('.nav')}><i className="fa fa-arrow-up fa-2x" aria-hidden="true"></i></div>
+
+        <div className="MapHero hero is-fullheight">
+
+          <MainMap restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
+          <div className="columns">
+            <div className="column">
+              <Filter />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column"></div>
+            <div className="Arrow column is-1">
+              <div onClick={() => jump('.restaurantHero')}>
+                <i className="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div className="Arrow column is-1">
+              <div onClick={() => jump('.nav')}>
+                <i className="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div className="column"></div>
+
           </div>
         </div>
         <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />

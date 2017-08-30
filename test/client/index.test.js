@@ -64,7 +64,7 @@ test("What's For Lunch? renders on HeaderBody", t => {
    t.is(wrapper.find('a').exists(), true)
  })
 
- test.only('RestaurantList contains all restaurants', t => {
+ test('RestaurantList has <div>', t => {
    RestaurantList.prototype.componentDidMount = () => {}
    const wrapper = mount(<Provider store={store}><RestaurantList restaurants={[{restaurant_name: 'Deluxe cafe'}]} /></Provider>)
    t.is(wrapper.find('div').length, 5)

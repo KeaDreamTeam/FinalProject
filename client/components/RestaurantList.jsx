@@ -4,10 +4,14 @@ import {getRestaurants} from '../actions/restaurants'
 
 const RestaurantList = ({restaurants, toggleSingleView, singleView, select}) => {
   return (
-    <div className="hero is-fullheight">
+    <div className="restaurantHero hero is-fullheight">
+      <div className="columns">
+        <div className="column">
+          <h1 className="title has-text-centered">Pick up your favourite vegetarian restaurant!</h1>
+        </div>
+      </div>
       <div className="columns">
         <div className="column is-10 is-offset-1">
-          <h1 className="restaurantList-title title is-centered">Pick up your favourite vegetarian restaurant!</h1>
           <div className="columns is-multiline restaurant-container">
             {restaurants.map((restaurant, i) => {
               return (
