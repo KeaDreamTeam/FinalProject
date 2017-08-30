@@ -35,7 +35,6 @@ class Register extends React.Component {
    render() {
      return (
        <div className="column is-one-third is-offset-one-third">
-         <h1>Register!</h1>
          <form onSubmit={this.handleSubmit.bind(this)}>
            <div className="field">
              <div className="control">

@@ -33,7 +33,6 @@ class MainMap extends React.Component {
   render() {
     return (
       <div className="columns">
-
         <div className="mapcol column">
           <h1 className="title has-text-centered">Find a veggie option</h1>
           <Map google={window.google}

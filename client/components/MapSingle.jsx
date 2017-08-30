@@ -20,7 +20,6 @@ class MapSingle extends React.Component {
             }}
             centerAroundCurrentLocation={false}
             >
-
             <Marker
               title={this.props.restaurant.restaurant_name}
               name={this.props.restaurant.restaurant_name}

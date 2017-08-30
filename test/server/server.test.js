@@ -94,38 +94,3 @@ test.cb('POST /login ', t => {
         t.end()
     })
 })
-
-// tests routes/users.js
-
-test.cb('GET/ users returns users', t => {
-  request(t.context.app)
-  .get('/api/v1/users')
-  .expect(200)
-  .end((err,res) => {
-    if (err) console.log(err);
-    t.is(res.body[1].user_name, "Matthew")
-    t.end()
-  })
-})
-
-test.cb('GET/ comments returns user comments', t => {
-  request(t.context.app)
-  .get('/api/v1/users/3/comments')
-  .expect(200)
-  .end((err,res) => {
-    if (err) console.log(err);
-    t.is(res.body[0].user_id, 3)
-    t.end()
-  })
-})
-
-test.cb('GET/ comments returns user id', t => {
-  request(t.context.app)
-  .get('/api/v1/users/3/comments')
-  .expect(200)
-  .end((err,res) => {
-    if (err) console.log(err);
-    t.is(res.body[0].user_id, 3)
-    t.end()
-  })
-})

@@ -30,6 +30,7 @@ class Restaurant extends React.Component {
   render() {
     return (
       <div>
+
         <div className="MapHero hero is-fullheight">
 
           <MainMap restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
@@ -51,15 +52,13 @@ class Restaurant extends React.Component {
               </div>
             </div>
             <div className="column"></div>
+
           </div>
         </div>
-
-          <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
-
-          <div className="singleAnchor">
-            {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
-          </div>
-
+        <RestaurantList restaurants={this.props.restaurants} select={this.selectRestaurant.bind(this)} />
+        <div className="singleAnchor">
+          {this.state.selected && <RestaurantSingle selected={this.state.selected} select={this.selectRestaurant.bind(this)} /> }
+        </div>
       </div>
     )
   }
@@ -68,6 +67,6 @@ class Restaurant extends React.Component {
 const mapStateToProps = (state) => {
   return {
     restaurants: applyFilter(state.restaurants, state.filterOptions)}
-}
+  }
 
-export default connect(mapStateToProps)(Restaurant)
+  export default connect(mapStateToProps)(Restaurant)
