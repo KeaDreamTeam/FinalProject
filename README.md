@@ -30,13 +30,12 @@ An app that displays and searches through vegetarian restaurants. The client-sid
 - filtering
 - Google maps
 - enabled authorisation and adding users
-- mobile-ready
 - SPA
 
 ### Team Learning Objectives:
 
 - full stack development (React, Redux, Express, Knex)
-- creating a mobile-ready SPA app
+- SPA
 - Google maps implementation
 - applying Agile project techniques
 
