@@ -25,9 +25,9 @@ class Footer extends React.Component {
         <span className="">
 
           <p className="">
-            <i className="fa fa-heart is-small is-right red" aria-hidden="true"></i>
+            <img className="logo-footer" src="logo.png"></img>
             made with love
-            <i className="fa fa-heart is-small is-left red" aria-hidden="true"></i>
+            <img className="logo-footer" src="logo.png"></img>
           </p>
           <p className="">
             by Usha, Magda and Ania
