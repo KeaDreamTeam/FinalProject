@@ -2,6 +2,8 @@
 
 Project name: What's For Lunch?!
 
+You'll find us online https://whatsforlunchkea.herokuapp.com/#/
+
 ## Install
 
 Clone this repo:
