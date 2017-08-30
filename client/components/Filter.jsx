@@ -22,7 +22,7 @@ toggleFilters() {
 render() {
   return (
     <div className="columns">
-      <div className="column is-8 is-offset-2 box">
+      <div className="column is-10 is-offset-1 box">
         {
           this.state.filtersVisible ?
           <FilterOptions toggleFilters={this.toggleFilters} /> :
