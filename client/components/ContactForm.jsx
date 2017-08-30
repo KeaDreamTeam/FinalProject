@@ -14,7 +14,7 @@ componentDidMount = () => {
           <a onClick={toggleContactForm}>
             Contact Form
           </a>
-          <form method="POST" action="http://formspree.io/mjgiergiczny@gmail.com">
+          <form method="POST" action="https://formspree.io/mjgiergiczny@gmail.com">
             <div className="field">
               <div className="control">
                 <input className="input" type="email" name="email" placeholder="Your email" />
