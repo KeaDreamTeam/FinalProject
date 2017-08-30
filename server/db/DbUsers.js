@@ -9,9 +9,7 @@ const getUserComments = (id, db) => {
 }
 
 
-
 module.exports = {
   getUsers,
   getUserComments
-
 }

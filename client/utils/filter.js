@@ -1,6 +1,6 @@
 
 function applyFilter(restaurants, filterOptions) {
-  return restaurants.filter((restaurant) => (    
+  return restaurants.filter((restaurant) => (
     compareOption(restaurant.is_meat, filterOptions.is_meat) &&
     compareOption(restaurant.is_vegan, filterOptions.is_vegan) &&
     compareOption(restaurant.is_breakfast, filterOptions.is_breakfast) &&

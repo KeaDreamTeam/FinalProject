@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken')
 const verifyJwt = require('express-jwt')
 const hash = require('./hash')
-
 const db = require('../db/users')
 
 module.exports = {
@@ -9,20 +8,6 @@ module.exports = {
   createToken,
   decode
 }
-
-// function issueJwt (req, res, next) {
-//   db.getUserByName(req.body.user_name, req.app.get('db'))
-//     .then(user => {
-//       if (!user) {
-//         return res.status(403).json()
-//       }
-//       const token = createToken(user, process.env.JWT_SECRET)
-//       res.json({
-//         message: 'Authentication successful.',
-//         token
-//       })
-//     })
-// }
 
 function issueJwt (req, res, next) {
   const connection = req.app.get('db')
@@ -50,12 +35,11 @@ function issueJwt (req, res, next) {
 
 function verify (user_name, password, connection, callback) {
   db.getUserByName(user_name, connection)
-      .then(db => {
-        if (db.length === 0 || !hash.verifyUser(db, password)) {
-          console.log('user not ofund')
+      .then(user => {
+        if (user.length === 0 || !hash.verifyUser(user, password)) {
+          console.log('user not found')
           return callback(null, false)
       }
-      const user = db
       delete user.hash
       callback(null, user)
     })
@@ -71,7 +55,6 @@ function createToken (user, secret) {
   }, secret, {
     expiresIn: '1d'
   })
-
 }
 
 function decode (req, res, next) {

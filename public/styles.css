@@ -1,10 +1,11 @@
 .negative {
-  color: #FF6384 !important;
+  color: #FF6384 !important; //used for icons in rating//
 }
 .positive {
-  color: #36A2EB !important;
+  color: #36A2EB !important; //used for icons in rating//
 }
-.headerColor {
+.red {
+  color: #FF6384; //used for footer//
 }
 .ico {
   width: 10px;
@@ -91,6 +92,11 @@ i.fa.fa-thumbs-up {
 .fa1 {
   padding: 5px!important;
 }
+
+/*colors set:
+'#FF6384',
+'#36A2EB',
+'#FFCE56'*/
 
 .Arrow {
   text-align: center;

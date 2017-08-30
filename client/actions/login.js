@@ -9,7 +9,7 @@ function requestLogin () {
   }
 }
 
-function receiveLogin (user) {
+export function receiveLogin (user) {
   return {
     type: 'LOGIN_SUCCESS',
     isFetching: false,
@@ -40,6 +40,7 @@ export function loginUser (creds) {
           const userInfo = saveUserToken(response.body.token)
           dispatch(receiveLogin(userInfo))
           alert("You've logged in!")
+          document.location = "/#/"
         }
       }).catch(err => alert("Try Again!")
 
