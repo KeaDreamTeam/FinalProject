@@ -902,14 +902,14 @@ exports.seed = function(knex, Promise) {
           is_fair: false
         },
         {
-          user_id: 24,
+          user_id: 4,
           restaurant_id: 17,
           content: "great place",
           is_pos: true,
           is_fair: true
         },
         {
-          user_id: 24,
+          user_id: 1,
           restaurant_id: 17,
           content: "fantastic place",
           is_pos: true,
@@ -1022,21 +1022,21 @@ exports.seed = function(knex, Promise) {
           is_fair: false
         },
         {
-          user_id: 4,
+          user_id: 5,
           restaurant_id: 20,
           content: "the salad was too green ...",
           is_pos: false,
           is_fair: false
         },
         {
-          user_id: 3,
+          user_id: 4,
           restaurant_id: 20,
           content: "very good price and great food",
           is_pos: true,
           is_fair: true
         },
         {
-          user_id: 6,
+          user_id: 3,
           restaurant_id: 20,
           content: "good price and great food",
           is_pos: true,
@@ -1050,7 +1050,7 @@ exports.seed = function(knex, Promise) {
           is_fair: true
         },
         {
-          user_id: 6,
+          user_id: 2,
           restaurant_id: 20,
           content: "good price and great food",
           is_pos: true,
@@ -1071,21 +1071,21 @@ exports.seed = function(knex, Promise) {
           is_fair: true
         },
         {
-          user_id: 4,
+          user_id: 7,
           restaurant_id: 21,
           content: "very good price and great food",
           is_pos: true,
           is_fair: true
         },
         {
-          user_id: 4,
+          user_id: 3,
           restaurant_id: 21,
           content: "great food",
           is_pos: true,
           is_fair: true
         },
         {
-          user_id: 4,
+          user_id: 1,
           restaurant_id: 21,
           content: "fabulous pizzas",
           is_pos: true,
@@ -1099,7 +1099,7 @@ exports.seed = function(knex, Promise) {
           is_fair: true
         },
         {
-          user_id: 4,
+          user_id: 7,
           restaurant_id: 21,
           content: "very good price and great food",
           is_pos: true,
@@ -1127,7 +1127,7 @@ exports.seed = function(knex, Promise) {
           is_fair: true
         },
         {
-          user_id: 2,
+          user_id: 1,
           restaurant_id: 21,
           content: "love the place",
           is_pos: true,
@@ -1162,7 +1162,7 @@ exports.seed = function(knex, Promise) {
           is_fair: true
         },
         {
-          user_id: 7,
+          user_id: 4,
           restaurant_id: 22,
           content: "very good salads and great food",
           is_pos: true,
@@ -1183,7 +1183,7 @@ exports.seed = function(knex, Promise) {
           is_fair: false
         },
         {
-          user_id: 5,
+          user_id: 9,
           restaurant_id: 23,
           content: "not too good ...",
           is_pos: false,
@@ -1232,7 +1232,7 @@ exports.seed = function(knex, Promise) {
           is_fair: false
         },
         {
-          user_id: 4,
+          user_id: 1,
           restaurant_id: 24,
           content: "not too good ...",
           is_pos: false,
@@ -1267,7 +1267,7 @@ exports.seed = function(knex, Promise) {
           is_fair: false
         },
         {
-          user_id: 4,
+          user_id: 3,
           restaurant_id: 25,
           content: "not too good ...",
           is_pos: false,
