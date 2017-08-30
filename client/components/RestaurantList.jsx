@@ -4,7 +4,7 @@ import {getRestaurants} from '../actions/restaurants'
 
 const RestaurantList = ({restaurants, toggleSingleView, singleView, select}) => {
   return (
-    <div className="restaurantHero hero is-fullheight">
+    <div className="restaurantHero hero">
       <div className="columns">
         <div className="column">
           <h1 className="title has-text-centered">Pick up your favourite vegetarian restaurant!</h1>
