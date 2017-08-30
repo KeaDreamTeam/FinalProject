@@ -32,8 +32,8 @@ class RatingCommentAdd extends React.Component {
 
   render() {
     return (
-      <div className="column box">
-            <h2 className="AddComment-title title">Add your comment</h2>
+      <div className="column is-half is-offset-one-quarter box">
+            <h2 className=" title">Add your comment</h2>
             {this.props.auth.isAuthenticated
               ? <form className="" onSubmit={this.submitDetails.bind(this)}>
                 <div className="field">
