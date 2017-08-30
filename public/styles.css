@@ -122,9 +122,18 @@ i.fa.fa-thumbs-up {
   height: 430px;
 }
 
-.Comments {
+.Comment {
   padding:5px!important;
   margin-bottom: 20px!important;
+}
+
+.Comments {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 300px;
+  padding-top:20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .ratings {

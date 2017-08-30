@@ -33,9 +33,7 @@ const RestaurantSingle = ({selected, select}) => {
         </div>
       </div>
       <div className="columns">
-          <div className="restaurantAddComment-container">
             <RatingCommentAdd user_id={500} restaurant_id={selected.restaurant_id} />
-          </div>
       </div>
       <a href="#" onClick={() => select(null)}>Close</a>
     </div>

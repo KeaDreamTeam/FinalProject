@@ -14,7 +14,8 @@ class Restaurant extends React.Component {
     super(props)
     this.state = {
       singleView: false,
-      selected: null
+      selected: null,
+      isClosing: false
     }
   }
 
@@ -23,8 +24,21 @@ class Restaurant extends React.Component {
   }
 
   selectRestaurant(selected) {
-    this.setState({selected})
-    jump('.singleAnchor')
+    if (!selected) {
+      jump('.restaurantHero')
+      setTimeout(() => this.setState({isClosing: true}), 1000)
+    }
+
+    else {
+      jump('.singleAnchor')
+      this.setState({selected})
+    }
+  }
+
+  componentDidUpdate = () => {
+    if (this.state.isClosing) {
+      this.setState({selected: null, isClosing:false})
+    }
   }
 
   render() {

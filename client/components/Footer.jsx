@@ -18,7 +18,6 @@ class Footer extends React.Component {
     this.setState({
       contactFormVisible: newContact
     })
-    jump(".ContactForm")
   }
   render() {
     return (
