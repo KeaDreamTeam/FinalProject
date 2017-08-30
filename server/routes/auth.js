@@ -19,8 +19,10 @@ function register (req, res, next) {
       }
       createUser(user_name, password, req.app.get('db'))
         .then(() => next())
+        .catch(err => console.log({err}))
     })
     .catch(err => {
+      console.log({err});
       res.status(500).send({message: err.message})
     })
 
