@@ -19,7 +19,7 @@ const getComments = (db) => {
 const saveComment = (comment, db) => {
   console.log({comment});
   return db('comments')
-  .insert(comment)
+  .insert(comment, 'comment_id')
   .then(comment_id => {
     console.log({comment_id});
     return db('comments')
