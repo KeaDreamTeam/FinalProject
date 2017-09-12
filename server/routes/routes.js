@@ -62,16 +62,19 @@ router.get('/comments', (req, res) => {
 })
 
 router.post('/comments', decode, (req, res) => {
+  console.log(req.body);
   let db = req.app.get('db')
   let comment = req.body
   comment.user_id = req.user.id
   console.log(req.user);
   DbAccess.saveComment(comment, db)
       .then(newComment => {
+        console.log({newComment});
         newComment.user_name = req.user.user_name;
         res.status(201).send(newComment)
       })
       .catch(err => {
+        console.log({err});
         res.status(500).send({message: err.message})
       })
 })
