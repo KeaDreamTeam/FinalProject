@@ -11,11 +11,9 @@ module.exports = {
 
 function issueJwt (req, res, next) {
   const connection = req.app.get('db')
-  console.log("issue", req.body)
   verify(req.body.user_name, req.body.password, connection,
     (err, user) => {
       if (err) {
-        console.log(err)
         return res.status(500).json({
           message: 'Authentication failed due to a server error.'
         })
@@ -36,16 +34,13 @@ function issueJwt (req, res, next) {
 function verify (user_name, password, connection, callback) {
   db.getUserByName(user_name, connection)
     .then(user => {
-      console.log({user});
       if (!user || user.length === 0 || !hash.verifyUser(user, password)) {
-        console.log('user not found')
         return callback(null, false)
       }
       delete user.hash
       callback(null, user)
     })
   .catch(err => {
-    console.log("verify", {err});
     callback(err, false)
   })
 }

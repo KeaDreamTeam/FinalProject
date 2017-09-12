@@ -19,17 +19,14 @@ import request from '../utils/api'
 import {receiveLogin} from './login'
 export function registerUserRequest ({user_name, password}) {
   return (dispatch) => {
-    console.log("creating user", user_name);
     request('post', 'auth/register', {user_name, password})
       .then((res) => {
           let user = saveUserToken(res.body.token)
           dispatch(receiveLogin(user))
-          console.log("register response", res.body);
           alert("success")
           document.location = "/#/"
       })
       .catch(err => {
-        console.log({err});
         if (err.status === 409) {
           alert("user exists")
         }
