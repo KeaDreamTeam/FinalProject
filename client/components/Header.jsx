@@ -46,7 +46,17 @@ const Header = ({isAuthenticated}) => (
                         )}
                 {isAuthenticated &&
                   <div className="nav-item">
-                    <Logout />
+                    <div className="field is-grouped">
+                      <p className="control">
+                        <Link to="/user" className="button is-primary is-inverted">Me</Link>
+                      </p>
+                      <p className="control">
+                        <Link to="/" className="button is-primary is-inverted">Home</Link>
+                      </p>
+                      <p className="control">
+                        <Logout />
+                      </p>
+                    </div>
                   </div>
                 }
             </div>
