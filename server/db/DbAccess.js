@@ -18,7 +18,7 @@ const getComments = (db) => {
 
 const saveComment = (comment, db) => {
   return db('comments')
-  .insert(comment)
+  .insert(comment, 'comment_id')
   .then(comment_id => {
     return db('comments')
     .where('comments.comment_id', comment_id[0])

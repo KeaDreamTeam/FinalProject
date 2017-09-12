@@ -65,7 +65,6 @@ router.post('/comments', decode, (req, res) => {
   let db = req.app.get('db')
   let comment = req.body
   comment.user_id = req.user.id
-  console.log(req.user);
   DbAccess.saveComment(comment, db)
       .then(newComment => {
         newComment.user_name = req.user.user_name;
