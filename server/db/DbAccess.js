@@ -17,11 +17,9 @@ const getComments = (db) => {
 }
 
 const saveComment = (comment, db) => {
-  console.log({comment});
   return db('comments')
   .insert(comment, 'comment_id')
   .then(comment_id => {
-    console.log({comment_id});
     return db('comments')
     .where('comments.comment_id', comment_id[0])
     .first()
