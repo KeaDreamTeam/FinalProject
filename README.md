@@ -18,7 +18,7 @@ then:
 
 ### Description
 
-An app that displays and searches through vegetarian restaurants. The client-side build using SPA pattern.
+An application that displays and searches through vegetarian restaurants in Wellington.
 
 ### Authors
 
@@ -30,8 +30,8 @@ An app that displays and searches through vegetarian restaurants. The client-sid
 
 - viewing list of restaurants and their details
 - filtering restaurants
-- restaurant view on GoogleMaps
-- rating, commenting
+- use GoogleMaps to show locations
+- rating and commenting
 - enabled authorisation and adding users
 - SPA
 
@@ -65,4 +65,4 @@ User Stories for the What's For Lunch app project.
 
 
 # API Documentation
-[See API documentation](https://github.com/KeaDreamTeam/Planning/blob/master/API-Documentation.md)
+[See API documentation for the project here](https://github.com/KeaDreamTeam/Planning/blob/master/API-Documentation.md)
