@@ -4,6 +4,8 @@ Project name: What's For Lunch?!
 
 You'll find us online https://whatsforlunchkea.herokuapp.com/#/
 
+Our team is still working on this project.
+
 ## Install
 
 Clone this repo:
@@ -24,21 +26,23 @@ An app that displays and searches through vegetarian restaurants. The client-sid
 - Magda Giergiczny - Facilitator, full stack developer and tester, Google Maps Conqueror
 - Ania Podhajska - Git master, full stack developer and tester, Filter & API Whisperer
 
-### Main features:
+### App main features:
 
+- viewing list of restaurants and their details
+- filtering restaurants
+- restaurant view on GoogleMaps
 - rating, commenting
-- filtering
-- Google maps
 - enabled authorisation and adding users
 - SPA
 
-### Team Learning Objectives:
+### Learning Objectives:
 
-- full stack development (React, Redux, Express, Knex)
-- SPA
+- practise: React, Redux, Express, Knex, creating REST API, consuming external API, SQLite, HTML, CSS, Bulma, Node, npm, react-chartjs-2, Heroku
+- full stack development
+- testing: AVA, Supertest, Nock, Enzyme, Sinon
 - Google maps implementation
+- SPA
 - applying Agile project techniques
-
 
 ## User Stories
 
@@ -55,9 +59,9 @@ User Stories for the What's For Lunch app project.
 | View a graph rating of a specific restaurant  | no | no |
 | View users' comments of a specific restaurant | no | no |
 | Add a new comment to a specified restaurant  | yes | yes |
-| Register as a new user  | yes | yes |
-| Log in as a user | yes | yes |
-| Be able to use the app on a mobile | no | no |
+| Register as a new user  | yes | no |
+| Log in as a user | yes | no |
+| Be able to use the app on a mobile | no | yes |
 
 
 # API Documentation
