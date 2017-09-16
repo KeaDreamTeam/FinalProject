@@ -37,7 +37,7 @@ An application that displays and searches through vegetarian restaurants in Well
 
 ### Learning Objectives:
 
-- practise: React, Redux, Express, Knex, creating REST API, consuming external API, SQLite, HTML, CSS, Bulma, Node, npm, react-chartjs-2, Heroku
+- practise: JS (ES6), React, Redux, Express, Knex, creating REST API, consuming external API, SQLite, HTML, CSS, Bulma, Node, npm, react-chartjs-2, Heroku
 - full stack development
 - testing: AVA, Supertest, Nock, Enzyme, Sinon
 - Google maps implementation
