@@ -6,15 +6,13 @@ You'll find us online https://whatsforlunchkea.herokuapp.com/#/
 
 Our team is still working on this project.
 
-## Install
+## Install / Running
 
-Clone this repo:
-
-git clone https://github.com/KeaDreamTeam/FinalProject WhatsForLunch
-
-then:
+- git clone https://github.com/KeaDreamTeam/FinalProject WhatsForLunch
 - cd WhatsForLunch
 - npm install
+- npm run dev
+- visit the app at [http://localhost:3000](http://localhost:3000).
 
 ### Description
 
