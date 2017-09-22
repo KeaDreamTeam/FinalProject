@@ -2,9 +2,9 @@ var isFairPos = Math.random() < 0.9 ? true : false;
 var isFairNeg = Math.random() < 0.1 ? true : false;
 const getRandomUserId = (min, max) => Math.floor(Math.random() * (Math.ceil(max) - Math.ceil(min) + 1) + min);
 
-let commentsNeg = ["not too good food", "too expensive", "did not like the food", "not suotable for families", "unpleasant staff", "not sure ..."];
+let commentsNeg = ["not too good food", "too expensive", "did not like the food", "not suotable for families", "unpleasant staff", "not sure"];
 let commentsPos = ["good food", "great value for money", "super fresh food", "great for families", "nice staff", "nice climate", "quick service", "amazing food"];
-const pickContent = (value) => (value == "pos" ? commentsPos[Math.floor(Math.random()*commentsPos.length)] : commentsNeg[Math.floor(Math.random()*commentsPos.length)])
+const pickContent = (value) => (value == "pos" ? commentsPos[Math.floor(Math.random()*commentsPos.length)] : commentsNeg[Math.floor(Math.random()*commentsNeg.length)])
 
 const pickContentNeg = function() {
     let i = Math.floor(Math.random() * commentsNeg.length)
@@ -15,10 +15,8 @@ const pickContentPos = function() {
     return commentsPos[i]
 };
 
-
 var createCommForRest = function(numNeg, numPos, restrId) {
     let CommentsForRest = []
-
     for (i=0; i<=numNeg; i++) {
         let comment = {
             user_id: getRandomUserId(1, 14),
@@ -54,11 +52,12 @@ exports.seed = function(knex, Promise) {
 
       );
     });
-};
+}
 
 
 
-// {
+// how the object comment should look like:
+//    {
 //   user_id: 2,
 //   restaurant_id: 25,
 //   content: "very good price and great food",
