@@ -6,14 +6,6 @@ let commentsNeg = ["not too good food", "too expensive", "did not like the food"
 let commentsPos = ["good food", "great value for money", "super fresh food", "great for families", "nice staff", "nice climate", "quick service", "amazing food"];
 const pickContent = (value) => (value == "pos" ? commentsPos[Math.floor(Math.random()*commentsPos.length)] : commentsNeg[Math.floor(Math.random()*commentsNeg.length)])
 
-const pickContentNeg = function() {
-    let i = Math.floor(Math.random() * commentsNeg.length)
-    return commentsNeg[i]
-};
-const pickContentPos = function() {
-    let i = Math.floor(Math.random() * commentsPos.length)
-    return commentsPos[i]
-};
 
 var createCommForRest = function(numNeg, numPos, restrId) {
     let CommentsForRest = []
@@ -37,7 +29,6 @@ var createCommForRest = function(numNeg, numPos, restrId) {
          };
          CommentsForRest.push(comment)
     };
-
     return CommentsForRest
  };
 
