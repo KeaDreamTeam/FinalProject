@@ -48,38 +48,11 @@ exports.seed = function(knex, Promise) {
   return knex('comments').del()
     .then(function () {
       // Inserts seed entries
-      return knex('comments').insert([
+      return knex('comments').insert(
 
             createCommForRest(1,3,1)
-            createCommForRest(12,3,2)
-            createCommForRest(3,3,3)
-            createCommForRest(5,3,4)
-            createCommForRest(15,3,5)
-            createCommForRest(15,3,6)
-            createCommForRest(15,3,7)
-            createCommForRest(15,3,8)
-            createCommForRest(15,3,9)
-            createCommForRest(15,3,10)
-            createCommForRest(15,3,11)
-            createCommForRest(15,3,12)
-            createCommForRest(15,3,13)
-            createCommForRest(15,3,14)
-            createCommForRest(15,3,15)
-            createCommForRest(15,3,16)
-            createCommForRest(15,3,17)
-            createCommForRest(15,3,18)
-            createCommForRest(15,3,19)
-            createCommForRest(15,3,20)
-            createCommForRest(15,3,21)
-            createCommForRest(15,3,22)
-            createCommForRest(15,3,23)
-            createCommForRest(15,3,24)
-            createCommForRest(15,3,25)
-            createCommForRest(15,3,26)
-            createCommForRest(15,3,27)
-            createCommForRest(15,3,28)
 
-      ]);
+      );
     });
 };
 
