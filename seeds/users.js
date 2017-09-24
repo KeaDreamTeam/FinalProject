@@ -18,6 +18,19 @@ exports.seed = function(knex, Promise) {
         {user_name: 'Carla', hash: "cvxxzcxzcxzccv"},
         {user_name: 'Peter', hash: "adsew3rcxvcxv23rdsds"},
         {user_name: 'Ingrid', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Baylen', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Blaise', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Benjamin', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'David', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Daniel', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Philip', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Ava', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Ingrid', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Isabella', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Noah', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Lucas', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Mason', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Tobias', hash: "adsew3rcxvcxv23rdsds"},
         {user_name: 'Liam', hash: generate('password')}
       ]);
     });
