@@ -34,7 +34,7 @@ var createCommForAllRest = function(restIndexMin, restIndexMax) {
   let comments = []
   for (var i=restIndexMin; i<=restIndexMax; i++) {
     let numNeg = Math.floor(Math.random() * 5)
-    let numPos = Math.floor(Math.random() * 6)
+    let numPos = Math.floor(Math.random() * 7)
     comments = comments.concat(createCommForRest(numNeg, numPos, i))
   };
   return comments
