@@ -30,8 +30,11 @@ exports.seed = function(knex, Promise) {
         {user_name: 'Noah', hash: "adsew3rcxvcxv23rdsds"},
         {user_name: 'Lucas', hash: "adsew3rcxvcxv23rdsds"},
         {user_name: 'Mason', hash: "adsew3rcxvcxv23rdsds"},
-        {user_name: 'Tobias', hash: "adsew3rcxvcxv23rdsds"},
-        {user_name: 'Liam', hash: generate('password')}
+        {user_name: 'Mike', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Tamara', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Sarah', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Sam', hash: "adsew3rcxvcxv23rdsds"},
+        {user_name: 'Ted', hash: generate('password')}
       ]);
     });
 };
