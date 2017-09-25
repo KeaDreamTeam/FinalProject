@@ -40,7 +40,7 @@ var createCommForAllRest = function(restIndexMin, restIndexMax) {
     let numPos = Math.floor(Math.random() * 6)
     comments = comments.concat(createCommForRest(numNeg, numPos, i))
   };
-  console.log(comments.length);
+  console.log("The number of comments created is ", comments.length);
   return comments
 }
 
