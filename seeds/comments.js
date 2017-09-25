@@ -1,12 +1,15 @@
 var isFairPos = Math.random() < 0.9 ? true : false;
 var isFairNeg = Math.random() < 0.1 ? true : false;
+
 let commentsNeg = ["not too good food", "too expensive", "did not like the food", "not suotable for families", "unpleasant staff", "not sure"];
 let commentsPos = ["good food", "great value for money", "super fresh food", "great for families", "nice staff", "nice climate", "quick service", "amazing food"];
-const pickContent = (value) => (value == "pos" ? commentsPos[Math.floor(Math.random()*commentsPos.length)] : commentsNeg[Math.floor(Math.random()*commentsNeg.length)]);
+
+const pickContent = (value) =>
+  (value == "pos" ? commentsPos[Math.floor(Math.random()*commentsPos.length)] : commentsNeg[Math.floor(Math.random()*commentsNeg.length)]);
 const getRandomUserId = (min, max) => Math.floor(Math.random() * (Math.ceil(max) - Math.ceil(min) + 1) + min);
 
 var createCommForRest = function(numNeg, numPos, restrId) {
-    let CommentsForRest = []
+    let commentsForRest = []
     for (var i=0; i<=numNeg; i++) {
         let comment = {
             user_id: getRandomUserId(1, 27),
@@ -15,7 +18,7 @@ var createCommForRest = function(numNeg, numPos, restrId) {
             is_pos: false,
             is_fair: isFairNeg
          };
-        CommentsForRest.push(comment)
+        commentsForRest.push(comment)
     };
     for (var i=0; i<=numPos; i++) {
         let comment = {
@@ -25,18 +28,19 @@ var createCommForRest = function(numNeg, numPos, restrId) {
             is_pos: true,
             is_fair: isFairPos
          };
-         CommentsForRest.push(comment)
+         commentsForRest.push(comment)
     };
-    return CommentsForRest
+    return commentsForRest
  };
 
 var createCommForAllRest = function(restIndexMin, restIndexMax) {
   let comments = []
   for (var i=restIndexMin; i<=restIndexMax; i++) {
-    let numNeg = Math.floor(Math.random() * 5)
-    let numPos = Math.floor(Math.random() * 7)
+    let numNeg = Math.floor(Math.random() * 4)
+    let numPos = Math.floor(Math.random() * 6)
     comments = comments.concat(createCommForRest(numNeg, numPos, i))
   };
+  console.log(comments.length);
   return comments
 }
 
