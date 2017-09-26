@@ -8,7 +8,6 @@ import MainMap from './MainMap'
 import applyFilter from '../utils/filter'
 import Filter from './Filter'
 
-
 class Restaurant extends React.Component {
   constructor (props) {
     super(props)
