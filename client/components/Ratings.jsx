@@ -17,37 +17,36 @@ class Ratings extends React.Component {
     }
   }
   render() {
-    let {positive_vote, negative_votes} = this.props.ratings
-    let data = {
-        	labels: [
-        		'Positive reviews',
-            'Negative reviews'
-        	],
-        	datasets: [{
-        		data: [positive_vote, negative_votes],
-        		backgroundColor: [
-        		'#36A2EB',
-        		'#FF6384'
-        		],
-        		hoverBackgroundColor: [
-        		'#777b82',
-        		'#777b82'
-        		]
-        	}]
-        };
+      let {positive_vote, negative_votes} = this.props.ratings
+      let data = {
+          	labels: [
+          		'Positive reviews',
+              'Negative reviews'
+          	],
+          	datasets: [{
+          		data: [positive_vote, negative_votes],
+          		backgroundColor: [
+          		'#36A2EB',
+          		'#FF6384'
+          		],
+          		hoverBackgroundColor: [
+          		'#777b82',
+          		'#777b82'
+          		]
+          	}]
+          };
 
-    return (
-        <div className="ratings">
-           <Doughnut
-             data={data}
-             width={250}
-	           height={250}
-	           options={{maintainAspectRatio: false}}/>
-            {/* <div style={{width: sum / positive_vote * 100, backgroundColor: 'blue'}} >hello</div> */}
-        </div>
-    )
+      return (
+          <div className="ratings">
+             <Doughnut
+               data={data}
+               width={250}
+  	           height={250}
+  	           options={{maintainAspectRatio: false}}/>
+              {/* <div style={{width: sum / positive_vote * 100, backgroundColor: 'blue'}} >hello</div> */}
+          </div>
+      )
   }
-
 }
 
 const mapStateToProps = (state) => {
